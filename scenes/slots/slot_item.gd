@@ -32,3 +32,9 @@ func set_item_properties(effect: SlotEffectResource) -> void:
 		show()
 	else:
 		hide()
+
+func get_weight() -> int:
+	if item:
+		return item.weight
+	else:
+		return 0

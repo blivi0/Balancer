@@ -1,5 +1,5 @@
 extends SlotEffectResource
 class_name FloatEffect
 
-func apply_effect(weight: int) -> int:
+func apply_effect(_weight: int) -> int:
 	return 0

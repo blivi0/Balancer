@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7toce147ilqu"]
+
+[ext_resource type="Script" path="res://scenes/slots/slot_grid.gd" id="1_lv1xs"]
+
+[node name="SlotGrid" type="GridContainer"]
+columns = 3
+script = ExtResource("1_lv1xs")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dwagge7ilxm17"]
 
-[ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/inventory.tscn" id="1_3b60l"]
+[ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_3b60l"]
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="1_hmcxb"]
 [ext_resource type="Script" path="res://scripts/resources/slot_item_resource.gd" id="2_6imw3"]
 [ext_resource type="Texture2D" uid="uid://ceomsqy5wdtja" path="res://icon.svg" id="3_kr6js"]
@@ -44,6 +44,9 @@ item = SubResource("Resource_c40o6")
 [node name="Slot4" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
 layout_mode = 2
 
+[node name="SlotEffect" parent="Control/Inventory/Slot4" index="0"]
+effect = ExtResource("5_03a0p")
+
 [node name="Slot5" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
 layout_mode = 2
 
@@ -56,5 +59,15 @@ item = SubResource("Resource_xw8f8")
 [node name="Slot6" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
 layout_mode = 2
 
+[node name="Slot7" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
+layout_mode = 2
+
+[node name="Slot8" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
+layout_mode = 2
+
+[node name="Slot9" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
+layout_mode = 2
+
 [editable path="Control/Inventory/Slot3"]
+[editable path="Control/Inventory/Slot4"]
 [editable path="Control/Inventory/Slot5"]

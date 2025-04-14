@@ -1,3 +1,71 @@
-[gd_scene format=3 uid="uid://3m2amnmp0x3c"]
+[gd_scene load_steps=9 format=3 uid="uid://3m2amnmp0x3c"]
 
-[node name="Game" type="Node"]
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_rse5h"]
+[ext_resource type="PackedScene" uid="uid://b178oc644nu6t" path="res://scenes/inventory.tscn" id="1_ueqdo"]
+[ext_resource type="Script" path="res://scripts/resources/slot_item_resource.gd" id="2_wlug0"]
+[ext_resource type="Texture2D" uid="uid://ceomsqy5wdtja" path="res://icon.svg" id="3_rhkk0"]
+[ext_resource type="Resource" uid="uid://cthfs3lq4ecd" path="res://resources/float_effect_resource.tres" id="5_61ds7"]
+
+[sub_resource type="Resource" id="Resource_7mpk5"]
+script = ExtResource("2_wlug0")
+texture = ExtResource("3_rhkk0")
+weight = 10
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_v3ylr"]
+
+[sub_resource type="Resource" id="Resource_ay3et"]
+script = ExtResource("2_wlug0")
+texture = ExtResource("3_rhkk0")
+weight = 20
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rse5h")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.5
+offset_top = -113.5
+offset_right = 136.5
+offset_bottom = 113.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="LeftInventory" parent="HBoxContainer" instance=ExtResource("1_ueqdo")]
+layout_mode = 2
+
+[node name="SlotItem" parent="HBoxContainer/LeftInventory/SlotGrid/Slot" index="1"]
+item = SubResource("Resource_7mpk5")
+
+[node name="Divider" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_v3ylr")
+
+[node name="RightInventory" parent="HBoxContainer" instance=ExtResource("1_ueqdo")]
+layout_mode = 2
+
+[node name="Slot5" parent="HBoxContainer/RightInventory/SlotGrid" index="4"]
+modulate = Color(0, 1, 0, 1)
+
+[node name="SlotEffect" parent="HBoxContainer/RightInventory/SlotGrid/Slot5" index="0"]
+effect = ExtResource("5_61ds7")
+
+[node name="SlotItem" parent="HBoxContainer/RightInventory/SlotGrid/Slot7" index="1"]
+item = SubResource("Resource_ay3et")
+
+[editable path="HBoxContainer/LeftInventory"]
+[editable path="HBoxContainer/LeftInventory/SlotGrid/Slot"]
+[editable path="HBoxContainer/RightInventory"]
+[editable path="HBoxContainer/RightInventory/SlotGrid/Slot5"]
+[editable path="HBoxContainer/RightInventory/SlotGrid/Slot7"]
