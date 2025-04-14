@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvdcr6yw64lg1"]
+
+[ext_resource type="Script" path="res://scenes/slots/slot.gd" id="1_o8bka"]
+[ext_resource type="PackedScene" uid="uid://dv6lwck4uafch" path="res://scenes/slots/slot_effect.tscn" id="3_bunfc"]
+[ext_resource type="PackedScene" uid="uid://dbb2axdp6ve3v" path="res://scenes/slots/slot_item.tscn" id="4_ld1gy"]
+
+[node name="Slot" type="Control"]
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_o8bka")
+
+[node name="SlotEffect" parent="." instance=ExtResource("3_bunfc")]
+layout_mode = 0
+
+[node name="SlotItem" parent="." instance=ExtResource("4_ld1gy")]
+layout_mode = 0
