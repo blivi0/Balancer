@@ -1,6 +1,0 @@
-[gd_resource type="Resource" script_class="FloatEffect" load_steps=2 format=3 uid="uid://cthfs3lq4ecd"]
-
-[ext_resource type="Script" path="res://scripts/resources/float_effect.gd" id="1_1fnm7"]
-
-[resource]
-script = ExtResource("1_1fnm7")

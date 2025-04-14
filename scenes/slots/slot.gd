@@ -8,7 +8,6 @@ signal slot_changed
 
 func _ready() -> void:
 	slot_effect.item_dropped.connect(on_item_dropped)
-	slot_item.item_dropped.connect(on_item_dropped)
 	slot_item.set_item_properties(slot_effect.effect)
 
 func on_item_dropped(new_slot: Slot) -> void:

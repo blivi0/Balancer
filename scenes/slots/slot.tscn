@@ -5,13 +5,28 @@
 [ext_resource type="PackedScene" uid="uid://dbb2axdp6ve3v" path="res://scenes/slots/slot_item.tscn" id="4_ld1gy"]
 
 [node name="Slot" type="Control"]
-custom_minimum_size = Vector2(32, 64)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 32.0
+offset_bottom = 32.0
 script = ExtResource("1_o8bka")
 
 [node name="SlotEffect" parent="." instance=ExtResource("3_bunfc")]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -16.0
+offset_right = 16.0
+offset_bottom = 32.0
+grow_horizontal = 2
 
 [node name="SlotItem" parent="." instance=ExtResource("4_ld1gy")]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -16.0
+offset_right = 16.0
+grow_horizontal = 2

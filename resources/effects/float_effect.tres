@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="FloatEffect" load_steps=2 format=3 uid="uid://cthfs3lq4ecd"]
+
+[ext_resource type="Script" path="res://scripts/resources/effects/float_effect.gd" id="1_f3ij8"]
+
+[resource]
+script = ExtResource("1_f3ij8")
+color = Color(0, 1, 0, 1)

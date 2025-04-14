@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://c2cmfy6elc58g"]
+
+[ext_resource type="PackedScene" uid="uid://3m2amnmp0x3c" path="res://scenes/game.tscn" id="1_jp5ad"]
+[ext_resource type="Script" path="res://scripts/resources/slot_item_resource.gd" id="2_yrcr0"]
+[ext_resource type="Texture2D" uid="uid://ceomsqy5wdtja" path="res://icon.svg" id="3_2aybh"]
+[ext_resource type="Resource" uid="uid://cthfs3lq4ecd" path="res://resources/effects/float_effect.tres" id="4_558up"]
+
+[sub_resource type="Resource" id="Resource_h2kan"]
+script = ExtResource("2_yrcr0")
+texture = ExtResource("3_2aybh")
+weight = 30
+
+[sub_resource type="Resource" id="Resource_5l30g"]
+script = ExtResource("2_yrcr0")
+texture = ExtResource("3_2aybh")
+weight = 50
+
+[sub_resource type="Resource" id="Resource_jexod"]
+script = ExtResource("2_yrcr0")
+texture = ExtResource("3_2aybh")
+weight = 70
+
+[sub_resource type="Resource" id="Resource_7q4t1"]
+script = ExtResource("2_yrcr0")
+texture = ExtResource("3_2aybh")
+weight = 40
+
+[node name="Level1" instance=ExtResource("1_jp5ad")]
+
+[node name="SlotItem" parent="MarginContainer/HBoxContainer/LeftInventory/SlotGrid/Slot" index="1"]
+item = SubResource("Resource_h2kan")
+
+[node name="SlotItem" parent="MarginContainer/HBoxContainer/LeftInventory/SlotGrid/Slot5" index="1"]
+item = SubResource("Resource_5l30g")
+
+[node name="SlotEffect" parent="MarginContainer/HBoxContainer/RightInventory/SlotGrid/Slot5" index="0"]
+effect = ExtResource("4_558up")
+
+[node name="SlotItem" parent="MarginContainer/HBoxContainer/RightInventory/SlotGrid/Slot6" index="1"]
+item = SubResource("Resource_jexod")
+
+[node name="SlotItem" parent="MarginContainer/HBoxContainer/RightInventory/SlotGrid/Slot7" index="1"]
+item = SubResource("Resource_7q4t1")
+
+[editable path="MarginContainer/HBoxContainer/LeftInventory"]
+[editable path="MarginContainer/HBoxContainer/LeftInventory/SlotGrid/Slot"]
+[editable path="MarginContainer/HBoxContainer/LeftInventory/SlotGrid/Slot5"]
+[editable path="MarginContainer/HBoxContainer/RightInventory"]
+[editable path="MarginContainer/HBoxContainer/RightInventory/SlotGrid/Slot5"]
+[editable path="MarginContainer/HBoxContainer/RightInventory/SlotGrid/Slot6"]
+[editable path="MarginContainer/HBoxContainer/RightInventory/SlotGrid/Slot7"]

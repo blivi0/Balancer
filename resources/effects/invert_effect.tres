@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="InvertEffect" load_steps=2 format=3 uid="uid://blk3yl02vbpex"]
+
+[ext_resource type="Script" path="res://scripts/resources/effects/invert_effect.gd" id="1_pap7x"]
+
+[resource]
+script = ExtResource("1_pap7x")
+color = Color(0, 1, 1, 1)
