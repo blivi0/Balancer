@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7452osdgjly8"]
+
+[ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_r6koq"]
+[ext_resource type="Script" path="res://scripts/resources/slot_item_resource.gd" id="2_65f4g"]
+[ext_resource type="Texture2D" uid="uid://ceomsqy5wdtja" path="res://icon.svg" id="3_w2f36"]
+
+[sub_resource type="Resource" id="Resource_cyvx3"]
+script = ExtResource("2_65f4g")
+texture = ExtResource("3_w2f36")
+weight = 30
+
+[sub_resource type="Resource" id="Resource_xkv4a"]
+script = ExtResource("2_65f4g")
+texture = ExtResource("3_w2f36")
+weight = 70
+
+[node name="Level1Left" instance=ExtResource("1_r6koq")]
+
+[node name="SlotItem" parent="Slot" index="1"]
+item = SubResource("Resource_cyvx3")
+
+[node name="SlotItem" parent="Slot5" index="1"]
+item = SubResource("Resource_xkv4a")
+
+[editable path="Slot"]
+[editable path="Slot5"]

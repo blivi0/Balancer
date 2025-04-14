@@ -4,6 +4,8 @@ class_name Slot
 @onready var slot_effect: SlotEffect = $SlotEffect
 @onready var slot_item: SlotItem = $SlotItem
 
+var can_drag = true
+
 signal slot_changed
 
 func _ready() -> void:
@@ -20,5 +22,4 @@ func set_item(item: SlotItemResource) -> void:
 	slot_item.set_item(item, slot_effect.effect)
 
 func get_weight() -> int:
-	var weight := slot_item.get_weight()
-	return slot_effect.effect.apply_effect(weight)
+	return slot_item.effective_weight

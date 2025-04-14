@@ -21,3 +21,7 @@ func get_total_weight() -> int:
 	for slot in slots:
 		total_weight += slot.get_weight()
 	return total_weight
+
+func disable_slots() -> void:
+	for slot in slots:
+		slot.can_drag = false

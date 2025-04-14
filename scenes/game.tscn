@@ -1,9 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://3m2amnmp0x3c"]
+[gd_scene load_steps=3 format=3 uid="uid://3m2amnmp0x3c"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_rse5h"]
-[ext_resource type="PackedScene" uid="uid://b178oc644nu6t" path="res://scenes/inventory.tscn" id="1_ueqdo"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_v3ylr"]
+[ext_resource type="PackedScene" uid="uid://cxx57oxpc1hs1" path="res://scenes/inventory_controller.tscn" id="2_dheqr"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -14,34 +12,55 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rse5h")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="InventoryController" parent="." instance=ExtResource("2_dheqr")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -11.5
+offset_right = 42.5
+offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_top = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
+[node name="WinContainer" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = -37.0
+offset_right = 53.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 32
 
-[node name="LeftInventory" parent="MarginContainer/HBoxContainer" instance=ExtResource("1_ueqdo")]
+[node name="MarginContainer" type="MarginContainer" parent="WinContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WinContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="Divider" type="TextureRect" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_v3ylr")
-
-[node name="RightInventory" parent="MarginContainer/HBoxContainer" instance=ExtResource("1_ueqdo")]
-layout_mode = 2
-
-[node name="WinLabel" type="Label" parent="MarginContainer"]
-visible = false
+[node name="Label" type="Label" parent="WinContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Winner!"
+
+[node name="NextLevelButton" type="Button" parent="WinContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Next Level"

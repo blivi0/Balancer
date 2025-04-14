@@ -14,7 +14,7 @@ func _ready() -> void:
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	var slot = get_parent() as Slot
-	if not slot.slot_item.item:
+	if not slot.slot_item.item or not slot.can_drag:
 		return null
 	
 	set_drag_preview(slot.slot_item.duplicate())

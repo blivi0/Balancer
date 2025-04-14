@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://bosijvlnlbar0"]
+
+[ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_x2uac"]
+[ext_resource type="Resource" uid="uid://w0vugw8u4tc5" path="res://resources/effects/lock_effect.tres" id="2_0h52p"]
+[ext_resource type="Resource" uid="uid://7lnnkb6p6gei" path="res://resources/effects/weight_effect.tres" id="2_t00ky"]
+[ext_resource type="Script" path="res://scripts/resources/slot_item_resource.gd" id="3_5rc6y"]
+[ext_resource type="Texture2D" uid="uid://ceomsqy5wdtja" path="res://icon.svg" id="4_e1k0f"]
+
+[sub_resource type="Resource" id="Resource_3ocjk"]
+script = ExtResource("3_5rc6y")
+texture = ExtResource("4_e1k0f")
+weight = 30
+
+[node name="Level2Right" instance=ExtResource("1_x2uac")]
+
+[node name="SlotEffect" parent="Slot" index="0"]
+effect = ExtResource("2_0h52p")
+
+[node name="SlotEffect" parent="Slot5" index="0"]
+effect = ExtResource("2_t00ky")
+
+[node name="SlotItem" parent="Slot8" index="1"]
+item = SubResource("Resource_3ocjk")
+
+[editable path="Slot"]
+[editable path="Slot5"]
+[editable path="Slot8"]

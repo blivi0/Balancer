@@ -1,20 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwagge7ilxm17"]
+[gd_scene load_steps=3 format=3 uid="uid://dwagge7ilxm17"]
 
 [ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_3b60l"]
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="1_hmcxb"]
-[ext_resource type="Script" path="res://scripts/resources/slot_item_resource.gd" id="2_6imw3"]
-[ext_resource type="Texture2D" uid="uid://ceomsqy5wdtja" path="res://icon.svg" id="3_kr6js"]
-[ext_resource type="Resource" uid="uid://cthfs3lq4ecd" path="res://resources/effects/float_effect.tres" id="5_03a0p"]
-
-[sub_resource type="Resource" id="Resource_c40o6"]
-script = ExtResource("2_6imw3")
-texture = ExtResource("3_kr6js")
-weight = 10
-
-[sub_resource type="Resource" id="Resource_xw8f8"]
-script = ExtResource("2_6imw3")
-texture = ExtResource("3_kr6js")
-weight = 5
 
 [node name="TestSlots" type="Node"]
 
@@ -29,45 +16,29 @@ grow_vertical = 2
 [node name="Inventory" parent="Control" instance=ExtResource("1_3b60l")]
 layout_mode = 0
 
-[node name="Slot" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
+[node name="Slot10" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
 layout_mode = 2
 
-[node name="Slot2" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
+[node name="Slot11" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
 layout_mode = 2
 
-[node name="Slot3" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
+[node name="Slot12" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
 layout_mode = 2
 
-[node name="SlotItem" parent="Control/Inventory/Slot3" index="1"]
-item = SubResource("Resource_c40o6")
-
-[node name="Slot4" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
+[node name="Slot13" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
 layout_mode = 2
 
-[node name="SlotEffect" parent="Control/Inventory/Slot4" index="0"]
-effect = ExtResource("5_03a0p")
-
-[node name="Slot5" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
+[node name="Slot14" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
 layout_mode = 2
 
-[node name="SlotEffect" parent="Control/Inventory/Slot5" index="0"]
-effect = ExtResource("5_03a0p")
-
-[node name="SlotItem" parent="Control/Inventory/Slot5" index="1"]
-item = SubResource("Resource_xw8f8")
-
-[node name="Slot6" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
+[node name="Slot15" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
 layout_mode = 2
 
-[node name="Slot7" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
+[node name="Slot16" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
 layout_mode = 2
 
-[node name="Slot8" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
+[node name="Slot17" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
 layout_mode = 2
 
-[node name="Slot9" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
+[node name="Slot18" parent="Control/Inventory" instance=ExtResource("1_hmcxb")]
 layout_mode = 2
-
-[editable path="Control/Inventory/Slot3"]
-[editable path="Control/Inventory/Slot4"]
-[editable path="Control/Inventory/Slot5"]
