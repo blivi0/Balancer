@@ -15,10 +15,7 @@ var can_drag = true
 signal slot_changed
 
 func _ready() -> void:
-	set_item_properties()
 	effect_texture_rect.texture = effect.texture
-	# TODO: temp
-	modulate = effect.color
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	if not item or not can_drag:
@@ -33,20 +30,29 @@ func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	var new_slot = data as Slot
 	var temp = item
-	set_item(new_slot.item)
-	new_slot.set_item(temp)
+	item = new_slot.item
+	new_slot.item = temp
 	slot_changed.emit()
 
-func set_item(new_item: SlotItem) -> void:
-	item = new_item
-	set_item_properties()
-
-func set_item_properties() -> void:
+func init_item() -> void:
 	if item:
-		effective_weight = effect.apply_effect(item.weight)
+		set_item_weight(effect.apply_effect(item.weight))
 		item_texture_rect.texture = item.texture
-		item_label.text = str(effective_weight)
 		slot_item.show()
 	else:
 		effective_weight = 0
 		slot_item.hide()
+
+func apply_item_effect(effect_item: EffectItem) -> void:
+	if item:
+		set_item_weight(effect_item.apply_effect(effective_weight))
+
+func set_item_weight(weight: int) -> void:
+	effective_weight = weight
+	item_label.text = str(weight)
+
+func _on_mouse_entered() -> void:
+	pass
+
+func _on_mouse_exited() -> void:
+	pass

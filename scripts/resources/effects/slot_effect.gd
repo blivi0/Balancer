@@ -2,9 +2,7 @@ extends Resource
 class_name SlotEffect
 
 @export var texture: Texture2D
-
-# TODO: temp
-@export var color: Color
+@export var description: String
 
 func can_drop_data() -> bool:
 	return true

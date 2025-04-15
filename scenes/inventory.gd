@@ -1,7 +1,7 @@
 extends VBoxContainer
 class_name Inventory
 
-const LEVEL_FORMAT = "res://scenes/levels/level_%d_%s.tscn"
+const LEVEL_FORMAT := "res://scenes/levels/level_%d_%s.tscn"
 
 @onready var label: Label = $Label
 

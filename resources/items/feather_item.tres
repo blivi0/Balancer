@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FeatherItem" load_steps=4 format=3 uid="uid://cx32j81fblskt"]
+
+[ext_resource type="Script" path="res://scripts/resources/items/feather_item.gd" id="1_vel3v"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7jbs6"]
+load_path = "res://.godot/imported/items.png-bbdc37fb0594eb66b996033d9edd41a1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vpbw"]
+atlas = SubResource("CompressedTexture2D_7jbs6")
+region = Rect2(14, 149, 64, 64)
+
+[resource]
+script = ExtResource("1_vel3v")
+description = ""
+texture = SubResource("AtlasTexture_0vpbw")
+weight = 1

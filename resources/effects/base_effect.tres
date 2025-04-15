@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="SlotEffectResource" load_steps=2 format=3 uid="uid://wntjvf4vgcr6"]
+[gd_resource type="Resource" script_class="SlotEffect" load_steps=2 format=3 uid="uid://wntjvf4vgcr6"]
 
 [ext_resource type="Script" path="res://scripts/resources/effects/slot_effect.gd" id="1_36d5l"]
 
 [resource]
 script = ExtResource("1_36d5l")
-color = Color(1, 1, 1, 1)
+description = ""
