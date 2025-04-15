@@ -1,5 +1,5 @@
 extends Resource
-class_name SlotEffectResource
+class_name SlotEffect
 
 @export var texture: Texture2D
 

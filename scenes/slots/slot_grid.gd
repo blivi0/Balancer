@@ -19,7 +19,7 @@ func on_slot_changed() -> void:
 func get_total_weight() -> int:
 	var total_weight := 0
 	for slot in slots:
-		total_weight += slot.get_weight()
+		total_weight += slot.effective_weight
 	return total_weight
 
 func disable_slots() -> void:

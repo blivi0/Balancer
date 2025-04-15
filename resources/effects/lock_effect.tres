@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="LockEffect" load_steps=2 format=3 uid="uid://w0vugw8u4tc5"]
-
-[ext_resource type="Script" path="res://scripts/resources/effects/lock_effect.gd" id="1_g21x6"]
-
-[resource]
-script = ExtResource("1_g21x6")
-color = Color(1, 0, 0, 1)

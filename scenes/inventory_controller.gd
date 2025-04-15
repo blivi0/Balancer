@@ -18,8 +18,8 @@ func load_level(level_num: int) -> void:
 	right_inventory.load_level(level_num, "right")
 
 func on_inventory_changed() -> void:
-	var total := left_inventory.total + right_inventory.total
-	
+	left_inventory.update_total()
+	right_inventory.update_total()
 	if left_inventory.total == right_inventory.total:
 		left_inventory.disable_grid()
 		right_inventory.disable_grid()

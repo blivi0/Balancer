@@ -1,18 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvdcr6yw64lg1"]
+[gd_scene load_steps=3 format=3 uid="uid://dvdcr6yw64lg1"]
 
 [ext_resource type="Script" path="res://scenes/slots/slot.gd" id="1_o8bka"]
-[ext_resource type="PackedScene" uid="uid://dv6lwck4uafch" path="res://scenes/slots/slot_effect.tscn" id="3_bunfc"]
-[ext_resource type="PackedScene" uid="uid://dbb2axdp6ve3v" path="res://scenes/slots/slot_item.tscn" id="4_ld1gy"]
+[ext_resource type="Resource" uid="uid://wntjvf4vgcr6" path="res://resources/effects/base_effect.tres" id="2_yelnl"]
 
 [node name="Slot" type="Control"]
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 32.0
 offset_bottom = 32.0
 script = ExtResource("1_o8bka")
+effect = ExtResource("2_yelnl")
 
-[node name="SlotEffect" parent="." instance=ExtResource("3_bunfc")]
+[node name="SlotEffect" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -21,12 +22,38 @@ offset_left = -16.0
 offset_right = 16.0
 offset_bottom = 32.0
 grow_horizontal = 2
+mouse_filter = 2
 
-[node name="SlotItem" parent="." instance=ExtResource("4_ld1gy")]
+[node name="EffectTextureRect" type="TextureRect" parent="SlotEffect"]
+layout_mode = 2
+expand_mode = 1
+
+[node name="SlotItem" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -16.0
 offset_right = 16.0
+offset_bottom = 44.0
 grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="TextureContainer" type="PanelContainer" parent="SlotItem"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ItemTextureRect" type="TextureRect" parent="SlotItem/TextureContainer"]
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="LabelContainer" type="PanelContainer" parent="SlotItem"]
+layout_mode = 2
+
+[node name="ItemLabel" type="Label" parent="SlotItem/LabelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "0"

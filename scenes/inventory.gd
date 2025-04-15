@@ -26,7 +26,6 @@ func update_total() -> void:
 	label.text = str(total)
 
 func on_grid_changed() -> void:
-	update_total()
 	inventory_changed.emit()
 
 func disable_grid() -> void:

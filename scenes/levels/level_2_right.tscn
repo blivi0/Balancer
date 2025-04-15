@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_x2uac"]
 [ext_resource type="Resource" uid="uid://w0vugw8u4tc5" path="res://resources/effects/lock_effect.tres" id="2_0h52p"]
 [ext_resource type="Resource" uid="uid://7lnnkb6p6gei" path="res://resources/effects/weight_effect.tres" id="2_t00ky"]
-[ext_resource type="Script" path="res://scripts/resources/slot_item_resource.gd" id="3_5rc6y"]
+[ext_resource type="Script" path="res://scripts/resources/slot_item.gd" id="3_5rc6y"]
 [ext_resource type="Texture2D" uid="uid://ceomsqy5wdtja" path="res://icon.svg" id="4_e1k0f"]
 
 [sub_resource type="Resource" id="Resource_3ocjk"]

@@ -1,26 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7452osdgjly8"]
+[gd_scene load_steps=4 format=3 uid="uid://c7452osdgjly8"]
 
 [ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_r6koq"]
-[ext_resource type="Script" path="res://scripts/resources/slot_item_resource.gd" id="2_65f4g"]
-[ext_resource type="Texture2D" uid="uid://ceomsqy5wdtja" path="res://icon.svg" id="3_w2f36"]
-
-[sub_resource type="Resource" id="Resource_cyvx3"]
-script = ExtResource("2_65f4g")
-texture = ExtResource("3_w2f36")
-weight = 30
-
-[sub_resource type="Resource" id="Resource_xkv4a"]
-script = ExtResource("2_65f4g")
-texture = ExtResource("3_w2f36")
-weight = 70
+[ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_t05x2"]
+[ext_resource type="Resource" uid="uid://bg2o4joduo023" path="res://resources/items/paper_item.tres" id="3_4v6rl"]
 
 [node name="Level1Left" instance=ExtResource("1_r6koq")]
+columns = 4
 
-[node name="SlotItem" parent="Slot" index="1"]
-item = SubResource("Resource_cyvx3")
+[node name="Slot" parent="." index="0" instance=ExtResource("2_t05x2")]
+layout_mode = 2
+item = ExtResource("3_4v6rl")
 
-[node name="SlotItem" parent="Slot5" index="1"]
-item = SubResource("Resource_xkv4a")
+[node name="Slot2" parent="." index="1" instance=ExtResource("2_t05x2")]
+layout_mode = 2
 
-[editable path="Slot"]
-[editable path="Slot5"]
+[node name="Slot3" parent="." index="2" instance=ExtResource("2_t05x2")]
+layout_mode = 2
+
+[node name="Slot4" parent="." index="3" instance=ExtResource("2_t05x2")]
+layout_mode = 2
+
+[node name="Slot5" parent="." index="4" instance=ExtResource("2_t05x2")]
+layout_mode = 2
+
+[node name="Slot6" parent="." index="5" instance=ExtResource("2_t05x2")]
+layout_mode = 2
+
+[node name="Slot7" parent="." index="6" instance=ExtResource("2_t05x2")]
+layout_mode = 2
+
+[node name="Slot8" parent="." index="7" instance=ExtResource("2_t05x2")]
+layout_mode = 2

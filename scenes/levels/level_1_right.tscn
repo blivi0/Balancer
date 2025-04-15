@@ -1,31 +1,31 @@
-[gd_scene load_steps=7 format=3 uid="uid://cut65aiw28ecj"]
+[gd_scene load_steps=3 format=3 uid="uid://cut65aiw28ecj"]
 
 [ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_3xha7"]
-[ext_resource type="Resource" uid="uid://cthfs3lq4ecd" path="res://resources/effects/float_effect.tres" id="2_pugpa"]
-[ext_resource type="Script" path="res://scripts/resources/slot_item_resource.gd" id="3_u7gr2"]
-[ext_resource type="Texture2D" uid="uid://ceomsqy5wdtja" path="res://icon.svg" id="4_6lchx"]
-
-[sub_resource type="Resource" id="Resource_4tbq2"]
-script = ExtResource("3_u7gr2")
-texture = ExtResource("4_6lchx")
-weight = 50
-
-[sub_resource type="Resource" id="Resource_lpbg6"]
-script = ExtResource("3_u7gr2")
-texture = ExtResource("4_6lchx")
-weight = 40
+[ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_5pbtm"]
 
 [node name="Level1Right" instance=ExtResource("1_3xha7")]
+columns = 4
 
-[node name="SlotEffect" parent="Slot5" index="0"]
-effect = ExtResource("2_pugpa")
+[node name="Slot" parent="." index="0" instance=ExtResource("2_5pbtm")]
+layout_mode = 2
 
-[node name="SlotItem" parent="Slot6" index="1"]
-item = SubResource("Resource_4tbq2")
+[node name="Slot2" parent="." index="1" instance=ExtResource("2_5pbtm")]
+layout_mode = 2
 
-[node name="SlotItem" parent="Slot7" index="1"]
-item = SubResource("Resource_lpbg6")
+[node name="Slot3" parent="." index="2" instance=ExtResource("2_5pbtm")]
+layout_mode = 2
 
-[editable path="Slot5"]
-[editable path="Slot6"]
-[editable path="Slot7"]
+[node name="Slot4" parent="." index="3" instance=ExtResource("2_5pbtm")]
+layout_mode = 2
+
+[node name="Slot5" parent="." index="4" instance=ExtResource("2_5pbtm")]
+layout_mode = 2
+
+[node name="Slot6" parent="." index="5" instance=ExtResource("2_5pbtm")]
+layout_mode = 2
+
+[node name="Slot7" parent="." index="6" instance=ExtResource("2_5pbtm")]
+layout_mode = 2
+
+[node name="Slot8" parent="." index="7" instance=ExtResource("2_5pbtm")]
+layout_mode = 2
