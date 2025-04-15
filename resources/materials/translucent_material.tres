@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://d6lt5msrphyc"]
+
+[ext_resource type="Shader" path="res://resources/materials/translucent_shader.gdshader" id="1_su86j"]
+
+[resource]
+shader = ExtResource("1_su86j")

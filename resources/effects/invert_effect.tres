@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvertEffect" load_steps=3 format=3 uid="uid://bs4xpmy5wad0i"]
+
+[ext_resource type="Script" path="res://scripts/resources/effects/invert_effect.gd" id="1_bu6wx"]
+[ext_resource type="Texture2D" uid="uid://ceomsqy5wdtja" path="res://icon.svg" id="2_b5j2g"]
+
+[resource]
+script = ExtResource("1_bu6wx")
+texture = ExtResource("2_b5j2g")
+name = "Invert"
+description = "The item's weight is inverted (e.g., weight of 3 becomes -3)."

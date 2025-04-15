@@ -1,5 +1,5 @@
 extends EffectItem
 class_name IronBlockItem
 
-func apply_effect(weight: int) -> int:
-	return weight + 5
+func apply_weight(other_weight: int) -> int:
+	return other_weight + 5

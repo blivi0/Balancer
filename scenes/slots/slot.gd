@@ -13,6 +13,8 @@ var effective_weight := 0
 var can_drag = true
 
 signal slot_changed
+signal slot_hovered(item: SlotItem, effect: SlotEffect)
+signal slot_unhovered
 
 func _ready() -> void:
 	effect_texture_rect.texture = effect.texture
@@ -32,12 +34,14 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	var temp = item
 	item = new_slot.item
 	new_slot.item = temp
+	_on_mouse_entered()
 	slot_changed.emit()
 
 func init_item() -> void:
 	if item:
-		set_item_weight(effect.apply_effect(item.weight))
 		item_texture_rect.texture = item.texture
+		effect.apply_material(item_texture_rect)
+		set_item_weight(effect.apply_weight(item.weight))
 		slot_item.show()
 	else:
 		effective_weight = 0
@@ -45,14 +49,15 @@ func init_item() -> void:
 
 func apply_item_effect(effect_item: EffectItem) -> void:
 	if item:
-		set_item_weight(effect_item.apply_effect(effective_weight))
+		set_item_weight(effect_item.apply_weight(effective_weight))
 
 func set_item_weight(weight: int) -> void:
 	effective_weight = weight
 	item_label.text = str(weight)
 
 func _on_mouse_entered() -> void:
-	pass
+	if item is EffectItem or effect.description:
+		slot_hovered.emit(item, effect)
 
 func _on_mouse_exited() -> void:
-	pass
+	slot_unhovered.emit()

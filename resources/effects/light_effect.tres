@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LightEffect" load_steps=3 format=3 uid="uid://dadx5bjhfwnap"]
+
+[ext_resource type="Script" path="res://scripts/resources/effects/light_effect.gd" id="1_j8x8w"]
+[ext_resource type="Texture2D" uid="uid://ceomsqy5wdtja" path="res://icon.svg" id="2_y3tx2"]
+
+[resource]
+script = ExtResource("1_j8x8w")
+texture = ExtResource("2_y3tx2")
+name = "Light"
+description = "The item in this slot doesn't contribute to the total weight at all."

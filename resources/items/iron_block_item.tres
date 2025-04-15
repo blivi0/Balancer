@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="IronBlockItem" load_steps=4 format=3 uid="uid://egahxugh1mcp"]
+
+[ext_resource type="Script" path="res://scripts/resources/items/iron_block_item.gd" id="1_n4ix1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gmuwg"]
+load_path = "res://.godot/imported/items.png-bbdc37fb0594eb66b996033d9edd41a1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck2g1"]
+atlas = SubResource("CompressedTexture2D_gmuwg")
+region = Rect2(142, 149, 64, 64)
+
+[resource]
+script = ExtResource("1_n4ix1")
+name = "Iron Block"
+description = "Increases weight of nearby items by 5"
+texture = SubResource("AtlasTexture_ck2g1")
+weight = 50
