@@ -18,6 +18,9 @@ func load_level(level_num: int, side: String) -> void:
 	move_child(slot_grid, 0)
 	update_total()
 
+func get_slots() -> Array[Slot]:
+	return slot_grid.slots
+
 func update_total() -> void:
 	total = slot_grid.get_total_weight()
 	label.text = str(total)

@@ -6,34 +6,21 @@ class_name InventoryController
 @onready var left_inventory: Inventory = $LeftContainer/LeftInventory
 @onready var right_inventory: Inventory = $RightContainer/RightInventory
 
+var all_slots: Array[Slot]
+
 signal balanced
-signal hovered(item: SlotItem, effect: SlotEffect)
-signal unhovered
-
-func _ready() -> void:
-	load_level(1)
-	connect_signals(left_inventory.slot_grid)
-	connect_signals(right_inventory.slot_grid)
-
-func connect_signals(slot_grid: SlotGrid) -> void:
-	slot_grid.grid_changed.connect(on_inventory_changed)
-	slot_grid.grid_hovered.connect(on_inventory_hovered)
-	slot_grid.grid_unhovered.connect(on_inventory_unhovered)
 
 func load_level(level_num: int) -> void:
 	left_inventory.load_level(level_num, "left")
 	right_inventory.load_level(level_num, "right")
+	all_slots = left_inventory.get_slots() + right_inventory.get_slots()
+	for slot in all_slots:
+		slot.updated.connect(on_slot_updated)
 
-func on_inventory_changed() -> void:
+func on_slot_updated() -> void:
 	left_inventory.update_total()
 	right_inventory.update_total()
 	if left_inventory.total == right_inventory.total:
 		left_inventory.disable_grid()
 		right_inventory.disable_grid()
 		balanced.emit()
-
-func on_inventory_hovered(item: SlotItem, effect: SlotEffect) -> void:
-	hovered.emit(item, effect)
-
-func on_inventory_unhovered() -> void:
-	unhovered.emit()

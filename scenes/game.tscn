@@ -52,9 +52,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -53.0
-offset_top = -37.0
+offset_top = -54.5
 offset_right = 53.0
-offset_bottom = 37.0
+offset_bottom = 54.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -75,6 +75,10 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Winner!"
+
+[node name="RestartButton" type="Button" parent="WinContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
 
 [node name="NextLevelButton" type="Button" parent="WinContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2

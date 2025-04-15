@@ -4,34 +4,15 @@ class_name SlotGrid
 var slots: Array[Slot]
 var rows: int
 
-signal grid_changed
-signal grid_hovered(item: SlotItem, effect: SlotEffect)
-signal grid_unhovered
-
 func _ready() -> void:
 	slots = []
 	var children = get_children()
 	for child in children:
 		var slot = child as Slot
-		connect_signals(slot)
 		slots.append(slot)
 	update_slot_weights()
 	@warning_ignore("integer_division")
 	rows = slots.size() / columns
-
-func connect_signals(slot: Slot) -> void:
-	slot.slot_changed.connect(on_slot_changed)
-	slot.slot_hovered.connect(on_slot_hovered)
-	slot.slot_unhovered.connect(on_slot_unhovered)
-
-func on_slot_changed() -> void:
-	grid_changed.emit()
-
-func on_slot_hovered(item: SlotItem, effect: SlotEffect) -> void:
-	grid_hovered.emit(item, effect)
-
-func on_slot_unhovered() -> void:
-	grid_unhovered.emit()
 
 func get_total_weight() -> int:
 	update_slot_weights()
