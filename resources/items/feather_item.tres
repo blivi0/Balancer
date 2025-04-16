@@ -1,17 +1,15 @@
 [gd_resource type="Resource" script_class="FeatherItem" load_steps=4 format=3 uid="uid://cx32j81fblskt"]
 
 [ext_resource type="Script" path="res://scripts/resources/items/feather_item.gd" id="1_vel3v"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_in6ev"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7jbs6"]
-load_path = "res://.godot/imported/items.png-bbdc37fb0594eb66b996033d9edd41a1.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0vpbw"]
-atlas = SubResource("CompressedTexture2D_7jbs6")
-region = Rect2(14, 149, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v6ef"]
+atlas = ExtResource("2_in6ev")
+region = Rect2(144, 32, 16, 16)
 
 [resource]
 script = ExtResource("1_vel3v")
 name = "Feather"
 description = "Reduces weight of nearby items by 5"
-texture = SubResource("AtlasTexture_0vpbw")
+texture = SubResource("AtlasTexture_7v6ef")
 weight = 1

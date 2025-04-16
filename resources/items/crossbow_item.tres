@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SlotItem" load_steps=4 format=3 uid="uid://bc6f3y4uvna4d"]
+
+[ext_resource type="Script" path="res://scripts/resources/items/slot_item.gd" id="1_epk8l"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_a4ogb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nml2"]
+atlas = ExtResource("2_a4ogb")
+region = Rect2(304, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_epk8l")
+texture = SubResource("AtlasTexture_0nml2")
+weight = 15

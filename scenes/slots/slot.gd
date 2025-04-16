@@ -4,10 +4,10 @@ class_name Slot
 @export var effect: SlotEffect
 @export var item: SlotItem
 
-@onready var effect_texture_rect: TextureRect = $SlotEffect/EffectTextureRect
-@onready var slot_item: VBoxContainer = $SlotItem
-@onready var item_texture_rect: TextureRect = $SlotItem/TextureContainer/ItemTextureRect
-@onready var item_label: Label = $SlotItem/LabelContainer/ItemLabel
+@onready var effect_texture_rect: TextureRect = $VBoxContainer/SlotContainer/EffectTextureRect
+@onready var item_texture_rect: TextureRect = $VBoxContainer/SlotContainer/ItemTextureRect
+@onready var weight_panel_container: PanelContainer = $VBoxContainer/WeightPanelContainer
+@onready var weight_label: Label = $VBoxContainer/WeightPanelContainer/WeightLabel
 
 var effective_weight := 0
 var can_drag = true
@@ -23,7 +23,9 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	if not item or not can_drag:
 		return null
 	
-	set_drag_preview(slot_item.duplicate())
+	var control = Control.new()
+	control.add_child(item_texture_rect.duplicate())
+	set_drag_preview(control)
 	return self
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
@@ -42,10 +44,12 @@ func init_item() -> void:
 		item_texture_rect.texture = item.texture
 		effect.apply_material(item_texture_rect)
 		set_item_weight(effect.apply_weight(item.weight))
-		slot_item.show()
+		item_texture_rect.show()
+		weight_panel_container.show()
 	else:
 		effective_weight = 0
-		slot_item.hide()
+		item_texture_rect.hide()
+		weight_panel_container.hide()
 
 func apply_item_effect(effect_item: EffectItem) -> void:
 	if item:
@@ -53,7 +57,7 @@ func apply_item_effect(effect_item: EffectItem) -> void:
 
 func set_item_weight(weight: int) -> void:
 	effective_weight = weight
-	item_label.text = str(weight)
+	weight_label.text = str(weight)
 
 func _on_mouse_entered() -> void:
 	if item is EffectItem or effect.description:
