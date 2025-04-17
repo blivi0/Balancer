@@ -1,5 +1,10 @@
 extends Resource
 class_name SlotItem
 
+const DEFAULT_PICKUP_AUDIO := preload("res://assets/audio/draft/item_general_pickup_draft_02.wav")
+const DEFAULT_DROP_AUDIO := preload("res://assets/audio/draft/item_general_drop_draft_02.wav")
+
 @export var texture: Texture2D
 @export var weight: int
+@export var pickup_audio: AudioStream = DEFAULT_PICKUP_AUDIO
+@export var drop_audio: AudioStream = DEFAULT_DROP_AUDIO

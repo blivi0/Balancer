@@ -86,3 +86,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Next Level"
+
+[node name="DragSound" type="AudioStreamPlayer" parent="."]
+
+[node name="DropSound" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"

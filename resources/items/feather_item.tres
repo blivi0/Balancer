@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="FeatherItem" load_steps=4 format=3 uid="uid://cx32j81fblskt"]
+[gd_resource type="Resource" script_class="FeatherItem" load_steps=6 format=3 uid="uid://cx32j81fblskt"]
 
+[ext_resource type="AudioStream" uid="uid://c6mgxkb0exy8r" path="res://assets/audio/draft/item_feather_drop_draft_01.wav" id="1_5lgc4"]
 [ext_resource type="Script" path="res://scripts/resources/items/feather_item.gd" id="1_vel3v"]
+[ext_resource type="AudioStream" uid="uid://uq80eepyder3" path="res://assets/audio/draft/item_feather_pickup_draft_01.wav" id="2_1mwpu"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_in6ev"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7v6ef"]
@@ -13,3 +15,5 @@ name = "Feather"
 description = "Reduces weight of nearby items by 5"
 texture = SubResource("AtlasTexture_7v6ef")
 weight = 1
+pickup_audio = ExtResource("2_1mwpu")
+drop_audio = ExtResource("1_5lgc4")

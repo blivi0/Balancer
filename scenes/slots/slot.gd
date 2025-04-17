@@ -15,6 +15,8 @@ var can_drag = true
 signal updated
 signal hovered(item: SlotItem, effect: SlotEffect)
 signal unhovered
+signal dragged(item: SlotItem)
+signal dropped(item: SlotItem)
 
 func _ready() -> void:
 	effect_texture_rect.texture = effect.texture
@@ -26,10 +28,11 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	var control = Control.new()
 	control.add_child(item_texture_rect.duplicate())
 	set_drag_preview(control)
+	dragged.emit(item)
 	return self
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
-	return effect.can_drop_data() and data is Slot
+	return data is Slot
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	var new_slot = data as Slot
@@ -37,6 +40,7 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	item = new_slot.item
 	new_slot.item = temp
 	_on_mouse_entered()
+	dropped.emit(item)
 	updated.emit()
 
 func init_item() -> void:
