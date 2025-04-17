@@ -6,5 +6,7 @@ const DEFAULT_DROP_AUDIO := preload("res://assets/audio/draft/item_general_drop_
 
 @export var texture: Texture2D
 @export var weight: int
+@export var name: String
+@export var description: String
 @export var pickup_audio: AudioStream = DEFAULT_PICKUP_AUDIO
 @export var drop_audio: AudioStream = DEFAULT_DROP_AUDIO

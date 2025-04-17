@@ -1,13 +1,21 @@
-[gd_resource type="Resource" script_class="SlotItem" load_steps=4 format=3 uid="uid://btqc46e62ypoh"]
+[gd_resource type="Resource" script_class="SlotItem" load_steps=6 format=3 uid="uid://btqc46e62ypoh"]
 
+[ext_resource type="AudioStream" uid="uid://5www7tt0fh4w" path="res://assets/audio/draft/item_general_drop_draft_02.wav" id="1_5heb1"]
 [ext_resource type="Script" path="res://scripts/resources/items/slot_item.gd" id="1_gbibf"]
-[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_7f8hr"]
+[ext_resource type="AudioStream" uid="uid://clsqbe3div6fq" path="res://assets/audio/draft/item_general_pickup_draft_02.wav" id="2_fopg5"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lbco6"]
-atlas = ExtResource("2_7f8hr")
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_grcd1"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwysh"]
+atlas = SubResource("CompressedTexture2D_grcd1")
 region = Rect2(288, 16, 16, 16)
 
 [resource]
 script = ExtResource("1_gbibf")
-texture = SubResource("AtlasTexture_lbco6")
+texture = SubResource("AtlasTexture_bwysh")
 weight = 8
+name = ""
+description = ""
+pickup_audio = ExtResource("2_fopg5")
+drop_audio = ExtResource("1_5heb1")

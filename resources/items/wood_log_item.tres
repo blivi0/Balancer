@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="SlotItem" load_steps=4 format=3 uid="uid://d20r62xi1yv4y"]
+[gd_resource type="Resource" script_class="SlotItem" load_steps=6 format=3 uid="uid://d20r62xi1yv4y"]
 
+[ext_resource type="AudioStream" uid="uid://5www7tt0fh4w" path="res://assets/audio/draft/item_general_drop_draft_02.wav" id="1_c3ts1"]
 [ext_resource type="Script" path="res://scripts/resources/items/slot_item.gd" id="1_jtvd5"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_13boy"]
+[ext_resource type="AudioStream" uid="uid://clsqbe3div6fq" path="res://assets/audio/draft/item_general_pickup_draft_02.wav" id="2_uhisa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rowkn"]
 atlas = ExtResource("2_13boy")
@@ -11,3 +13,7 @@ region = Rect2(224, 16, 16, 16)
 script = ExtResource("1_jtvd5")
 texture = SubResource("AtlasTexture_rowkn")
 weight = 4
+name = ""
+description = ""
+pickup_audio = ExtResource("2_uhisa")
+drop_audio = ExtResource("1_c3ts1")

@@ -17,6 +17,7 @@ signal hovered(item: SlotItem, effect: SlotEffect)
 signal unhovered
 signal dragged(item: SlotItem)
 signal dropped(item: SlotItem)
+signal drop_failed
 
 func _ready() -> void:
 	effect_texture_rect.texture = effect.texture
@@ -35,12 +36,20 @@ func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 	return data is Slot
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
-	var new_slot = data as Slot
-	var temp = item
-	item = new_slot.item
-	new_slot.item = temp
-	_on_mouse_entered()
-	dropped.emit(item)
+	var source_slot = data as Slot
+	if effect.name == "Locked":
+		if source_slot.item.name != "Key":
+			drop_failed.emit()
+			return
+		unlock()
+		source_slot.item = null
+		_on_mouse_exited()
+	else:
+		var temp = item
+		item = source_slot.item
+		source_slot.item = temp
+		dropped.emit(item)
+		_on_mouse_entered()
 	updated.emit()
 
 func init_item() -> void:
@@ -63,8 +72,13 @@ func set_item_weight(weight: int) -> void:
 	effective_weight = weight
 	weight_label.text = str(weight)
 
+func unlock() -> void:
+	# TODO: play animation
+	effect = load("res://resources/effects/base_effect.tres") as SlotEffect
+	effect_texture_rect.texture = effect.texture
+
 func _on_mouse_entered() -> void:
-	if item is EffectItem or effect.description:
+	if (item and item.description) or effect.description:
 		hovered.emit(item, effect)
 
 func _on_mouse_exited() -> void:

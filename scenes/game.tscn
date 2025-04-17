@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://3m2amnmp0x3c"]
+[gd_scene load_steps=5 format=3 uid="uid://3m2amnmp0x3c"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_rse5h"]
 [ext_resource type="PackedScene" uid="uid://cxx57oxpc1hs1" path="res://scenes/inventory_controller.tscn" id="2_dheqr"]
 [ext_resource type="PackedScene" uid="uid://dmwqj1xxuahjc" path="res://scenes/description_container.tscn" id="3_tpjy8"]
+[ext_resource type="AudioStream" uid="uid://cpfslkis7gg6t" path="res://assets/audio/draft/item_locked_draft_02.wav" id="4_t8egk"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -90,4 +91,8 @@ text = "Next Level"
 [node name="DragSound" type="AudioStreamPlayer" parent="."]
 
 [node name="DropSound" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="LockSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_t8egk")
 bus = &"SFX"

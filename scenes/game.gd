@@ -12,6 +12,7 @@ const MAX_LEVEL := 1
 @onready var next_level_button: Button = $WinContainer/MarginContainer/VBoxContainer/NextLevelButton
 @onready var drag_sound: AudioStreamPlayer = $DragSound
 @onready var drop_sound: AudioStreamPlayer = $DropSound
+@onready var lock_sound: AudioStreamPlayer = $LockSound
 
 var level := 1
 
@@ -32,6 +33,7 @@ func load_level() -> void:
 		slot.unhovered.connect(on_slot_unhovered)
 		slot.dragged.connect(on_slot_dragged)
 		slot.dropped.connect(on_slot_dropped)
+		slot.drop_failed.connect(on_slot_drop_failed)
 
 func on_inventory_balanced() -> void:
 	if level >= MAX_LEVEL:
@@ -47,7 +49,7 @@ func on_next_level_pressed() -> void:
 	load_level()
 
 func on_slot_hovered(item: SlotItem, effect: SlotEffect) -> void:
-	if item is EffectItem:
+	if item and item.description:
 		item_description.show_description(item.texture, item.name, item.description)
 	if effect.description:
 		slot_description.show_description(effect.texture, effect.name, effect.description)
@@ -63,3 +65,6 @@ func on_slot_dragged(item: SlotItem) -> void:
 func on_slot_dropped(item: SlotItem) -> void:
 	drop_sound.stream = item.drop_audio
 	drop_sound.play()
+
+func on_slot_drop_failed() -> void:
+	lock_sound.play()

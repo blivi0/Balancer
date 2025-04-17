@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://1fci8al4kefy"]
+[gd_scene load_steps=11 format=3 uid="uid://1fci8al4kefy"]
 
 [ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_gq022"]
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_r1wfb"]
 [ext_resource type="Resource" uid="uid://n4nvs0ip1cfs" path="res://resources/items/shield_item.tres" id="3_o65jw"]
 [ext_resource type="Resource" uid="uid://egahxugh1mcp" path="res://resources/items/iron_block_item.tres" id="4_fa6pu"]
+[ext_resource type="Resource" uid="uid://dxomgo1me4tuq" path="res://resources/items/key_item.tres" id="4_kxc27"]
 [ext_resource type="Resource" uid="uid://cx32j81fblskt" path="res://resources/items/feather_item.tres" id="5_evr65"]
 [ext_resource type="Resource" uid="uid://cxetoso7ot27r" path="res://resources/effects/heavy_effect.tres" id="6_60drc"]
 [ext_resource type="Resource" uid="uid://bs4xpmy5wad0i" path="res://resources/effects/invert_effect.tres" id="7_5xj41"]
 [ext_resource type="Resource" uid="uid://dadx5bjhfwnap" path="res://resources/effects/light_effect.tres" id="8_b5wq0"]
+[ext_resource type="Resource" uid="uid://cwjeex84031vg" path="res://resources/effects/lock_effect.tres" id="10_6mef3"]
 
 [node name="TestLevelRight" instance=ExtResource("1_gq022")]
 columns = 4
@@ -21,7 +23,7 @@ layout_mode = 2
 
 [node name="Slot3" parent="." index="2" instance=ExtResource("2_r1wfb")]
 layout_mode = 2
-item = ExtResource("4_fa6pu")
+item = ExtResource("4_kxc27")
 
 [node name="Slot4" parent="." index="3" instance=ExtResource("2_r1wfb")]
 layout_mode = 2
@@ -38,6 +40,7 @@ layout_mode = 2
 
 [node name="Slot8" parent="." index="7" instance=ExtResource("2_r1wfb")]
 layout_mode = 2
+item = ExtResource("4_fa6pu")
 
 [node name="Slot9" parent="." index="8" instance=ExtResource("2_r1wfb")]
 layout_mode = 2
@@ -53,3 +56,4 @@ effect = ExtResource("8_b5wq0")
 
 [node name="Slot12" parent="." index="11" instance=ExtResource("2_r1wfb")]
 layout_mode = 2
+effect = ExtResource("10_6mef3")

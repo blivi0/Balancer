@@ -10,5 +10,5 @@ region = Rect2(9, 73, 30, 30)
 [resource]
 script = ExtResource("1_bu6wx")
 texture = SubResource("AtlasTexture_6ds8s")
-name = "Invert"
+name = "Inverted"
 description = "The item's weight is inverted (e.g., weight of 3 becomes -3)."

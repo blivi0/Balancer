@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="SlotItem" load_steps=4 format=3 uid="uid://bg2o4joduo023"]
+[gd_resource type="Resource" script_class="SlotItem" load_steps=6 format=3 uid="uid://bg2o4joduo023"]
 
+[ext_resource type="AudioStream" uid="uid://5www7tt0fh4w" path="res://assets/audio/draft/item_general_drop_draft_02.wav" id="1_hmhmq"]
 [ext_resource type="Script" path="res://scripts/resources/items/slot_item.gd" id="1_oevm7"]
+[ext_resource type="AudioStream" uid="uid://clsqbe3div6fq" path="res://assets/audio/draft/item_general_pickup_draft_02.wav" id="2_m8mbt"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_coqrk"]
 load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
@@ -13,3 +15,7 @@ region = Rect2(144, 16, 16, 16)
 script = ExtResource("1_oevm7")
 texture = SubResource("AtlasTexture_n01oq")
 weight = 1
+name = ""
+description = ""
+pickup_audio = ExtResource("2_m8mbt")
+drop_audio = ExtResource("1_hmhmq")

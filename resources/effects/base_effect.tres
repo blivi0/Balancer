@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="SlotEffect" load_steps=4 format=3 uid="uid://wntjvf4vgcr6"]
+[gd_resource type="Resource" script_class="SlotEffect" load_steps=4 format=3 uid="uid://dttjcbm82pnwv"]
 
 [ext_resource type="Script" path="res://scripts/resources/effects/slot_effect.gd" id="1_36d5l"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_3mwsf"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m1kql"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6yn2"]
 atlas = ExtResource("2_3mwsf")
 region = Rect2(13, 29, 22, 22)
 
 [resource]
 script = ExtResource("1_36d5l")
-texture = SubResource("AtlasTexture_m1kql")
+texture = SubResource("AtlasTexture_s6yn2")
 name = ""
 description = ""
