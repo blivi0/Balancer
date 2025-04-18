@@ -6,13 +6,10 @@ const MAX_LEVEL := 1
 
 @onready var inventory_controller: InventoryController = $InventoryController
 @onready var item_description: DescriptionContainer = $ItemDescription
-@onready var slot_description: DescriptionContainer = $SlotDescription
+@onready var effect_description: DescriptionContainer = $EffectDescription
 @onready var win_container: PanelContainer = $WinContainer
 @onready var restart_button: Button = $WinContainer/MarginContainer/VBoxContainer/RestartButton
 @onready var next_level_button: Button = $WinContainer/MarginContainer/VBoxContainer/NextLevelButton
-@onready var drag_sound: AudioStreamPlayer = $DragSound
-@onready var drop_sound: AudioStreamPlayer = $DropSound
-@onready var lock_sound: AudioStreamPlayer = $LockSound
 
 var level := 1
 
@@ -29,11 +26,9 @@ func load_level() -> void:
 	win_container.hide()
 	inventory_controller.load_level(level)
 	for slot in inventory_controller.all_slots:
-		slot.hovered.connect(on_slot_hovered)
+		slot.item_hovered.connect(on_slot_item_hovered)
+		slot.effect_hovered.connect(on_slot_effect_hovered)
 		slot.unhovered.connect(on_slot_unhovered)
-		slot.dragged.connect(on_slot_dragged)
-		slot.dropped.connect(on_slot_dropped)
-		slot.drop_failed.connect(on_slot_drop_failed)
 
 func on_inventory_balanced() -> void:
 	if level >= MAX_LEVEL:
@@ -48,23 +43,12 @@ func on_next_level_pressed() -> void:
 	level += 1
 	load_level()
 
-func on_slot_hovered(item: SlotItem, effect: SlotEffect) -> void:
-	if item and item.description:
-		item_description.show_description(item.texture, item.name, item.description)
-	if effect.description:
-		slot_description.show_description(effect.texture, effect.name, effect.description)
+func on_slot_item_hovered(info: SlotInfo) -> void:
+	item_description.show_description(info)
+
+func on_slot_effect_hovered(info: SlotInfo) -> void:
+	effect_description.show_description(info)
 
 func on_slot_unhovered() -> void:
-	item_description.hide_description()
-	slot_description.hide_description()
-
-func on_slot_dragged(item: SlotItem) -> void:
-	drag_sound.stream = item.pickup_audio
-	drag_sound.play()
-
-func on_slot_dropped(item: SlotItem) -> void:
-	drop_sound.stream = item.drop_audio
-	drop_sound.play()
-
-func on_slot_drop_failed() -> void:
-	lock_sound.play()
+	item_description.hide()
+	effect_description.hide()

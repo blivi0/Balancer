@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://cxetoso7ot27r" path="res://resources/effects/heavy_effect.tres" id="6_60drc"]
 [ext_resource type="Resource" uid="uid://bs4xpmy5wad0i" path="res://resources/effects/invert_effect.tres" id="7_5xj41"]
 [ext_resource type="Resource" uid="uid://dadx5bjhfwnap" path="res://resources/effects/light_effect.tres" id="8_b5wq0"]
-[ext_resource type="Resource" uid="uid://cwjeex84031vg" path="res://resources/effects/lock_effect.tres" id="10_6mef3"]
+[ext_resource type="PackedScene" uid="uid://fyjudb5e33g" path="res://scenes/slots/locked_slot.tscn" id="10_re2uy"]
 
 [node name="TestLevelRight" instance=ExtResource("1_gq022")]
 columns = 4
@@ -54,6 +54,5 @@ effect = ExtResource("7_5xj41")
 layout_mode = 2
 effect = ExtResource("8_b5wq0")
 
-[node name="Slot12" parent="." index="11" instance=ExtResource("2_r1wfb")]
+[node name="LockedSlot" parent="." index="11" instance=ExtResource("10_re2uy")]
 layout_mode = 2
-effect = ExtResource("10_6mef3")

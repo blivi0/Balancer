@@ -1,18 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvdcr6yw64lg1"]
+[gd_scene load_steps=3 format=3 uid="uid://dvdcr6yw64lg1"]
 
 [ext_resource type="Script" path="res://scenes/slots/slot.gd" id="1_o8bka"]
-[ext_resource type="Script" path="res://scripts/resources/effects/slot_effect.gd" id="2_y4gl2"]
-[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="3_4t3op"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m1kql"]
-atlas = ExtResource("3_4t3op")
-region = Rect2(13, 29, 22, 22)
-
-[sub_resource type="Resource" id="Resource_ute55"]
-script = ExtResource("2_y4gl2")
-texture = SubResource("AtlasTexture_m1kql")
-name = ""
-description = ""
+[ext_resource type="Resource" uid="uid://dttjcbm82pnwv" path="res://resources/effects/base_effect.tres" id="2_osh6l"]
 
 [node name="Slot" type="Control"]
 custom_minimum_size = Vector2(32, 32)
@@ -21,7 +10,7 @@ anchors_preset = 0
 offset_right = 32.0
 offset_bottom = 32.0
 script = ExtResource("1_o8bka")
-effect = SubResource("Resource_ute55")
+effect = ExtResource("2_osh6l")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -66,6 +55,12 @@ layout_mode = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 8
 text = "0"
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="DropSound" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

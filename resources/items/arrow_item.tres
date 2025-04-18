@@ -11,9 +11,9 @@ region = Rect2(208, 16, 16, 16)
 
 [resource]
 script = ExtResource("1_xx0b6")
-texture = SubResource("AtlasTexture_f67p0")
 weight = 3
-name = ""
-description = ""
 pickup_audio = ExtResource("2_sbldr")
 drop_audio = ExtResource("1_q7im4")
+texture = SubResource("AtlasTexture_f67p0")
+name = ""
+description = ""

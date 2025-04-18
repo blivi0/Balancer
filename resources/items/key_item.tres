@@ -11,9 +11,9 @@ region = Rect2(160, 32, 16, 16)
 
 [resource]
 script = ExtResource("3_20xux")
-texture = SubResource("AtlasTexture_hyo8l")
 weight = 2
-name = "Key"
-description = "Unlocks locked inventory slot. Item is deleted after."
 pickup_audio = ExtResource("2_8jixn")
 drop_audio = ExtResource("1_t6ipo")
+texture = SubResource("AtlasTexture_hyo8l")
+name = "Key"
+description = "Unlocks locked inventory slot. Item is deleted after."

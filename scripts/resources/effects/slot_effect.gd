@@ -1,9 +1,5 @@
-extends Resource
+extends SlotInfo
 class_name SlotEffect
-
-@export var texture: Texture2D
-@export var name: String
-@export var description: String
 
 func apply_weight(weight: int) -> int:
 	return weight
