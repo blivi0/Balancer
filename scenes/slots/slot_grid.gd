@@ -44,7 +44,3 @@ func apply_item_effect(i: int, effect_item: EffectItem) -> void:
 
 func get_slot(row: int, col: int) -> Slot:
 	return slots[row * columns + col]
-
-func disable_slots() -> void:
-	for slot in slots:
-		slot.can_drag = false

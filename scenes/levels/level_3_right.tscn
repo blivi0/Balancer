@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpj2xqf8bhlne"]
+
+[ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_6twgk"]
+[ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_oj0pe"]
+[ext_resource type="Resource" uid="uid://cxetoso7ot27r" path="res://resources/effects/heavy_effect.tres" id="3_1whhq"]
+[ext_resource type="Resource" uid="uid://c4xrohkyxd6as" path="res://resources/items/potion_item.tres" id="3_swtav"]
+[ext_resource type="Resource" uid="uid://d20r62xi1yv4y" path="res://resources/items/wood_log_item.tres" id="4_rq0yh"]
+
+[node name="Level3Right" instance=ExtResource("1_6twgk")]
+columns = 2
+
+[node name="Slot" parent="." index="0" instance=ExtResource("2_oj0pe")]
+layout_mode = 2
+item = ExtResource("3_swtav")
+
+[node name="Slot2" parent="." index="1" instance=ExtResource("2_oj0pe")]
+layout_mode = 2
+item = ExtResource("4_rq0yh")
+
+[node name="Slot3" parent="." index="2" instance=ExtResource("2_oj0pe")]
+layout_mode = 2
+effect = ExtResource("3_1whhq")
+
+[node name="Slot4" parent="." index="3" instance=ExtResource("2_oj0pe")]
+layout_mode = 2

@@ -25,6 +25,7 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	effect_texture_rect.texture = effect.texture
 	source_slot.item = null
 	_on_mouse_exited()
+	updated.emit()
 
 func _on_mouse_entered() -> void:
 	if locked:

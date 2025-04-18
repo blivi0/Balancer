@@ -12,7 +12,7 @@ class_name Slot
 @onready var drop_sound: AudioStreamPlayer = $DropSound
 
 var effective_weight := 0
-var can_drag = true
+var can_drag := true
 
 signal updated
 signal item_hovered(info: SlotInfo)

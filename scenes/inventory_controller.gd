@@ -21,6 +21,9 @@ func on_slot_updated() -> void:
 	left_inventory.update_total()
 	right_inventory.update_total()
 	if left_inventory.total == right_inventory.total:
-		left_inventory.disable_grid()
-		right_inventory.disable_grid()
+		disable_slots()
 		balanced.emit()
+
+func disable_slots() -> void:
+	for slot in all_slots:
+		slot.can_drag = false

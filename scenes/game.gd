@@ -1,8 +1,6 @@
 extends Control
 
-const MAX_LEVEL := 1
-
-@export var debug := false
+const MAX_LEVEL := 4
 
 @onready var inventory_controller: InventoryController = $InventoryController
 @onready var item_description: DescriptionContainer = $ItemDescription
@@ -14,9 +12,6 @@ const MAX_LEVEL := 1
 var level := 1
 
 func _ready() -> void:
-	if debug:
-		level = 99
-	
 	load_level()
 	inventory_controller.balanced.connect(on_inventory_balanced)
 	restart_button.pressed.connect(on_restart_pressed)

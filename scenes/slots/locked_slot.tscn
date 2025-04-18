@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="1_k6dxx"]
 [ext_resource type="Script" path="res://scenes/slots/locked_slot.gd" id="2_hbxlu"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="3_egy4g"]
-[ext_resource type="AudioStream" uid="uid://cpfslkis7gg6t" path="res://assets/audio/draft/item_locked_draft_02.wav" id="3_u3js3"]
+[ext_resource type="AudioStream" uid="uid://m1vm0uif4xd3" path="res://assets/audio/sfx/item_locked_draft_02.wav" id="4_6xxnu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_155fa"]
 atlas = ExtResource("3_egy4g")
@@ -16,5 +16,5 @@ script = ExtResource("2_hbxlu")
 texture = SubResource("AtlasTexture_155fa")
 
 [node name="LockedSound" type="AudioStreamPlayer" parent="." index="3"]
-stream = ExtResource("3_u3js3")
+stream = ExtResource("4_6xxnu")
 bus = &"SFX"

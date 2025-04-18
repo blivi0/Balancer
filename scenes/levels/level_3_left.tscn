@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dimyh3h5y1kvv"]
+
+[ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_d0t2t"]
+[ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_8unlg"]
+[ext_resource type="Resource" uid="uid://bpreo46u130nb" path="res://resources/items/sword_item.tres" id="3_s2st8"]
+[ext_resource type="Resource" uid="uid://n4nvs0ip1cfs" path="res://resources/items/shield_item.tres" id="4_c2kqd"]
+
+[node name="Level3Left" instance=ExtResource("1_d0t2t")]
+columns = 2
+
+[node name="Slot" parent="." index="0" instance=ExtResource("2_8unlg")]
+layout_mode = 2
+item = ExtResource("3_s2st8")
+
+[node name="Slot2" parent="." index="1" instance=ExtResource("2_8unlg")]
+layout_mode = 2
+item = ExtResource("4_c2kqd")
+
+[node name="Slot3" parent="." index="2" instance=ExtResource("2_8unlg")]
+layout_mode = 2
+
+[node name="Slot4" parent="." index="3" instance=ExtResource("2_8unlg")]
+layout_mode = 2

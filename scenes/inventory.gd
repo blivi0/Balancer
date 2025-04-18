@@ -24,6 +24,3 @@ func get_slots() -> Array[Slot]:
 func update_total() -> void:
 	total = slot_grid.get_total_weight()
 	label.text = str(total)
-
-func disable_grid() -> void:
-	slot_grid.disable_slots()

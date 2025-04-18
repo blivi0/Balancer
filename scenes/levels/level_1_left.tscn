@@ -1,42 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7452osdgjly8"]
+[gd_scene load_steps=6 format=3 uid="uid://c7452osdgjly8"]
 
 [ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_r6koq"]
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_t05x2"]
-[ext_resource type="Resource" uid="uid://cx32j81fblskt" path="res://resources/items/feather_item.tres" id="4_iiv3d"]
-[ext_resource type="Resource" uid="uid://bs4xpmy5wad0i" path="res://resources/effects/invert_effect.tres" id="6_5spht"]
+[ext_resource type="Resource" uid="uid://bg2o4joduo023" path="res://resources/items/paper_item.tres" id="3_7u77c"]
+[ext_resource type="Resource" uid="uid://c3wrbe1b1ntd3" path="res://resources/items/leaf_item.tres" id="4_j2858"]
+[ext_resource type="Resource" uid="uid://deedyncguq3qv" path="res://resources/items/stick_item.tres" id="5_1jvwn"]
 
 [node name="Level1Left" instance=ExtResource("1_r6koq")]
-columns = 4
+columns = 2
 
 [node name="Slot" parent="." index="0" instance=ExtResource("2_t05x2")]
 layout_mode = 2
-effect = null
-item = ExtResource("4_iiv3d")
+item = ExtResource("3_7u77c")
 
 [node name="Slot2" parent="." index="1" instance=ExtResource("2_t05x2")]
 layout_mode = 2
-effect = null
+item = ExtResource("4_j2858")
 
 [node name="Slot3" parent="." index="2" instance=ExtResource("2_t05x2")]
 layout_mode = 2
-effect = ExtResource("6_5spht")
+item = ExtResource("5_1jvwn")
 
 [node name="Slot4" parent="." index="3" instance=ExtResource("2_t05x2")]
 layout_mode = 2
-effect = null
-
-[node name="Slot5" parent="." index="4" instance=ExtResource("2_t05x2")]
-layout_mode = 2
-effect = null
-
-[node name="Slot6" parent="." index="5" instance=ExtResource("2_t05x2")]
-layout_mode = 2
-effect = null
-
-[node name="Slot7" parent="." index="6" instance=ExtResource("2_t05x2")]
-layout_mode = 2
-effect = null
-
-[node name="Slot8" parent="." index="7" instance=ExtResource("2_t05x2")]
-layout_mode = 2
-effect = null
