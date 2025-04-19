@@ -22,8 +22,11 @@ func get_total_weight() -> int:
 	return total_weight
 
 func update_slot_weights() -> void:
+	# First pass: set initial item properties
 	for slot in slots:
-		slot.init_item()
+		slot.initialize()
+	
+	# Second pass: apply effect items
 	for i in range(slots.size()):
 		var slot = slots[i]
 		if slot.item is EffectItem:

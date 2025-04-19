@@ -1,4 +1,4 @@
-extends SlotInfo
+extends SlotResource
 class_name SlotEffect
 
 func apply_weight(weight: int) -> int:

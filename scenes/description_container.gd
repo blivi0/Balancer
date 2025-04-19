@@ -5,8 +5,8 @@ class_name DescriptionContainer
 @onready var name_label: Label = $MarginContainer/VBoxContainer/HBoxContainer/NameLabel
 @onready var description_label: Label = $MarginContainer/VBoxContainer/DescriptionLabel
 
-func show_description(info: SlotInfo) -> void:
-	icon_texture_rect.texture = info.texture
-	name_label.text = info.name
-	description_label.text = info.description
+func show_description(slot_resource: SlotResource) -> void:
+	icon_texture_rect.texture = slot_resource.texture
+	name_label.text = slot_resource.name
+	description_label.text = slot_resource.description
 	show()

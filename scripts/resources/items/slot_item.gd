@@ -1,4 +1,4 @@
-extends SlotInfo
+extends SlotResource
 class_name SlotItem
 
 const DEFAULT_PICKUP_AUDIO := preload("res://assets/audio/sfx/pickups/item_general_pickup_draft_02.wav")

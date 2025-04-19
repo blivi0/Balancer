@@ -38,11 +38,11 @@ func on_next_level_pressed() -> void:
 	level += 1
 	load_level()
 
-func on_slot_item_hovered(info: SlotInfo) -> void:
-	item_description.show_description(info)
+func on_slot_item_hovered(slot_resource: SlotResource) -> void:
+	item_description.show_description(slot_resource)
 
-func on_slot_effect_hovered(info: SlotInfo) -> void:
-	effect_description.show_description(info)
+func on_slot_effect_hovered(slot_resource: SlotResource) -> void:
+	effect_description.show_description(slot_resource)
 
 func on_slot_unhovered() -> void:
 	item_description.hide()

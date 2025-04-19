@@ -28,5 +28,8 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	updated.emit()
 
 func _on_mouse_entered() -> void:
-	if locked:
-		effect_hovered.emit(LOCK_INFO)
+	if not locked:
+		super()
+		return
+	
+	effect_hovered.emit(LOCK_INFO)

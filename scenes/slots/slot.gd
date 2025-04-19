@@ -15,8 +15,8 @@ var effective_weight := 0
 var can_drag := true
 
 signal updated
-signal item_hovered(info: SlotInfo)
-signal effect_hovered(info: SlotInfo)
+signal item_hovered(slot_resource: SlotResource)
+signal effect_hovered(slot_resource: SlotResource)
 signal unhovered
 
 func _ready() -> void:
@@ -45,7 +45,7 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	_on_mouse_entered()
 	updated.emit()
 
-func init_item() -> void:
+func initialize() -> void:
 	if item:
 		item_texture_rect.texture = item.texture
 		effect.apply_material(item_texture_rect)

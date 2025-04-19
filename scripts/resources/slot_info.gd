@@ -1,5 +1,5 @@
 extends Resource
-class_name SlotInfo
+class_name SlotResource
 
 @export var texture: Texture2D
 @export var name: String
