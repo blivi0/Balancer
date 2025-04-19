@@ -28,21 +28,26 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ItemDescription" parent="." instance=ExtResource("3_tpjy8")]
-visible = false
-layout_mode = 2
-offset_left = 128.0
-offset_top = 8.0
-offset_right = 288.0
-offset_bottom = 72.0
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = 16.0
+offset_right = 160.0
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_override_constants/separation = 32
+alignment = 1
 
-[node name="EffectDescription" parent="." instance=ExtResource("3_tpjy8")]
+[node name="ItemDescription" parent="HBoxContainer" instance=ExtResource("3_tpjy8")]
 visible = false
 layout_mode = 2
-offset_left = 352.0
-offset_top = 8.0
-offset_right = 512.0
-offset_bottom = 72.0
+
+[node name="EffectDescription" parent="HBoxContainer" instance=ExtResource("3_tpjy8")]
+visible = false
+layout_mode = 2
 
 [node name="WinContainer" type="PanelContainer" parent="."]
 visible = false

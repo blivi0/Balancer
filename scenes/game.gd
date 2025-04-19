@@ -3,8 +3,8 @@ extends Control
 const MAX_LEVEL := 4
 
 @onready var inventory_controller: InventoryController = $InventoryController
-@onready var item_description: DescriptionContainer = $ItemDescription
-@onready var effect_description: DescriptionContainer = $EffectDescription
+@onready var item_description: DescriptionContainer = $HBoxContainer/ItemDescription
+@onready var effect_description: DescriptionContainer = $HBoxContainer/EffectDescription
 @onready var win_container: PanelContainer = $WinContainer
 @onready var restart_button: Button = $WinContainer/MarginContainer/VBoxContainer/RestartButton
 @onready var next_level_button: Button = $WinContainer/MarginContainer/VBoxContainer/NextLevelButton
