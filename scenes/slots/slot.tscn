@@ -51,10 +51,14 @@ stretch_mode = 3
 [node name="WeightPanelContainer" type="PanelContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="WeightLabel" type="Label" parent="VBoxContainer/WeightPanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/WeightPanelContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 8
-text = "0"
+
+[node name="WeightLabel" type="Label" parent="VBoxContainer/WeightPanelContainer/MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+text = "0
+"
 
 [node name="PickupSound" type="AudioStreamPlayer" parent="."]
 bus = &"SFX"

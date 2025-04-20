@@ -26,4 +26,4 @@ func on_slot_updated() -> void:
 
 func disable_slots() -> void:
 	for slot in all_slots:
-		slot.can_drag = false
+		slot.slot_enabled = false

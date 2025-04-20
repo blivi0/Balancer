@@ -1,0 +1,20 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bsdk08c61i3mi"]
+
+[ext_resource type="FontFile" uid="uid://cworhl63i06d3" path="res://assets/font/pixelFont-7-8x14-sproutLands.ttf" id="1_8lnmi"]
+[ext_resource type="FontFile" uid="uid://b1htqs28nj84q" path="res://assets/font/pixelFont-2-5x5-sproutLands.ttf" id="2_vw2nx"]
+
+[resource]
+Button/fonts/font = ExtResource("2_vw2nx")
+LargeLabel/base_type = &"Label"
+LargeLabel/font_sizes/font_size = 18
+LargeLabel/fonts/font = ExtResource("1_8lnmi")
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 4
+MarginContainer/constants/margin_right = 4
+MarginContainer/constants/margin_top = 4
+MediumLabel/base_type = &"Label"
+MediumLabel/font_sizes/font_size = 16
+MediumLabel/fonts/font = ExtResource("2_vw2nx")
+SmallLabel/base_type = &"Label"
+SmallLabel/font_sizes/font_size = 8
+SmallLabel/fonts/font = ExtResource("2_vw2nx")

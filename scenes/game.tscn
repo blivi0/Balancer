@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://3m2amnmp0x3c"]
+[gd_scene load_steps=6 format=3 uid="uid://3m2amnmp0x3c"]
 
+[ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_a84yq"]
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_rse5h"]
 [ext_resource type="PackedScene" uid="uid://cxx57oxpc1hs1" path="res://scenes/inventory_controller.tscn" id="2_dheqr"]
 [ext_resource type="PackedScene" uid="uid://dmwqj1xxuahjc" path="res://scenes/description_container.tscn" id="3_tpjy8"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_a84yq")
 script = ExtResource("1_rse5h")
 
 [node name="InventoryController" parent="." instance=ExtResource("2_dheqr")]
@@ -57,10 +59,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -53.0
-offset_top = -54.5
-offset_right = 53.0
-offset_bottom = 54.5
+offset_left = -42.0
+offset_top = -37.5
+offset_right = 42.0
+offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -75,23 +77,23 @@ theme_override_constants/margin_bottom = 8
 
 [node name="VBoxContainer" type="VBoxContainer" parent="WinContainer/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 12
 
 [node name="Label" type="Label" parent="WinContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
+theme_type_variation = &"LargeLabel"
 text = "Winner!"
 
 [node name="RestartButton" type="Button" parent="WinContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
 text = "Restart"
 
 [node name="NextLevelButton" type="Button" parent="WinContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 12
 text = "Next Level"
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]

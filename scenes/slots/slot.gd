@@ -7,12 +7,12 @@ class_name Slot
 @onready var effect_texture_rect: TextureRect = $VBoxContainer/SlotContainer/EffectTextureRect
 @onready var item_texture_rect: TextureRect = $VBoxContainer/SlotContainer/ItemTextureRect
 @onready var weight_panel_container: PanelContainer = $VBoxContainer/WeightPanelContainer
-@onready var weight_label: Label = $VBoxContainer/WeightPanelContainer/WeightLabel
+@onready var weight_label: Label = $VBoxContainer/WeightPanelContainer/MarginContainer/WeightLabel
 @onready var pickup_sound: AudioStreamPlayer = $PickupSound
 @onready var drop_sound: AudioStreamPlayer = $DropSound
 
 var effective_weight := 0
-var can_drag := true
+var slot_enabled := true
 
 signal updated
 signal item_hovered(slot_resource: SlotResource)
@@ -23,7 +23,7 @@ func _ready() -> void:
 	effect_texture_rect.texture = effect.texture
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
-	if not item or not can_drag:
+	if not item or not slot_enabled:
 		return null
 	
 	var control := Control.new()
@@ -76,6 +76,8 @@ func play_drop_sound() -> void:
 	drop_sound.play()
 
 func _on_mouse_entered() -> void:
+	if not slot_enabled:
+		return
 	if item and item.description:
 		item_hovered.emit(item)
 	if effect.description:

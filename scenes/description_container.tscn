@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmwqj1xxuahjc"]
+[gd_scene load_steps=3 format=3 uid="uid://dmwqj1xxuahjc"]
 
 [ext_resource type="Script" path="res://scenes/description_container.gd" id="1_3aeke"]
+[ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_jch6m"]
 
 [node name="DescriptionContainer" type="PanelContainer"]
 custom_minimum_size = Vector2(144, 0)
 offset_right = 99.0
 offset_bottom = 75.0
+theme = ExtResource("1_jch6m")
 script = ExtResource("1_3aeke")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -27,17 +29,18 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-stretch_mode = 3
+stretch_mode = 5
 
 [node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
+theme_type_variation = &"LargeLabel"
 text = "Name"
 
 [node name="DescriptionLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(144, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 8
+theme_type_variation = &"SmallLabel"
 text = "Description"
 autowrap_mode = 2

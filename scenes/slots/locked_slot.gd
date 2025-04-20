@@ -35,5 +35,4 @@ func _on_mouse_entered() -> void:
 	if not locked:
 		super()
 		return
-	
 	effect_hovered.emit(LOCK_RESOURCE)
