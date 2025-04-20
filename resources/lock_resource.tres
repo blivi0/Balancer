@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="SlotResource" load_steps=4 format=3 uid="uid://dixx30teqwljf"]
 
-[ext_resource type="Script" path="res://scripts/resources/slot_resource.gd" id="1_16trd"]
+[ext_resource type="Script" path="res://scripts/resources/slot_resource.gd" id="1_g7gd1"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_s7cb3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_155fa"]
 atlas = ExtResource("2_s7cb3")
-region = Rect2(60, 28, 24, 24)
+region = Rect2(59, 27, 26, 26)
 
 [resource]
-script = ExtResource("1_16trd")
+script = ExtResource("1_g7gd1")
 texture = SubResource("AtlasTexture_155fa")
 name = "Locked"
 description = "Blocks the slot so no item can be placed there."

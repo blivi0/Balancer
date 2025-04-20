@@ -46,6 +46,7 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	updated.emit()
 
 func initialize() -> void:
+	effect_texture_rect.material = null
 	if item:
 		item_texture_rect.texture = item.texture
 		effect.apply_material(item_texture_rect)
@@ -58,6 +59,7 @@ func initialize() -> void:
 		weight_panel_container.hide()
 
 func apply_item_effect(effect_item: EffectItem) -> void:
+	effect_item.apply_material(effect_texture_rect)
 	if item:
 		set_item_weight(effect_item.apply_weight(effective_weight))
 

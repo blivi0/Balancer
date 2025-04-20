@@ -1,7 +1,7 @@
 extends Slot
 class_name LockedSlot
 
-const LOCK_INFO := preload("res://resources/lock_info.tres")
+const LOCK_RESOURCE := preload("res://resources/lock_resource.tres")
 
 @onready var locked_sound: AudioStreamPlayer = $LockedSound
 
@@ -27,9 +27,13 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	_on_mouse_exited()
 	updated.emit()
 
+func apply_item_effect(effect_item: EffectItem) -> void:
+	if not locked:
+		super(effect_item)
+
 func _on_mouse_entered() -> void:
 	if not locked:
 		super()
 		return
 	
-	effect_hovered.emit(LOCK_INFO)
+	effect_hovered.emit(LOCK_RESOURCE)
