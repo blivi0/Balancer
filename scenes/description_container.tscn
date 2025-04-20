@@ -25,17 +25,17 @@ layout_mode = 2
 theme_override_constants/separation = 8
 
 [node name="IconTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-stretch_mode = 5
+expand_mode = 3
 
 [node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_type_variation = &"LargeLabel"
+theme_type_variation = &"MediumLabel"
 text = "Name"
 
 [node name="DescriptionLabel" type="Label" parent="MarginContainer/VBoxContainer"]
