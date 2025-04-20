@@ -1,6 +1,6 @@
 extends Control
 
-const MAX_LEVEL := 5
+const MAX_LEVEL := 7
 
 @export var debug: bool = false
 
