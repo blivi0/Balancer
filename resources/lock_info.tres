@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="SlotInfo" load_steps=4 format=3 uid="uid://dixx30teqwljf"]
+[gd_resource type="Resource" script_class="SlotResource" load_steps=4 format=3 uid="uid://dixx30teqwljf"]
 
-[ext_resource type="Script" path="res://scripts/resources/slot_info.gd" id="1_16trd"]
+[ext_resource type="Script" path="res://scripts/resources/slot_resource.gd" id="1_16trd"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_s7cb3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_155fa"]

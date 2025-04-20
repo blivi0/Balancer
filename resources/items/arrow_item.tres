@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SlotItem" load_steps=6 format=3 uid="uid://cswpw8a6anuds"]
 
-[ext_resource type="AudioStream" uid="uid://cqr20oan6cu2d" path="res://assets/audio/sfx/drops/item_general_drop_draft_02.wav" id="1_1yubg"]
+[ext_resource type="AudioStream" uid="uid://q3xyquc4y0v8" path="res://assets/audio/sfx/drops/item_general_drop_draft_02.wav" id="1_1yubg"]
 [ext_resource type="Script" path="res://scripts/resources/items/slot_item.gd" id="1_xx0b6"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_3gurk"]
-[ext_resource type="AudioStream" uid="uid://bacimtxhwqxll" path="res://assets/audio/sfx/pickups/item_general_pickup_draft_02.wav" id="2_bxs4d"]
+[ext_resource type="AudioStream" uid="uid://cbwcid2q317e5" path="res://assets/audio/sfx/pickups/item_general_pickup_draft_02.wav" id="2_bxs4d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f67p0"]
 atlas = ExtResource("2_3gurk")
@@ -12,8 +12,8 @@ region = Rect2(208, 16, 16, 16)
 [resource]
 script = ExtResource("1_xx0b6")
 weight = 3
-pickup_audio = ExtResource("2_bxs4d")
 drop_audio = ExtResource("1_1yubg")
+pickup_audio = ExtResource("2_bxs4d")
 texture = SubResource("AtlasTexture_f67p0")
 name = ""
 description = ""
