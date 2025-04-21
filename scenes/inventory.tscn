@@ -2,16 +2,19 @@
 
 [ext_resource type="Script" path="res://scenes/inventory.gd" id="1_lv1xs"]
 
-[node name="Inventory" type="VBoxContainer"]
+[node name="Inventory" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 32
 script = ExtResource("1_lv1xs")
 
-[node name="Label" type="Label" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_type_variation = &"LargeLabel"

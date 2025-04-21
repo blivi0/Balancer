@@ -4,19 +4,32 @@
 [ext_resource type="Script" path="res://scenes/inventory_controller.gd" id="1_ll4r5"]
 
 [node name="InventoryController" type="HBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -11.5
+offset_right = 42.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 64
 script = ExtResource("1_ll4r5")
 
-[node name="LeftContainer" type="MarginContainer" parent="."]
+[node name="LeftInventory" parent="." instance=ExtResource("1_eo20v")]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
 
-[node name="LeftInventory" parent="LeftContainer" instance=ExtResource("1_eo20v")]
+[node name="RightInventory" parent="." instance=ExtResource("1_eo20v")]
 layout_mode = 2
-
-[node name="RightContainer" type="MarginContainer" parent="."]
-layout_mode = 2
-
-[node name="RightInventory" parent="RightContainer" instance=ExtResource("1_eo20v")]
-layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
