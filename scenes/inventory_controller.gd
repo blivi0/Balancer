@@ -3,7 +3,8 @@ class_name InventoryController
 
 const MIN_MARGIN_TOP := 0
 const MAX_MARGIN_TOP := 96
-const MID_MARGIN_TOP = (MIN_MARGIN_TOP + MAX_MARGIN_TOP) / 2.0
+@warning_ignore("integer_division")
+const MID_MARGIN_TOP = (MIN_MARGIN_TOP + MAX_MARGIN_TOP) / 2
 
 @onready var left_inventory: Inventory = $LeftInventory
 @onready var right_inventory: Inventory = $RightInventory

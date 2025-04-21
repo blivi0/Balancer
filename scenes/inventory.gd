@@ -10,7 +10,7 @@ const TWEEN_DURATION := 0.75
 var slot_grid: SlotGrid
 var total: int
 var display_total: int
-var margin_top: float
+var margin_top: int
 var tween: Tween
 
 signal tween_finished
@@ -37,7 +37,7 @@ func get_slots() -> Array[Slot]:
 func update_total() -> void:
 	total = slot_grid.get_total_weight()
 
-func start_tween(target_margin_top: float) -> void:
+func start_tween(target_margin_top: int) -> void:
 	if tween and tween.is_running():
 		tween.kill()
 	tween = get_tree().create_tween().set_parallel(true).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
