@@ -1,0 +1,106 @@
+[gd_scene load_steps=6 format=3 uid="uid://3m2amnmp0x3c"]
+
+[ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_a84yq"]
+[ext_resource type="Script" path="res://scenes/game/game.gd" id="1_rse5h"]
+[ext_resource type="PackedScene" uid="uid://cxx57oxpc1hs1" path="res://scenes/game/inventory_controller.tscn" id="2_dheqr"]
+[ext_resource type="PackedScene" uid="uid://dmwqj1xxuahjc" path="res://scenes/game/description_container.tscn" id="3_tpjy8"]
+[ext_resource type="AudioStream" uid="uid://c65pdcxf6m1r5" path="res://assets/audio/music/Idea1-Adventure.wav" id="4_1x3oo"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_a84yq")
+script = ExtResource("1_rse5h")
+
+[node name="InventoryController" parent="." instance=ExtResource("2_dheqr")]
+layout_mode = 1
+anchors_preset = 13
+anchor_top = 0.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = 0.0
+offset_right = 50.0
+offset_bottom = 0.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 16.0
+offset_right = 176.0
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="ItemDescription" parent="HBoxContainer" instance=ExtResource("3_tpjy8")]
+visible = false
+layout_mode = 2
+
+[node name="EffectDescription" parent="HBoxContainer" instance=ExtResource("3_tpjy8")]
+visible = false
+layout_mode = 2
+
+[node name="WinContainer" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -37.5
+offset_right = 42.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="WinContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WinContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="WinContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_type_variation = &"LargeLabel"
+text = "Winner!"
+
+[node name="NextLevelButton" type="Button" parent="WinContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Next Level"
+
+[node name="RestartButton" type="Button" parent="WinContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="WinContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="GameBackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_1x3oo")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="WinContainer/MarginContainer/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="WinContainer/MarginContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="WinContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,24 @@
+extends Control
+
+@onready var main_panel: Control = $MainPanel
+@onready var levels_panel: Control = $LevelsPanel
+@onready var levels_container: VBoxContainer = $LevelsPanel/MarginContainer/LevelsContainer
+
+func _ready() -> void:
+	for child in levels_container.get_children():
+		var level_button = child as LevelButton
+		level_button.level_pressed.connect(on_level_button_pressed)
+
+func on_level_button_pressed(level: int) -> void:
+	LevelManager.start_game(level)
+
+func _on_play_button_pressed() -> void:
+	LevelManager.start_game(1)
+
+func _on_levels_button_pressed() -> void:
+	main_panel.hide()
+	levels_panel.show()
+
+func _on_levels_back_button_pressed() -> void:
+	levels_panel.hide()
+	main_panel.show()

@@ -1,0 +1,130 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbepqc04iog4e"]
+
+[ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_82enx"]
+[ext_resource type="Script" path="res://scenes/menu/menu.gd" id="2_rhonl"]
+[ext_resource type="AudioStream" uid="uid://pbchmtyklyvt" path="res://assets/audio/music/TitleScreen1.wav" id="3_wn1xr"]
+[ext_resource type="PackedScene" uid="uid://fmhagw7sqyw3" path="res://scenes/menu/level_button.tscn" id="4_y2rp1"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_82enx")
+script = ExtResource("2_rhonl")
+
+[node name="MainPanel" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="MainPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 56.0
+offset_right = 50.0
+offset_bottom = 86.0
+grow_horizontal = 2
+theme_type_variation = &"LargeLabel"
+theme_override_font_sizes/font_size = 36
+text = "Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -34.0
+offset_right = 36.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="PlayButton" type="Button" parent="MainPanel/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="LevelsButton" type="Button" parent="MainPanel/VBoxContainer"]
+layout_mode = 2
+text = "Levels"
+
+[node name="CreditsButton" type="Button" parent="MainPanel/VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+
+[node name="LevelsPanel" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="LevelsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="LevelsBackButton" type="Button" parent="LevelsPanel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Back"
+
+[node name="LevelsContainer" type="VBoxContainer" parent="LevelsPanel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 8
+
+[node name="LevelButton" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
+layout_mode = 2
+
+[node name="LevelButton2" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
+layout_mode = 2
+
+[node name="LevelButton3" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
+layout_mode = 2
+
+[node name="LevelButton4" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
+layout_mode = 2
+
+[node name="LevelButton5" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
+layout_mode = 2
+
+[node name="LevelButton6" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
+layout_mode = 2
+
+[node name="LevelButton7" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
+layout_mode = 2
+
+[node name="MenuBackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wn1xr")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="MainPanel/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainPanel/VBoxContainer/LevelsButton" to="." method="_on_levels_button_pressed"]
+[connection signal="pressed" from="LevelsPanel/MarginContainer/LevelsBackButton" to="." method="_on_levels_back_button_pressed"]
