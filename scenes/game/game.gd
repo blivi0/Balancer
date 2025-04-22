@@ -21,8 +21,9 @@ func load_level() -> void:
 		slot.unhovered.connect(on_slot_unhovered)
 
 func on_inventory_balanced() -> void:
-	LevelManager.update_max_level()
-	if not LevelManager.can_increase_level():
+	if LevelManager.can_increase_level():
+		LevelManager.update_max_level()
+	else:
 		next_level_button.hide()
 	win_container.reset_size()
 	win_container.show()
@@ -45,4 +46,4 @@ func _on_restart_button_pressed() -> void:
 	load_level()
 
 func _on_quit_button_pressed() -> void:
-	get_tree().change_scene_to_packed(MENU_SCENE)
+	LevelManager.quit_game()

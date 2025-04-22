@@ -13,7 +13,7 @@ func on_level_button_pressed(level: int) -> void:
 	LevelManager.start_game(level)
 
 func _on_play_button_pressed() -> void:
-	LevelManager.start_game(1)
+	LevelManager.start_game(LevelManager.max_level)
 
 func _on_levels_button_pressed() -> void:
 	main_panel.hide()

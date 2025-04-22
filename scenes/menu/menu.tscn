@@ -29,9 +29,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -50.0
-offset_top = 56.0
+offset_top = 54.0
 offset_right = 50.0
-offset_bottom = 86.0
+offset_bottom = 84.0
 grow_horizontal = 2
 theme_type_variation = &"LargeLabel"
 theme_override_font_sizes/font_size = 36
@@ -52,7 +52,7 @@ offset_right = 36.0
 offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 12
 
 [node name="PlayButton" type="Button" parent="MainPanel/VBoxContainer"]
 layout_mode = 2
@@ -97,7 +97,7 @@ text = "Back"
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 8
+theme_override_constants/separation = 12
 
 [node name="LevelButton" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
 layout_mode = 2
