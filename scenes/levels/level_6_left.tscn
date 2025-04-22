@@ -1,37 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://cumia42qhcvaq"]
+[gd_scene load_steps=6 format=3 uid="uid://c86x4t1jwo3ot"]
 
-[ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_vdr3x"]
-[ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_7ql7h"]
-[ext_resource type="Resource" uid="uid://n4nvs0ip1cfs" path="res://resources/items/shield_item.tres" id="3_usvsy"]
+[ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_qd44j"]
+[ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_y3bjs"]
+[ext_resource type="Resource" uid="uid://cx32j81fblskt" path="res://resources/items/feather_item.tres" id="3_krkkg"]
+[ext_resource type="Resource" uid="uid://bc6f3y4uvna4d" path="res://resources/items/crossbow_item.tres" id="4_lgpdh"]
+[ext_resource type="Resource" uid="uid://di24d3yagjavj" path="res://resources/items/pickaxe_item.tres" id="5_lggy4"]
 
-[node name="Level6Left" instance=ExtResource("1_vdr3x")]
+[node name="SlotGrid" instance=ExtResource("1_qd44j")]
 
-[node name="Slot" parent="." index="0" instance=ExtResource("2_7ql7h")]
-layout_mode = 2
-item = ExtResource("3_usvsy")
-
-[node name="Slot2" parent="." index="1" instance=ExtResource("2_7ql7h")]
+[node name="Slot" parent="." index="0" instance=ExtResource("2_y3bjs")]
 layout_mode = 2
 
-[node name="Slot3" parent="." index="2" instance=ExtResource("2_7ql7h")]
+[node name="Slot2" parent="." index="1" instance=ExtResource("2_y3bjs")]
 layout_mode = 2
-item = ExtResource("3_usvsy")
+item = ExtResource("3_krkkg")
 
-[node name="Slot4" parent="." index="3" instance=ExtResource("2_7ql7h")]
-layout_mode = 2
-
-[node name="Slot5" parent="." index="4" instance=ExtResource("2_7ql7h")]
+[node name="Slot3" parent="." index="2" instance=ExtResource("2_y3bjs")]
 layout_mode = 2
 
-[node name="Slot6" parent="." index="5" instance=ExtResource("2_7ql7h")]
+[node name="Slot4" parent="." index="3" instance=ExtResource("2_y3bjs")]
+layout_mode = 2
+item = ExtResource("4_lgpdh")
+
+[node name="Slot5" parent="." index="4" instance=ExtResource("2_y3bjs")]
 layout_mode = 2
 
-[node name="Slot7" parent="." index="6" instance=ExtResource("2_7ql7h")]
+[node name="Slot6" parent="." index="5" instance=ExtResource("2_y3bjs")]
 layout_mode = 2
-item = ExtResource("3_usvsy")
+item = ExtResource("5_lggy4")
 
-[node name="Slot8" parent="." index="7" instance=ExtResource("2_7ql7h")]
+[node name="Slot7" parent="." index="6" instance=ExtResource("2_y3bjs")]
 layout_mode = 2
 
-[node name="Slot9" parent="." index="8" instance=ExtResource("2_7ql7h")]
+[node name="Slot8" parent="." index="7" instance=ExtResource("2_y3bjs")]
+layout_mode = 2
+
+[node name="Slot9" parent="." index="8" instance=ExtResource("2_y3bjs")]
 layout_mode = 2

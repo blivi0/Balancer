@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://c4xrohkyxd6as" path="res://resources/items/potion_item.tres" id="3_swtav"]
 [ext_resource type="Resource" uid="uid://d20r62xi1yv4y" path="res://resources/items/wood_log_item.tres" id="4_rq0yh"]
 
-[node name="Level3Right" instance=ExtResource("1_6twgk")]
+[node name="SlotGrid" instance=ExtResource("1_6twgk")]
 columns = 2
 
 [node name="Slot" parent="." index="0" instance=ExtResource("2_oj0pe")]

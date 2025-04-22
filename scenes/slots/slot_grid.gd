@@ -26,7 +26,7 @@ func update_slot_weights() -> void:
 	for slot in slots:
 		slot.initialize()
 	
-	# Second pass: apply effect items
+	# Second pass: apply item effects
 	for i in range(slots.size()):
 		var slot = slots[i]
 		if slot.item is EffectItem:

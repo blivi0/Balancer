@@ -1,39 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://c86x4t1jwo3ot"]
+[gd_scene load_steps=6 format=3 uid="uid://deag754mni6lf"]
 
 [ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_w78q7"]
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_ihrdu"]
-[ext_resource type="Resource" uid="uid://cx32j81fblskt" path="res://resources/items/feather_item.tres" id="3_cotwm"]
-[ext_resource type="Resource" uid="uid://bc6f3y4uvna4d" path="res://resources/items/crossbow_item.tres" id="4_8hto2"]
-[ext_resource type="Resource" uid="uid://di24d3yagjavj" path="res://resources/items/pickaxe_item.tres" id="5_u38ix"]
+[ext_resource type="Resource" uid="uid://dadx5bjhfwnap" path="res://resources/effects/light_effect.tres" id="3_1miah"]
+[ext_resource type="Resource" uid="uid://btqc46e62ypoh" path="res://resources/items/bow_item.tres" id="3_7m4ar"]
+[ext_resource type="Resource" uid="uid://bpreo46u130nb" path="res://resources/items/sword_item.tres" id="4_1d4rx"]
 
-[node name="Level4Left" instance=ExtResource("1_w78q7")]
+[node name="SlotGrid" instance=ExtResource("1_w78q7")]
+columns = 2
 
 [node name="Slot" parent="." index="0" instance=ExtResource("2_ihrdu")]
 layout_mode = 2
+item = ExtResource("3_7m4ar")
 
 [node name="Slot2" parent="." index="1" instance=ExtResource("2_ihrdu")]
 layout_mode = 2
-item = ExtResource("3_cotwm")
+item = ExtResource("4_1d4rx")
 
 [node name="Slot3" parent="." index="2" instance=ExtResource("2_ihrdu")]
 layout_mode = 2
 
 [node name="Slot4" parent="." index="3" instance=ExtResource("2_ihrdu")]
 layout_mode = 2
-item = ExtResource("4_8hto2")
-
-[node name="Slot5" parent="." index="4" instance=ExtResource("2_ihrdu")]
-layout_mode = 2
-
-[node name="Slot6" parent="." index="5" instance=ExtResource("2_ihrdu")]
-layout_mode = 2
-item = ExtResource("5_u38ix")
-
-[node name="Slot7" parent="." index="6" instance=ExtResource("2_ihrdu")]
-layout_mode = 2
-
-[node name="Slot8" parent="." index="7" instance=ExtResource("2_ihrdu")]
-layout_mode = 2
-
-[node name="Slot9" parent="." index="8" instance=ExtResource("2_ihrdu")]
-layout_mode = 2
+effect = ExtResource("3_1miah")

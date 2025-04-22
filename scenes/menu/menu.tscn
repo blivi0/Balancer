@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbepqc04iog4e"]
+[gd_scene load_steps=4 format=3 uid="uid://bbepqc04iog4e"]
 
 [ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_82enx"]
 [ext_resource type="Script" path="res://scenes/menu/menu.gd" id="2_rhonl"]
 [ext_resource type="AudioStream" uid="uid://pbchmtyklyvt" path="res://assets/audio/music/TitleScreen1.wav" id="3_wn1xr"]
-[ext_resource type="PackedScene" uid="uid://fmhagw7sqyw3" path="res://scenes/menu/level_button.tscn" id="4_y2rp1"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -98,27 +97,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 12
-
-[node name="LevelButton" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
-layout_mode = 2
-
-[node name="LevelButton2" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
-layout_mode = 2
-
-[node name="LevelButton3" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
-layout_mode = 2
-
-[node name="LevelButton4" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
-layout_mode = 2
-
-[node name="LevelButton5" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
-layout_mode = 2
-
-[node name="LevelButton6" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
-layout_mode = 2
-
-[node name="LevelButton7" parent="LevelsPanel/MarginContainer/LevelsContainer" instance=ExtResource("4_y2rp1")]
-layout_mode = 2
 
 [node name="MenuBackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_wn1xr")

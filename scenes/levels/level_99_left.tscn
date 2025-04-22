@@ -15,7 +15,7 @@
 [ext_resource type="Resource" uid="uid://bc6f3y4uvna4d" path="res://resources/items/crossbow_item.tres" id="13_u8byr"]
 [ext_resource type="Resource" uid="uid://di24d3yagjavj" path="res://resources/items/pickaxe_item.tres" id="14_htrqf"]
 
-[node name="TestLevelLeft" instance=ExtResource("1_s2086")]
+[node name="SlotGrid" instance=ExtResource("1_s2086")]
 columns = 4
 
 [node name="Slot" parent="." index="0" instance=ExtResource("2_j503a")]

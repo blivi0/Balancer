@@ -1,12 +1,15 @@
 extends Control
 
+const LEVEL_BUTTON := preload("res://scenes/menu/level_button.tscn")
+
 @onready var main_panel: Control = $MainPanel
 @onready var levels_panel: Control = $LevelsPanel
 @onready var levels_container: VBoxContainer = $LevelsPanel/MarginContainer/LevelsContainer
 
 func _ready() -> void:
-	for child in levels_container.get_children():
-		var level_button = child as LevelButton
+	for i in range(LevelManager.TOTAL_LEVELS):
+		var level_button = LEVEL_BUTTON.instantiate()
+		levels_container.add_child(level_button)
 		level_button.level_pressed.connect(on_level_button_pressed)
 
 func on_level_button_pressed(level: int) -> void:

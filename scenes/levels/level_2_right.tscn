@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://cv48lted52efd" path="res://resources/items/stone_item.tres" id="3_ybr2i"]
 [ext_resource type="Resource" uid="uid://cswpw8a6anuds" path="res://resources/items/arrow_item.tres" id="4_c6how"]
 
-[node name="Level2Right" instance=ExtResource("1_qvi81")]
+[node name="SlotGrid" instance=ExtResource("1_qvi81")]
 columns = 1
 
 [node name="Slot" parent="." index="0" instance=ExtResource("2_5bwhj")]

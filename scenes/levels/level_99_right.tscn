@@ -11,7 +11,7 @@
 [ext_resource type="Resource" uid="uid://dadx5bjhfwnap" path="res://resources/effects/light_effect.tres" id="8_b5wq0"]
 [ext_resource type="PackedScene" uid="uid://fyjudb5e33g" path="res://scenes/slots/locked_slot.tscn" id="10_re2uy"]
 
-[node name="TestLevelRight" instance=ExtResource("1_gq022")]
+[node name="SlotGrid" instance=ExtResource("1_gq022")]
 columns = 4
 
 [node name="Slot" parent="." index="0" instance=ExtResource("2_r1wfb")]

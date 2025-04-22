@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_5pbtm"]
 [ext_resource type="Resource" uid="uid://bg2o4joduo023" path="res://resources/items/paper_item.tres" id="5_tckxs"]
 
-[node name="Level1Right" instance=ExtResource("1_3xha7")]
+[node name="SlotGrid" instance=ExtResource("1_3xha7")]
 columns = 2
 
 [node name="Slot" parent="." index="0" instance=ExtResource("2_5pbtm")]
