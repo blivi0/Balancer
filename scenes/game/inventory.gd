@@ -42,7 +42,7 @@ func update_total() -> void:
 
 func start_tween(target_margin_top: int) -> void:
 	if tween and tween.is_running():
-		tween.kill()
+		tween.stop()
 	tween = get_tree().create_tween().set_parallel(true).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 	
 	if abs(total - display_total) < 3:
@@ -54,7 +54,7 @@ func start_tween(target_margin_top: int) -> void:
 		tween.tween_property(self, "margin_top", target_margin_top, TWEEN_DURATION)
 	
 	tween.chain().tween_callback(on_tween_finished)
-	
+
 func on_tween_finished() -> void:
 	tween = null
 	tween_finished.emit()
