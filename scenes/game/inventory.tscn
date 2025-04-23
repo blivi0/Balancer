@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b178oc644nu6t"]
+[gd_scene load_steps=7 format=3 uid="uid://b178oc644nu6t"]
 
+[ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_dytaw"]
 [ext_resource type="Script" path="res://scenes/game/inventory.gd" id="1_lv1xs"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_8j7ys"]
 
@@ -16,12 +17,12 @@ atlas = ExtResource("2_8j7ys")
 region = Rect2(257, 162, 30, 30)
 
 [node name="Inventory" type="MarginContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 86.0
+offset_bottom = 78.0
+theme = ExtResource("1_dytaw")
+theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 script = ExtResource("1_lv1xs")
 heavy_icon = SubResource("AtlasTexture_d6exk")
@@ -33,7 +34,8 @@ theme_override_constants/separation = 24
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer"]
 custom_minimum_size = Vector2(66, 0)
@@ -46,7 +48,7 @@ layout_mode = 2
 texture = SubResource("AtlasTexture_dyrte")
 
 [node name="Control" type="Control" parent="VBoxContainer/PanelContainer/HBoxContainer"]
-custom_minimum_size = Vector2(48, 0)
+custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 
 [node name="WeightLabel" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer/Control"]

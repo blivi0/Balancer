@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://duubkofmyipp6"]
+
+[ext_resource type="PackedScene" uid="uid://b178oc644nu6t" path="res://scenes/game/inventory.tscn" id="1_erxq6"]
+[ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="2_5fg86"]
+[ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="3_n7kq8"]
+[ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="4_bhqvh"]
+
+[node name="Inventory" instance=ExtResource("1_erxq6")]
+offset_right = 96.0
+offset_bottom = 150.0
+theme = ExtResource("2_5fg86")
+
+[node name="SlotGrid" parent="VBoxContainer" index="0" instance=ExtResource("3_n7kq8")]
+layout_mode = 2
+
+[node name="Slot" parent="VBoxContainer/SlotGrid" index="0" instance=ExtResource("4_bhqvh")]
+layout_mode = 2
+
+[node name="Slot2" parent="VBoxContainer/SlotGrid" index="1" instance=ExtResource("4_bhqvh")]
+layout_mode = 2
+
+[node name="Control" parent="VBoxContainer/PanelContainer/HBoxContainer" index="1"]
+custom_minimum_size = Vector2(30, 0)
+size_flags_horizontal = 4
