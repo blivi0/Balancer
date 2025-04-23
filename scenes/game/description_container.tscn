@@ -8,6 +8,7 @@ custom_minimum_size = Vector2(144, 0)
 offset_right = 99.0
 offset_bottom = 75.0
 theme = ExtResource("1_jch6m")
+theme_type_variation = &"WoodPanelContainer"
 script = ExtResource("1_3aeke")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

@@ -14,9 +14,8 @@ const MID_MARGIN_TOP = (MIN_MARGIN_TOP + MAX_MARGIN_TOP) / 2
 var normal_icon: Texture2D
 
 @onready var v_box_container: VBoxContainer = $VBoxContainer
-@onready var panel_container: PanelContainer = $VBoxContainer/PanelContainer
-@onready var weight_icon: TextureRect = $VBoxContainer/PanelContainer/HBoxContainer/WeightIcon
-@onready var weight_label: Label = $VBoxContainer/PanelContainer/HBoxContainer/Control/WeightLabel
+@onready var weight_icon: TextureRect = $VBoxContainer/HBoxContainer/WeightIcon
+@onready var weight_label: Label = $VBoxContainer/HBoxContainer/Control/WeightLabel
 
 var slot_grid: SlotGrid
 var total: int
@@ -43,8 +42,6 @@ func load_level(level_num: int, side: String) -> void:
 	slot_grid = load(level_path).instantiate() as SlotGrid
 	v_box_container.add_child(slot_grid)
 	v_box_container.move_child(slot_grid, 0)
-	panel_container.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	panel_container.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	update_total()
 	display_total = total
 

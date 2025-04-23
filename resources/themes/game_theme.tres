@@ -58,7 +58,7 @@ texture_margin_bottom = 4.0
 atlas = ExtResource("2_vfkvs")
 region = Rect2(98, 66, 44, 44)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_reyvr"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uv0rp"]
 texture = SubResource("AtlasTexture_kwhvn")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
@@ -81,7 +81,8 @@ MarginContainer/constants/margin_top = 4
 MediumLabel/base_type = &"Label"
 MediumLabel/font_sizes/font_size = 16
 MediumLabel/fonts/font = ExtResource("2_vw2nx")
-PanelContainer/styles/panel = SubResource("StyleBoxTexture_reyvr")
 SmallLabel/base_type = &"Label"
 SmallLabel/font_sizes/font_size = 8
 SmallLabel/fonts/font = ExtResource("2_vw2nx")
+WoodPanelContainer/base_type = &"PanelContainer"
+WoodPanelContainer/styles/panel = SubResource("StyleBoxTexture_uv0rp")

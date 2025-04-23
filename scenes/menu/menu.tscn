@@ -32,6 +32,7 @@ offset_top = 44.5
 offset_right = 136.0
 offset_bottom = 90.5
 grow_horizontal = 2
+theme_type_variation = &"WoodPanelContainer"
 
 [node name="TitleLabel" type="Label" parent="MainPanel/PanelContainer"]
 layout_mode = 2

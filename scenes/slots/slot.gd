@@ -7,7 +7,8 @@ class_name Slot
 @onready var effect_texture_rect: TextureRect = $VBoxContainer/SlotContainer/EffectTextureRect
 @onready var item_texture_rect: TextureRect = $VBoxContainer/SlotContainer/ItemTextureRect
 @onready var weight_panel_container: PanelContainer = $VBoxContainer/WeightPanelContainer
-@onready var weight_label: Label = $VBoxContainer/WeightPanelContainer/HBoxContainer/Control/WeightLabel
+@onready var weight_icon: TextureRect = $VBoxContainer/WeightPanelContainer/MarginContainer/HBoxContainer/WeightIcon
+@onready var weight_label: Label = $VBoxContainer/WeightPanelContainer/MarginContainer/HBoxContainer/Control/WeightLabel
 @onready var pickup_sound: AudioStreamPlayer = $PickupSound
 @onready var drop_sound: AudioStreamPlayer = $DropSound
 

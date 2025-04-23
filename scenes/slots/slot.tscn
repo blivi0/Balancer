@@ -10,7 +10,7 @@ atlas = ExtResource("4_1i344")
 region = Rect2(240, 176, 8, 8)
 
 [node name="Slot" type="Control"]
-custom_minimum_size = Vector2(40, 32)
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 32.0
@@ -24,12 +24,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
+offset_left = -16.0
+offset_right = 16.0
 offset_bottom = 48.0
 grow_horizontal = 2
 mouse_filter = 2
-theme_override_constants/separation = -8
+theme_override_constants/separation = 0
 
 [node name="SlotContainer" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -64,25 +64,28 @@ stretch_mode = 3
 [node name="WeightPanelContainer" type="PanelContainer" parent="VBoxContainer"]
 z_index = -1
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/WeightPanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/WeightPanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/WeightPanelContainer/MarginContainer"]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 
-[node name="WeightIcon" type="TextureRect" parent="VBoxContainer/WeightPanelContainer/HBoxContainer"]
+[node name="WeightIcon" type="TextureRect" parent="VBoxContainer/WeightPanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 texture = SubResource("AtlasTexture_8k8rd")
 
-[node name="Control" type="Control" parent="VBoxContainer/WeightPanelContainer/HBoxContainer"]
+[node name="Control" type="Control" parent="VBoxContainer/WeightPanelContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(12, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="WeightLabel" type="Label" parent="VBoxContainer/WeightPanelContainer/HBoxContainer/Control"]
+[node name="WeightLabel" type="Label" parent="VBoxContainer/WeightPanelContainer/MarginContainer/HBoxContainer/Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

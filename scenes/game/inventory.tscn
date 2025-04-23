@@ -17,7 +17,7 @@ atlas = ExtResource("2_8j7ys")
 region = Rect2(257, 162, 30, 30)
 
 [node name="Inventory" type="MarginContainer"]
-offset_right = 86.0
+offset_right = 68.0
 offset_bottom = 78.0
 theme = ExtResource("1_dytaw")
 theme_override_constants/margin_left = 0
@@ -30,28 +30,25 @@ balanced_icon = SubResource("AtlasTexture_53l14")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
-theme_override_constants/separation = 24
-
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
-layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 24
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(66, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/separation = 8
 
-[node name="WeightIcon" type="TextureRect" parent="VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="WeightIcon" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 texture = SubResource("AtlasTexture_dyrte")
 
-[node name="Control" type="Control" parent="VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 
-[node name="WeightLabel" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer/Control"]
+[node name="WeightLabel" type="Label" parent="VBoxContainer/HBoxContainer/Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
