@@ -2,10 +2,20 @@ extends MarginContainer
 class_name Inventory
 
 const LEVEL_FORMAT := "res://scenes/levels/level_%d_%s.tscn"
+
 const TWEEN_DURATION := 0.75
+const MIN_MARGIN_TOP := 0
+const MAX_MARGIN_TOP := 96
+@warning_ignore("integer_division")
+const MID_MARGIN_TOP = (MIN_MARGIN_TOP + MAX_MARGIN_TOP) / 2
+
+@export var heavy_icon: Texture2D
+@export var balanced_icon: Texture2D
+var normal_icon: Texture2D
 
 @onready var v_box_container: VBoxContainer = $VBoxContainer
-@onready var label: Label = $VBoxContainer/Label
+@onready var weight_icon: TextureRect = $VBoxContainer/PanelContainer/HBoxContainer/WeightIcon
+@onready var weight_label: Label = $VBoxContainer/PanelContainer/HBoxContainer/WeightLabel
 
 var slot_grid: SlotGrid
 var total: int
@@ -17,10 +27,11 @@ signal tween_finished
 
 func _ready() -> void:
 	margin_top = get_theme_constant("margin_top")
+	normal_icon = weight_icon.texture
 
 func _process(_delta: float) -> void:
 	if tween and tween.is_running():
-		label.text = str(display_total)
+		weight_label.text = str(display_total)
 		add_theme_constant_override("margin_top", margin_top)
 
 func load_level(level_num: int, side: String) -> void:
@@ -40,7 +51,19 @@ func get_slots() -> Array[Slot]:
 func update_total() -> void:
 	total = slot_grid.get_total_weight()
 
-func start_tween(target_margin_top: int) -> void:
+func set_status(status: DataTypes.InventoryStatus) -> void:
+	var target_margin_top: int
+	match status:
+		DataTypes.InventoryStatus.LIGHT:
+			target_margin_top = MIN_MARGIN_TOP
+			weight_icon.texture = normal_icon
+		DataTypes.InventoryStatus.HEAVY:
+			target_margin_top = MAX_MARGIN_TOP
+			weight_icon.texture = heavy_icon
+		DataTypes.InventoryStatus.BALANCED:
+			target_margin_top = MID_MARGIN_TOP
+			weight_icon.texture = balanced_icon
+	
 	if tween and tween.is_running():
 		tween.stop()
 	tween = get_tree().create_tween().set_parallel(true).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_d2ikf"]
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_hku65"]
 [ext_resource type="Resource" uid="uid://cxetoso7ot27r" path="res://resources/effects/heavy_effect.tres" id="3_yptrd"]
-[ext_resource type="Resource" uid="uid://di24d3yagjavj" path="res://resources/items/pickaxe_item.tres" id="4_2kof6"]
+[ext_resource type="Resource" uid="uid://oyjdh5y3rssa" path="res://resources/items/staff_item.tres" id="4_ri5xl"]
 
 [node name="SlotGrid" instance=ExtResource("1_d2ikf")]
 columns = 2
@@ -14,7 +14,7 @@ effect = ExtResource("3_yptrd")
 
 [node name="Slot2" parent="." index="1" instance=ExtResource("2_hku65")]
 layout_mode = 2
-item = ExtResource("4_2kof6")
+item = ExtResource("4_ri5xl")
 
 [node name="Slot3" parent="." index="2" instance=ExtResource("2_hku65")]
 layout_mode = 2
