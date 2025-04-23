@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://3m2amnmp0x3c"]
+[gd_scene load_steps=25 format=3 uid="uid://3m2amnmp0x3c"]
 
 [ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_a84yq"]
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_rse5h"]
@@ -7,6 +7,62 @@
 [ext_resource type="AudioStream" uid="uid://c65pdcxf6m1r5" path="res://assets/audio/music/Idea1-Adventure.wav" id="4_1x3oo"]
 [ext_resource type="Script" path="res://scenes/game/pause_menu.gd" id="5_jf0le"]
 [ext_resource type="Script" path="res://scenes/game/win_menu.gd" id="5_trp2c"]
+[ext_resource type="PackedScene" uid="uid://beocrjjnsxjiw" path="res://scenes/game/icon_button.tscn" id="6_t2rbg"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="7_kph2l"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_weslg"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jelwl"]
+atlas = SubResource("CompressedTexture2D_weslg")
+region = Rect2(256, 96, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qekgd"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_joy6y"]
+atlas = SubResource("CompressedTexture2D_qekgd")
+region = Rect2(288, 96, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6wbyp"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcidb"]
+atlas = SubResource("CompressedTexture2D_6wbyp")
+region = Rect2(320, 96, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ooka2"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddei0"]
+atlas = SubResource("CompressedTexture2D_ooka2")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g0j8u"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwrte"]
+atlas = SubResource("CompressedTexture2D_g0j8u")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ynt24"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb44c"]
+atlas = SubResource("CompressedTexture2D_ynt24")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccia4"]
+atlas = ExtResource("7_kph2l")
+region = Rect2(256, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8klwm"]
+atlas = ExtResource("7_kph2l")
+region = Rect2(288, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acs7d"]
+atlas = ExtResource("7_kph2l")
+region = Rect2(320, 64, 32, 32)
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -57,10 +113,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -52.0
-offset_top = -63.5
-offset_right = 52.0
-offset_bottom = 63.5
+offset_left = -69.0
+offset_top = -42.5
+offset_right = 69.0
+offset_bottom = 42.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -85,19 +141,26 @@ size_flags_vertical = 0
 theme_type_variation = &"LargeLabel"
 text = "Winner!"
 
-[node name="NextLevelButton" type="Button" parent="WinMenu/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="WinMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Next Level"
 
-[node name="RestartButton" type="Button" parent="WinMenu/MarginContainer/VBoxContainer"]
+[node name="QuitButton" parent="WinMenu/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("6_t2rbg")]
 layout_mode = 2
-text = "Restart"
+icon = SubResource("AtlasTexture_jelwl")
+hover_icon = SubResource("AtlasTexture_joy6y")
+pressed_icon = SubResource("AtlasTexture_tcidb")
 
-[node name="QuitButton" type="Button" parent="WinMenu/MarginContainer/VBoxContainer"]
+[node name="RestartButton" parent="WinMenu/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("6_t2rbg")]
 layout_mode = 2
-text = "Quit"
+icon = SubResource("AtlasTexture_ddei0")
+hover_icon = SubResource("AtlasTexture_wwrte")
+pressed_icon = SubResource("AtlasTexture_pb44c")
+
+[node name="NextLevelButton" parent="WinMenu/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("6_t2rbg")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_ccia4")
+hover_icon = SubResource("AtlasTexture_8klwm")
+pressed_icon = SubResource("AtlasTexture_acs7d")
 
 [node name="PauseMenu" type="Control" parent="."]
 visible = false

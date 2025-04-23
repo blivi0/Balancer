@@ -1,10 +1,65 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bsdk08c61i3mi"]
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://bsdk08c61i3mi"]
 
 [ext_resource type="FontFile" uid="uid://cworhl63i06d3" path="res://assets/font/pixelFont-7-8x14-sproutLands.ttf" id="1_8lnmi"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_vfkvs"]
 [ext_resource type="FontFile" uid="uid://b1htqs28nj84q" path="res://assets/font/pixelFont-2-5x5-sproutLands.ttf" id="2_vw2nx"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eun0h"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81shl"]
+atlas = SubResource("CompressedTexture2D_eun0h")
+region = Rect2(23, 215, 34, 34)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h6q5d"]
+texture = SubResource("AtlasTexture_81shl")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 7.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f8gqe"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mexbi"]
+atlas = SubResource("CompressedTexture2D_f8gqe")
+region = Rect2(71, 167, 34, 34)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_41p32"]
+texture = SubResource("AtlasTexture_mexbi")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sr0a"]
+atlas = ExtResource("2_vfkvs")
+region = Rect2(23, 167, 34, 34)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h7mdr"]
+texture = SubResource("AtlasTexture_0sr0a")
+texture_margin_left = 3.0
+texture_margin_top = 4.0
+texture_margin_right = 3.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pudc6"]
+atlas = ExtResource("2_vfkvs")
+region = Rect2(119, 169, 34, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a4hoi"]
+texture = SubResource("AtlasTexture_pudc6")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 4.0
 
 [resource]
 Button/fonts/font = ExtResource("2_vw2nx")
+Button/styles/disabled = SubResource("StyleBoxTexture_h6q5d")
+Button/styles/hover = SubResource("StyleBoxTexture_41p32")
+Button/styles/normal = SubResource("StyleBoxTexture_h7mdr")
+Button/styles/pressed = SubResource("StyleBoxTexture_a4hoi")
 LargeLabel/base_type = &"Label"
 LargeLabel/font_sizes/font_size = 18
 LargeLabel/fonts/font = ExtResource("1_8lnmi")

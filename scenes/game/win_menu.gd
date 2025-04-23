@@ -1,9 +1,9 @@
 extends PanelContainer
 class_name WinMenu
 
-@onready var next_level_button: Button = $MarginContainer/VBoxContainer/NextLevelButton
-@onready var restart_button: Button = $MarginContainer/VBoxContainer/RestartButton
-@onready var quit_button: Button = $MarginContainer/VBoxContainer/QuitButton
+@onready var quit_button: Button = $MarginContainer/VBoxContainer/HBoxContainer/QuitButton
+@onready var restart_button: Button = $MarginContainer/VBoxContainer/HBoxContainer/RestartButton
+@onready var next_level_button: IconButton = $MarginContainer/VBoxContainer/HBoxContainer/NextLevelButton
 
 var viewport_height: float
 
