@@ -9,7 +9,7 @@ load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5u8pd"]
 atlas = SubResource("CompressedTexture2D_w30vb")
-region = Rect2(176, 32, 16, 16)
+region = Rect2(180, 36, 18, 18)
 
 [resource]
 script = ExtResource("1_n4ix1")
