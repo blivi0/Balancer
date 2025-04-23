@@ -21,13 +21,18 @@ signal unhovered
 
 func _ready() -> void:
 	effect_texture_rect.texture = effect.texture
+	print(effect_texture_rect.global_position)
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	if not item or not slot_enabled:
 		return null
 	
 	var control := Control.new()
-	control.add_child(item_texture_rect.duplicate())
+	var copy = item_texture_rect.duplicate() as Control
+	control.size = copy.size
+	control.add_child(copy)
+	control.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+	copy.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	set_drag_preview(control)
 	
 	play_pickup_sound()

@@ -1,20 +1,78 @@
-[gd_scene load_steps=6 format=3 uid="uid://fyjudb5e33g"]
+[gd_scene load_steps=12 format=3 uid="uid://fyjudb5e33g"]
 
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="1_k6dxx"]
 [ext_resource type="Script" path="res://scenes/slots/locked_slot.gd" id="2_hbxlu"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="3_egy4g"]
 [ext_resource type="AudioStream" uid="uid://m1vm0uif4xd3" path="res://assets/audio/sfx/item_locked_draft_02.wav" id="4_6xxnu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_155fa"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_j827y"]
 atlas = ExtResource("3_egy4g")
-region = Rect2(60, 28, 24, 24)
+region = Rect2(48, 16, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov142"]
+atlas = ExtResource("3_egy4g")
+region = Rect2(0, 112, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmuv4"]
+atlas = ExtResource("3_egy4g")
+region = Rect2(48, 112, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvbs0"]
+atlas = ExtResource("3_egy4g")
+region = Rect2(96, 112, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl1wy"]
+atlas = ExtResource("3_egy4g")
+region = Rect2(144, 112, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh35r"]
+atlas = ExtResource("3_egy4g")
+region = Rect2(192, 112, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3lx33"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j827y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov142")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmuv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvbs0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl1wy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh35r")
+}],
+"loop": false,
+"name": &"unlock",
+"speed": 5.0
+}]
 
 [node name="LockedSlot" instance=ExtResource("1_k6dxx")]
 script = ExtResource("2_hbxlu")
 
-[node name="EffectTextureRect" parent="VBoxContainer/SlotContainer" index="0"]
-texture = SubResource("AtlasTexture_155fa")
+[node name="ItemTextureRect" parent="VBoxContainer/SlotContainer" index="1"]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_right = 32.0
+grow_horizontal = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/SlotContainer" index="2"]
+position = Vector2(16, 16)
+sprite_frames = SubResource("SpriteFrames_3lx33")
+animation = &"unlock"
 
 [node name="LockedSound" type="AudioStreamPlayer" parent="." index="3"]
 stream = ExtResource("4_6xxnu")
 bus = &"SFX"
+
+[connection signal="animation_finished" from="VBoxContainer/SlotContainer/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
