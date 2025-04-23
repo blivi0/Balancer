@@ -4,6 +4,7 @@ class_name LockedSlot
 const LOCK_RESOURCE := preload("res://resources/lock_resource.tres")
 
 @onready var locked_sound: AudioStreamPlayer = $LockedSound
+@onready var unlock_sound: AudioStreamPlayer = $UnlockSound
 @onready var animated_sprite_2d: AnimatedSprite2D = $VBoxContainer/SlotContainer/AnimatedSprite2D
 
 var locked := true
@@ -19,6 +20,7 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		return
 	
 	locked = false
+	unlock_sound.play()
 	animated_sprite_2d.play()
 	source_slot.item = null
 	_on_mouse_exited()

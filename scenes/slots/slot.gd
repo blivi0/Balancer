@@ -27,11 +27,11 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 		return null
 	
 	var control := Control.new()
-	var copy = item_texture_rect.duplicate() as Control
-	control.size = copy.size
-	control.add_child(copy)
+	var item_texture_copy = item_texture_rect.duplicate() as Control
+	control.size = item_texture_copy.size
+	control.add_child(item_texture_copy)
 	control.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
-	copy.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+	item_texture_copy.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 	set_drag_preview(control)
 	
 	play_pickup_sound()

@@ -1,4 +1,4 @@
-extends Control
+extends PanelContainer
 class_name PauseMenu
 
 @onready var quit_button: Button = $VBoxContainer/QuitButton
