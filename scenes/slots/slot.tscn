@@ -60,6 +60,7 @@ z_index = -1
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/WeightPanelContainer"]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 
 [node name="WeightIcon" type="TextureRect" parent="VBoxContainer/WeightPanelContainer/HBoxContainer"]
@@ -67,11 +68,30 @@ layout_mode = 2
 size_flags_horizontal = 0
 texture = SubResource("AtlasTexture_8k8rd")
 
-[node name="WeightLabel" type="Label" parent="VBoxContainer/WeightPanelContainer/HBoxContainer"]
+[node name="Control" type="Control" parent="VBoxContainer/WeightPanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(12, 0)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="WeightLabel" type="Label" parent="VBoxContainer/WeightPanelContainer/HBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -3.0
+offset_right = 6.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_type_variation = &"SmallLabel"
-text = "0
+text = "000
 "
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="PickupSound" type="AudioStreamPlayer" parent="."]
 bus = &"SFX"

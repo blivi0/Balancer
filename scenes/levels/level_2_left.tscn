@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://deedyncguq3qv" path="res://resources/items/stick_item.tres" id="5_pip3p"]
 
 [node name="SlotGrid" instance=ExtResource("1_t73f8")]
-columns = 1
+columns = 2
 
 [node name="Slot" parent="." index="0" instance=ExtResource("2_rix3b")]
 layout_mode = 2

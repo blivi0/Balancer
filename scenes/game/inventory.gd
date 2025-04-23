@@ -15,7 +15,7 @@ var normal_icon: Texture2D
 
 @onready var v_box_container: VBoxContainer = $VBoxContainer
 @onready var weight_icon: TextureRect = $VBoxContainer/PanelContainer/HBoxContainer/WeightIcon
-@onready var weight_label: Label = $VBoxContainer/PanelContainer/HBoxContainer/WeightLabel
+@onready var weight_label: Label = $VBoxContainer/PanelContainer/HBoxContainer/Control/WeightLabel
 
 var slot_grid: SlotGrid
 var total: int
