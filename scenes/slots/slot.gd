@@ -21,7 +21,6 @@ signal unhovered
 
 func _ready() -> void:
 	effect_texture_rect.texture = effect.texture
-	print(effect_texture_rect.global_position)
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	if not item or not slot_enabled:
@@ -32,7 +31,7 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	control.size = copy.size
 	control.add_child(copy)
 	control.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
-	copy.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	copy.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 	set_drag_preview(control)
 	
 	play_pickup_sound()
