@@ -1,15 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcpj5gxgwk2bk"]
+[gd_scene load_steps=6 format=3 uid="uid://dcpj5gxgwk2bk"]
 
 [ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_bx3q3"]
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_jh7e1"]
-[ext_resource type="Resource" uid="uid://di24d3yagjavj" path="res://resources/items/pickaxe_item.tres" id="3_5fabx"]
 [ext_resource type="Resource" uid="uid://egahxugh1mcp" path="res://resources/items/iron_block_item.tres" id="3_ct64n"]
+[ext_resource type="Resource" uid="uid://oyjdh5y3rssa" path="res://resources/items/staff_item.tres" id="3_wtog3"]
+[ext_resource type="Resource" uid="uid://c4xrohkyxd6as" path="res://resources/items/potion_item.tres" id="5_80hu6"]
 
 [node name="SlotGrid" instance=ExtResource("1_bx3q3")]
 
 [node name="Slot" parent="." index="0" instance=ExtResource("2_jh7e1")]
 layout_mode = 2
-item = ExtResource("3_5fabx")
+item = ExtResource("3_wtog3")
 
 [node name="Slot2" parent="." index="1" instance=ExtResource("2_jh7e1")]
 layout_mode = 2
@@ -35,3 +36,4 @@ layout_mode = 2
 
 [node name="Slot9" parent="." index="8" instance=ExtResource("2_jh7e1")]
 layout_mode = 2
+item = ExtResource("5_80hu6")

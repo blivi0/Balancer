@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2rlxv6t8nm44"]
+
+[ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_83akg"]
+[ext_resource type="PackedScene" uid="uid://fyjudb5e33g" path="res://scenes/slots/locked_slot.tscn" id="2_talc7"]
+[ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="3_x1y00"]
+[ext_resource type="Resource" uid="uid://dadx5bjhfwnap" path="res://resources/effects/light_effect.tres" id="4_xgj5c"]
+
+[node name="SlotGrid" instance=ExtResource("1_83akg")]
+
+[node name="LockedSlot" parent="." index="0" instance=ExtResource("2_talc7")]
+layout_mode = 2
+
+[node name="Slot" parent="." index="1" instance=ExtResource("3_x1y00")]
+layout_mode = 2
+effect = ExtResource("4_xgj5c")
+
+[node name="LockedSlot2" parent="." index="2" instance=ExtResource("2_talc7")]
+layout_mode = 2
+
+[node name="Slot2" parent="." index="3" instance=ExtResource("3_x1y00")]
+layout_mode = 2
+effect = ExtResource("4_xgj5c")
+
+[node name="Slot3" parent="." index="4" instance=ExtResource("3_x1y00")]
+layout_mode = 2
+effect = ExtResource("4_xgj5c")
+
+[node name="Slot4" parent="." index="5" instance=ExtResource("3_x1y00")]
+layout_mode = 2
+effect = ExtResource("4_xgj5c")
+
+[node name="LockedSlot3" parent="." index="6" instance=ExtResource("2_talc7")]
+layout_mode = 2
+
+[node name="Slot5" parent="." index="7" instance=ExtResource("3_x1y00")]
+layout_mode = 2
+effect = ExtResource("4_xgj5c")
+
+[node name="LockedSlot4" parent="." index="8" instance=ExtResource("2_talc7")]
+layout_mode = 2

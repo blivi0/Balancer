@@ -34,7 +34,10 @@ offset_bottom = 90.5
 grow_horizontal = 2
 theme_type_variation = &"WoodPanelContainer"
 
-[node name="TitleLabel" type="Label" parent="MainPanel/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/PanelContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MainPanel/PanelContainer/MarginContainer"]
 layout_mode = 2
 theme_type_variation = &"LargeLabel"
 theme_override_font_sizes/font_size = 36
