@@ -4,7 +4,7 @@ const LEVEL_BUTTON := preload("res://scenes/menu/level_button.tscn")
 
 @onready var main_panel: Control = $MainPanel
 @onready var levels_panel: Control = $LevelsPanel
-@onready var levels_container: VBoxContainer = $LevelsPanel/MarginContainer/LevelsContainer
+@onready var levels_container: GridContainer = $LevelsPanel/MarginContainer/LevelsContainer
 
 func _ready() -> void:
 	for i in range(LevelManager.TOTAL_LEVELS):
