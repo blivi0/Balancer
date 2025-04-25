@@ -5,7 +5,7 @@ const LEVEL_FORMAT := "res://scenes/levels/level_%d_%s.tscn"
 
 const TWEEN_DURATION := 0.75
 const MIN_MARGIN_TOP := 0
-const MAX_MARGIN_TOP := 96
+const MAX_MARGIN_TOP := 16
 @warning_ignore("integer_division")
 const MID_MARGIN_TOP = (MIN_MARGIN_TOP + MAX_MARGIN_TOP) / 2
 
@@ -26,7 +26,7 @@ var tween: Tween
 signal tween_finished
 
 func _ready() -> void:
-	margin_top = get_theme_constant("margin_top")
+	margin_top = MID_MARGIN_TOP
 	normal_icon = weight_icon.texture
 
 func _process(_delta: float) -> void:

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bekm6m5nfw4kv"]
+
+[ext_resource type="PackedScene" uid="uid://dkn7otfmjfs44" path="res://scenes/test/test_inventory.tscn" id="1_dbd7t"]
+[ext_resource type="PackedScene" uid="uid://dmwqj1xxuahjc" path="res://scenes/game/description_container.tscn" id="2_8h57t"]
+
+[node name="TestGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Inventory" parent="." instance=ExtResource("1_dbd7t")]
+layout_mode = 0
+offset_top = 56.0
+offset_bottom = 262.0
+theme_override_constants/margin_top = 0
+
+[node name="DescriptionContainer" parent="." instance=ExtResource("2_8h57t")]
+layout_mode = 0
+
+[editable path="Inventory"]
+[editable path="Inventory/VBoxContainer/SlotGrid/Slot"]

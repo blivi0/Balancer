@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkn7otfmjfs44"]
+
+[ext_resource type="PackedScene" uid="uid://b178oc644nu6t" path="res://scenes/game/inventory.tscn" id="1_mr7r2"]
+[ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="2_jxj68"]
+[ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="3_1smy5"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="4_p2yxo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og8cq"]
+atlas = ExtResource("4_p2yxo")
+region = Rect2(8, 72, 32, 32)
+
+[node name="Inventory" instance=ExtResource("1_mr7r2")]
+offset_right = 128.0
+offset_bottom = 195.0
+theme_override_constants/margin_top = 16
+
+[node name="SlotGrid" parent="VBoxContainer" index="0" instance=ExtResource("2_jxj68")]
+layout_mode = 2
+
+[node name="Slot" parent="VBoxContainer/SlotGrid" index="0" instance=ExtResource("3_1smy5")]
+layout_mode = 2
+
+[node name="EffectTextureRect" parent="VBoxContainer/SlotGrid/Slot/VBoxContainer/SlotContainer" index="0"]
+texture = SubResource("AtlasTexture_og8cq")
+
+[node name="Slot2" parent="VBoxContainer/SlotGrid" index="1" instance=ExtResource("3_1smy5")]
+layout_mode = 2
+
+[node name="Slot3" parent="VBoxContainer/SlotGrid" index="2" instance=ExtResource("3_1smy5")]
+layout_mode = 2
+
+[node name="Slot4" parent="VBoxContainer/SlotGrid" index="3" instance=ExtResource("3_1smy5")]
+layout_mode = 2
+
+[node name="Slot5" parent="VBoxContainer/SlotGrid" index="4" instance=ExtResource("3_1smy5")]
+layout_mode = 2
+
+[node name="Slot6" parent="VBoxContainer/SlotGrid" index="5" instance=ExtResource("3_1smy5")]
+layout_mode = 2
+
+[node name="Slot7" parent="VBoxContainer/SlotGrid" index="6" instance=ExtResource("3_1smy5")]
+layout_mode = 2
+
+[node name="Slot8" parent="VBoxContainer/SlotGrid" index="7" instance=ExtResource("3_1smy5")]
+layout_mode = 2
+
+[node name="Slot9" parent="VBoxContainer/SlotGrid" index="8" instance=ExtResource("3_1smy5")]
+layout_mode = 2
+
+[editable path="VBoxContainer/SlotGrid/Slot"]

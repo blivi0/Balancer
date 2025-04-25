@@ -4,44 +4,37 @@
 [ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_jch6m"]
 
 [node name="DescriptionContainer" type="PanelContainer"]
-custom_minimum_size = Vector2(144, 0)
-offset_right = 99.0
-offset_bottom = 75.0
+custom_minimum_size = Vector2(144, 48)
+offset_right = 200.0
+offset_bottom = 48.0
 theme = ExtResource("1_jch6m")
 theme_type_variation = &"WoodPanelContainer"
 script = ExtResource("1_3aeke")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="IconTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(16, 16)
+[node name="IconTextureRect" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-expand_mode = 3
 
-[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
+
+[node name="NameLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_type_variation = &"MediumLabel"
 text = "Name"
 
-[node name="DescriptionLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="DescriptionLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(144, 0)
 layout_mode = 2
 theme_type_variation = &"SmallLabel"
-text = "Description"
+text = "Description
+Description"
 autowrap_mode = 2

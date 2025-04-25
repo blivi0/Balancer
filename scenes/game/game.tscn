@@ -76,24 +76,28 @@ theme = ExtResource("1_a84yq")
 script = ExtResource("1_rse5h")
 
 [node name="InventoryController" parent="." instance=ExtResource("2_dheqr")]
+custom_minimum_size = Vector2(0, 198)
 layout_mode = 1
-anchors_preset = 13
-anchor_top = 0.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -50.0
-offset_top = 0.0
-offset_right = 50.0
-offset_bottom = 0.0
+offset_left = -100.0
+offset_top = -206.0
+offset_right = 100.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -176.0
-offset_top = 16.0
-offset_right = 176.0
-offset_bottom = 80.0
+offset_top = 8.0
+offset_bottom = 56.0
 grow_horizontal = 2
 theme_override_constants/separation = 32
 alignment = 1
