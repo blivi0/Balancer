@@ -11,4 +11,4 @@ region = Rect2(59, 27, 26, 26)
 script = ExtResource("1_g7gd1")
 texture = SubResource("AtlasTexture_155fa")
 name = "Locked"
-description = "Blocks the slot so no item can be placed there."
+description = "No item can be placed in this slot."

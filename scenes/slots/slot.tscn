@@ -20,9 +20,10 @@ script = ExtResource("1_o8bka")
 effect = ExtResource("2_osh6l")
 
 [node name="Line2D" type="Line2D" parent="."]
+visible = false
 z_index = -1
 position = Vector2(16, 16)
-points = PackedVector2Array(0, 0, 32, 0)
+points = PackedVector2Array(0, 0, 48, 0)
 width = 1.0
 default_color = Color(1, 1, 0, 1)
 

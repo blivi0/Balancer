@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c86x4t1jwo3ot"]
+[gd_scene load_steps=7 format=3 uid="uid://c86x4t1jwo3ot"]
 
 [ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_qd44j"]
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_y3bjs"]
 [ext_resource type="Resource" uid="uid://cx32j81fblskt" path="res://resources/items/feather_item.tres" id="3_krkkg"]
-[ext_resource type="Resource" uid="uid://bc6f3y4uvna4d" path="res://resources/items/crossbow_item.tres" id="4_lgpdh"]
-[ext_resource type="Resource" uid="uid://di24d3yagjavj" path="res://resources/items/pickaxe_item.tres" id="5_lggy4"]
+[ext_resource type="Resource" uid="uid://btqc46e62ypoh" path="res://resources/items/bow_item.tres" id="4_8pypd"]
+[ext_resource type="Resource" uid="uid://cswpw8a6anuds" path="res://resources/items/arrow_item.tres" id="5_b6c0x"]
+[ext_resource type="Resource" uid="uid://d20r62xi1yv4y" path="res://resources/items/wood_log_item.tres" id="6_cwdob"]
 
 [node name="SlotGrid" instance=ExtResource("1_qd44j")]
 
@@ -20,20 +21,21 @@ layout_mode = 2
 
 [node name="Slot4" parent="." index="3" instance=ExtResource("2_y3bjs")]
 layout_mode = 2
-item = ExtResource("4_lgpdh")
+item = ExtResource("4_8pypd")
 
 [node name="Slot5" parent="." index="4" instance=ExtResource("2_y3bjs")]
 layout_mode = 2
 
 [node name="Slot6" parent="." index="5" instance=ExtResource("2_y3bjs")]
 layout_mode = 2
-item = ExtResource("5_lggy4")
+item = ExtResource("5_b6c0x")
 
 [node name="Slot7" parent="." index="6" instance=ExtResource("2_y3bjs")]
 layout_mode = 2
 
 [node name="Slot8" parent="." index="7" instance=ExtResource("2_y3bjs")]
 layout_mode = 2
+item = ExtResource("6_cwdob")
 
 [node name="Slot9" parent="." index="8" instance=ExtResource("2_y3bjs")]
 layout_mode = 2
