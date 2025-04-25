@@ -22,12 +22,9 @@ func load_level() -> void:
 		slot.effect_hovered.connect(on_slot_effect_hovered)
 		slot.unhovered.connect(on_slot_unhovered)
 
-func on_inventory_balanced() -> void:
-	if LevelManager.can_increase_level():
-		LevelManager.update_max_level()
-	else:
-		win_menu.hide_next_level_button()
-	win_menu.show_win_menu()
+func on_inventory_balanced(num_moves: int) -> void:
+	LevelManager.complete_level(num_moves)
+	win_menu.show_win_menu(num_moves)
 
 func on_slot_item_hovered(slot_resource: SlotResource) -> void:
 	item_description.show_description(slot_resource)

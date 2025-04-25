@@ -143,22 +143,41 @@ size_flags_vertical = 0
 theme_type_variation = &"LargeLabel"
 text = "Winner!"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="WinMenu/MarginContainer/VBoxContainer"]
+[node name="MovesContainer" type="HBoxContainer" parent="WinMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 24
+alignment = 1
 
-[node name="QuitButton" parent="WinMenu/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("6_t2rbg")]
+[node name="MovesLabel" type="Label" parent="WinMenu/MarginContainer/VBoxContainer/MovesContainer"]
+layout_mode = 2
+theme_type_variation = &"LargeLabel"
+text = "Moves: 00"
+
+[node name="BestLabel" type="Label" parent="WinMenu/MarginContainer/VBoxContainer/MovesContainer"]
+layout_mode = 2
+theme_type_variation = &"LargeLabel"
+text = "Best: 00"
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="WinMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="QuitButton" parent="WinMenu/MarginContainer/VBoxContainer/ButtonsContainer" instance=ExtResource("6_t2rbg")]
 layout_mode = 2
 icon = SubResource("AtlasTexture_jelwl")
 hover_icon = SubResource("AtlasTexture_joy6y")
 pressed_icon = SubResource("AtlasTexture_tcidb")
 
-[node name="RestartButton" parent="WinMenu/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("6_t2rbg")]
+[node name="RestartButton" parent="WinMenu/MarginContainer/VBoxContainer/ButtonsContainer" instance=ExtResource("6_t2rbg")]
 layout_mode = 2
 icon = SubResource("AtlasTexture_ddei0")
 hover_icon = SubResource("AtlasTexture_wwrte")
 pressed_icon = SubResource("AtlasTexture_pb44c")
 
-[node name="NextLevelButton" parent="WinMenu/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("6_t2rbg")]
+[node name="NextLevelButton" parent="WinMenu/MarginContainer/VBoxContainer/ButtonsContainer" instance=ExtResource("6_t2rbg")]
 layout_mode = 2
 icon = SubResource("AtlasTexture_ccia4")
 hover_icon = SubResource("AtlasTexture_8klwm")
