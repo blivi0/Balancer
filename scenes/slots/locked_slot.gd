@@ -26,9 +26,9 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	_on_mouse_exited()
 	updated.emit()
 
-func apply_item_effect(effect_item: EffectItem) -> void:
+func apply_item_effect(effect_item: EffectItem, dir: DataTypes.Direction) -> void:
 	if not locked:
-		super(effect_item)
+		super(effect_item, dir)
 
 func _on_mouse_entered() -> void:
 	if not locked:

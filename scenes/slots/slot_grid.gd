@@ -37,13 +37,13 @@ func apply_item_effect(i: int, effect_item: EffectItem) -> void:
 	var row = i / columns
 	var col = i % columns
 	if row > 0:
-		get_slot(row - 1, col).apply_item_effect(effect_item)
+		get_slot(row - 1, col).apply_item_effect(effect_item, DataTypes.Direction.UP)
 	if col > 0:
-		get_slot(row, col - 1).apply_item_effect(effect_item)
+		get_slot(row, col - 1).apply_item_effect(effect_item, DataTypes.Direction.RIGHT)
 	if row < rows - 1:
-		get_slot(row + 1, col).apply_item_effect(effect_item)
+		get_slot(row + 1, col).apply_item_effect(effect_item, DataTypes.Direction.DOWN)
 	if col < columns - 1:
-		get_slot(row, col + 1).apply_item_effect(effect_item)
+		get_slot(row, col + 1).apply_item_effect(effect_item, DataTypes.Direction.LEFT)
 
 func get_slot(row: int, col: int) -> Slot:
 	return slots[row * columns + col]

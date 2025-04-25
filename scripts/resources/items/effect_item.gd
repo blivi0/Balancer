@@ -7,7 +7,7 @@ func apply_weight(other_weight: int) -> int:
 	return other_weight
 
 func apply_material(texture_rect: TextureRect) -> void:
-	Utils.apply_outline_shader(texture_rect, get_outline_color())
+	Utils.apply_outline_shader(texture_rect, get_color())
 
-func get_outline_color() -> Color:
+func get_color() -> Color:
 	return Color.WHITE

@@ -1,6 +1,8 @@
 extends Control
 class_name Slot
 
+const SLOT_DISTANCE := 48
+
 @export var effect: SlotEffect
 @export var item: SlotItem
 
@@ -11,6 +13,7 @@ class_name Slot
 @onready var weight_label: Label = $VBoxContainer/WeightPanelContainer/MarginContainer/HBoxContainer/Control/WeightLabel
 @onready var pickup_sound: AudioStreamPlayer = $PickupSound
 @onready var drop_sound: AudioStreamPlayer = $DropSound
+@onready var line_2d: Line2D = $Line2D
 
 var effective_weight := 0
 var slot_enabled := true
@@ -52,6 +55,8 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 
 func initialize() -> void:
 	effect_texture_rect.material = null
+	line_2d.hide()
+	
 	if item:
 		item_texture_rect.texture = item.texture
 		effect.apply_material(item_texture_rect)
@@ -63,10 +68,22 @@ func initialize() -> void:
 		item_texture_rect.hide()
 		weight_panel_container.hide()
 
-func apply_item_effect(effect_item: EffectItem) -> void:
+func apply_item_effect(effect_item: EffectItem, dir: DataTypes.Direction) -> void:
 	effect_item.apply_material(effect_texture_rect)
 	if item:
 		set_item_weight(effect_item.apply_weight(effective_weight))
+	
+	line_2d.show()
+	line_2d.default_color = effect_item.get_color()
+	match dir:
+		DataTypes.Direction.UP:
+			line_2d.points[1] = Vector2(0, SLOT_DISTANCE)
+		DataTypes.Direction.DOWN:
+			line_2d.points[1] = Vector2(0, -SLOT_DISTANCE)
+		DataTypes.Direction.LEFT:
+			line_2d.points[1] = Vector2(-SLOT_DISTANCE, 0)
+		DataTypes.Direction.RIGHT:
+			line_2d.points[1] = Vector2(SLOT_DISTANCE, 0)
 
 func set_item_weight(weight: int) -> void:
 	effective_weight = weight
