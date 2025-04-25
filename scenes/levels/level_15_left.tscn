@@ -1,0 +1,74 @@
+[gd_scene load_steps=16 format=3 uid="uid://b227pm1hsepo5"]
+
+[ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_bai5f"]
+[ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_0w4d6"]
+[ext_resource type="Resource" uid="uid://cxetoso7ot27r" path="res://resources/effects/heavy_effect.tres" id="3_ysegl"]
+[ext_resource type="Resource" uid="uid://bs4xpmy5wad0i" path="res://resources/effects/invert_effect.tres" id="4_3ehj7"]
+[ext_resource type="Resource" uid="uid://dadx5bjhfwnap" path="res://resources/effects/light_effect.tres" id="5_i1y7v"]
+[ext_resource type="Resource" uid="uid://btqc46e62ypoh" path="res://resources/items/bow_item.tres" id="6_0jc3o"]
+[ext_resource type="PackedScene" uid="uid://fyjudb5e33g" path="res://scenes/slots/locked_slot.tscn" id="6_dasuq"]
+[ext_resource type="Resource" uid="uid://cx32j81fblskt" path="res://resources/items/feather_item.tres" id="7_4issi"]
+[ext_resource type="Resource" uid="uid://cv48lted52efd" path="res://resources/items/stone_item.tres" id="8_1op23"]
+[ext_resource type="Resource" uid="uid://dxomgo1me4tuq" path="res://resources/items/key_item.tres" id="10_qnxk1"]
+[ext_resource type="Resource" uid="uid://bpreo46u130nb" path="res://resources/items/sword_item.tres" id="12_o4gtw"]
+[ext_resource type="Resource" uid="uid://bg2o4joduo023" path="res://resources/items/paper_item.tres" id="14_plfaf"]
+[ext_resource type="Resource" uid="uid://oyjdh5y3rssa" path="res://resources/items/staff_item.tres" id="14_wl3cn"]
+[ext_resource type="Resource" uid="uid://di24d3yagjavj" path="res://resources/items/pickaxe_item.tres" id="15_4m36j"]
+[ext_resource type="Resource" uid="uid://c4xrohkyxd6as" path="res://resources/items/potion_item.tres" id="16_jquab"]
+
+[node name="SlotGrid" instance=ExtResource("1_bai5f")]
+columns = 4
+
+[node name="Slot" parent="." index="0" instance=ExtResource("2_0w4d6")]
+layout_mode = 2
+effect = ExtResource("3_ysegl")
+item = ExtResource("14_plfaf")
+
+[node name="Slot2" parent="." index="1" instance=ExtResource("2_0w4d6")]
+layout_mode = 2
+effect = ExtResource("4_3ehj7")
+item = ExtResource("6_0jc3o")
+
+[node name="Slot3" parent="." index="2" instance=ExtResource("2_0w4d6")]
+layout_mode = 2
+effect = ExtResource("5_i1y7v")
+item = ExtResource("8_1op23")
+
+[node name="LockedSlot" parent="." index="3" instance=ExtResource("6_dasuq")]
+layout_mode = 2
+
+[node name="Slot4" parent="." index="4" instance=ExtResource("2_0w4d6")]
+layout_mode = 2
+effect = ExtResource("4_3ehj7")
+item = ExtResource("10_qnxk1")
+
+[node name="Slot5" parent="." index="5" instance=ExtResource("2_0w4d6")]
+layout_mode = 2
+effect = ExtResource("5_i1y7v")
+item = ExtResource("7_4issi")
+
+[node name="Slot6" parent="." index="6" instance=ExtResource("2_0w4d6")]
+layout_mode = 2
+effect = ExtResource("3_ysegl")
+item = ExtResource("12_o4gtw")
+
+[node name="Slot7" parent="." index="7" instance=ExtResource("2_0w4d6")]
+layout_mode = 2
+
+[node name="Slot8" parent="." index="8" instance=ExtResource("2_0w4d6")]
+layout_mode = 2
+effect = ExtResource("5_i1y7v")
+item = ExtResource("14_wl3cn")
+
+[node name="Slot9" parent="." index="9" instance=ExtResource("2_0w4d6")]
+layout_mode = 2
+effect = ExtResource("3_ysegl")
+item = ExtResource("15_4m36j")
+
+[node name="Slot10" parent="." index="10" instance=ExtResource("2_0w4d6")]
+layout_mode = 2
+effect = ExtResource("4_3ehj7")
+item = ExtResource("16_jquab")
+
+[node name="LockedSlot2" parent="." index="11" instance=ExtResource("6_dasuq")]
+layout_mode = 2
