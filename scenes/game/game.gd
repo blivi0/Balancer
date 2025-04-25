@@ -11,6 +11,7 @@ func _ready() -> void:
 	win_menu.next_level_button.pressed.connect(on_next_level)
 	win_menu.restart_button.pressed.connect(on_restart_level)
 	win_menu.quit_button.pressed.connect(on_quit)
+	pause_menu.restart_button.pressed.connect(on_restart_level)
 	pause_menu.quit_button.pressed.connect(on_quit)
 	load_level()
 
