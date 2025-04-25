@@ -14,6 +14,7 @@ const MID_MARGIN_TOP = (MIN_MARGIN_TOP + MAX_MARGIN_TOP) / 2
 var normal_icon: Texture2D
 
 @onready var v_box_container: VBoxContainer = $VBoxContainer
+@onready var h_box_container: HBoxContainer = $VBoxContainer/HBoxContainer
 @onready var weight_icon: TextureRect = $VBoxContainer/HBoxContainer/WeightIcon
 @onready var weight_label: Label = $VBoxContainer/HBoxContainer/Control/WeightLabel
 
@@ -33,6 +34,9 @@ func _process(_delta: float) -> void:
 	if tween and tween.is_running():
 		weight_label.text = str(display_total)
 		add_theme_constant_override("margin_top", margin_top)
+
+func move_weight_icon_first() -> void:
+	h_box_container.move_child(weight_icon, 0)
 
 func load_level(level_num: int, side: String) -> void:
 	if slot_grid:

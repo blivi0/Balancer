@@ -102,11 +102,11 @@ grow_horizontal = 2
 theme_override_constants/separation = 32
 alignment = 1
 
-[node name="ItemDescription" parent="HBoxContainer" instance=ExtResource("3_tpjy8")]
+[node name="EffectDescription" parent="HBoxContainer" instance=ExtResource("3_tpjy8")]
 visible = false
 layout_mode = 2
 
-[node name="EffectDescription" parent="HBoxContainer" instance=ExtResource("3_tpjy8")]
+[node name="ItemDescription" parent="HBoxContainer" instance=ExtResource("3_tpjy8")]
 visible = false
 layout_mode = 2
 

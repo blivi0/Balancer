@@ -11,6 +11,7 @@ signal balanced(num_moves: int)
 func _ready() -> void:
 	# Only need one signal
 	left_inventory.tween_finished.connect(on_inventory_tween_finished)
+	left_inventory.move_weight_icon_first()
 
 func load_level(level_num: int) -> void:
 	num_moves = 0
