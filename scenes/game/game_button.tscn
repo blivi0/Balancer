@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://beocrjjnsxjiw"]
+
+[ext_resource type="Script" path="res://scenes/game/game_button.gd" id="1_hvggp"]
+[ext_resource type="AudioStream" uid="uid://c5beh75slpue5" path="res://assets/sfx/UI/ui_select_draft_01.wav" id="2_61y4c"]
+
+[node name="GameButton" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon_alignment = 1
+script = ExtResource("1_hvggp")
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_61y4c")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

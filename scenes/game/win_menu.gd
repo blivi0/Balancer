@@ -1,9 +1,10 @@
 extends PanelContainer
 class_name WinMenu
 
-@onready var quit_button: Button = $MarginContainer/VBoxContainer/HBoxContainer/QuitButton
-@onready var restart_button: Button = $MarginContainer/VBoxContainer/HBoxContainer/RestartButton
-@onready var next_level_button: IconButton = $MarginContainer/VBoxContainer/HBoxContainer/NextLevelButton
+@onready var quit_button: GameButton = $MarginContainer/VBoxContainer/HBoxContainer/QuitButton
+@onready var restart_button: GameButton = $MarginContainer/VBoxContainer/HBoxContainer/RestartButton
+@onready var next_level_button: GameButton = $MarginContainer/VBoxContainer/HBoxContainer/NextLevelButton
+@onready var win_sound: AudioStreamPlayer = $WinSound
 
 var viewport_height: float
 
@@ -13,8 +14,9 @@ func _ready() -> void:
 func show_win_menu() -> void:
 	show()
 	var position_diff = Vector2.UP * ((viewport_height + size.y) / 2)
-	var tween = get_tree().create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	var tween = get_tree().create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_parallel(true)
 	tween.tween_property(self, "position", position_diff, 0.5).as_relative()
+	tween.tween_callback(win_sound.play).set_delay(0.05)
 
 func hide_win_menu() -> void:
 	hide()

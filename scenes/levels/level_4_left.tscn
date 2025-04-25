@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_ihrdu"]
 [ext_resource type="Resource" uid="uid://dadx5bjhfwnap" path="res://resources/effects/light_effect.tres" id="3_1miah"]
 [ext_resource type="Resource" uid="uid://btqc46e62ypoh" path="res://resources/items/bow_item.tres" id="3_7m4ar"]
-[ext_resource type="Resource" uid="uid://bpreo46u130nb" path="res://resources/items/sword_item.tres" id="4_1d4rx"]
+[ext_resource type="Resource" uid="uid://cswpw8a6anuds" path="res://resources/items/arrow_item.tres" id="4_3o214"]
 
 [node name="SlotGrid" instance=ExtResource("1_w78q7")]
 columns = 2
@@ -15,7 +15,7 @@ item = ExtResource("3_7m4ar")
 
 [node name="Slot2" parent="." index="1" instance=ExtResource("2_ihrdu")]
 layout_mode = 2
-item = ExtResource("4_1d4rx")
+item = ExtResource("4_3o214")
 
 [node name="Slot3" parent="." index="2" instance=ExtResource("2_ihrdu")]
 layout_mode = 2

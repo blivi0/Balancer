@@ -37,7 +37,8 @@ theme_override_constants/separation = 24
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(66, 0)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/separation = 8
 
 [node name="WeightIcon" type="TextureRect" parent="VBoxContainer/HBoxContainer"]

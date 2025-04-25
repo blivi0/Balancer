@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="1_k6dxx"]
 [ext_resource type="Script" path="res://scenes/slots/locked_slot.gd" id="2_hbxlu"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="3_egy4g"]
-[ext_resource type="AudioStream" uid="uid://m1vm0uif4xd3" path="res://assets/audio/sfx/item_locked_draft_02.wav" id="4_6xxnu"]
-[ext_resource type="AudioStream" uid="uid://bei7ytiq68mi5" path="res://assets/audio/sfx/item_unlock_draft_01.wav" id="5_qvh2r"]
+[ext_resource type="AudioStream" uid="uid://cafsn8p6cwhco" path="res://assets/sfx/Lock/item_locked_draft_02.wav" id="4_1laf2"]
+[ext_resource type="AudioStream" uid="uid://jrkrg1g1e5dr" path="res://assets/sfx/Lock/item_unlock_draft_02.wav" id="5_xm32d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j827y"]
 atlas = ExtResource("3_egy4g")
@@ -53,7 +53,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"unlock",
-"speed": 10.0
+"speed": 20.0
 }]
 
 [node name="LockedSlot" instance=ExtResource("1_k6dxx")]
@@ -65,11 +65,11 @@ sprite_frames = SubResource("SpriteFrames_3lx33")
 animation = &"unlock"
 
 [node name="LockedSound" type="AudioStreamPlayer" parent="." index="3"]
-stream = ExtResource("4_6xxnu")
+stream = ExtResource("4_1laf2")
 bus = &"SFX"
 
 [node name="UnlockSound" type="AudioStreamPlayer" parent="." index="4"]
-stream = ExtResource("5_qvh2r")
+stream = ExtResource("5_xm32d")
 bus = &"SFX"
 
 [connection signal="animation_finished" from="VBoxContainer/SlotContainer/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c8ecli8wrgctx"
+path="res://.godot/imported/item_potion_drop_draft_02 .wav-89e347d7f3350a70728a5a477445206a.sample"
+
+[deps]
+
+source_file="res://assets/sfx/Potion/item_potion_drop_draft_02 .wav"
+dest_files=["res://.godot/imported/item_potion_drop_draft_02 .wav-89e347d7f3350a70728a5a477445206a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -38,3 +38,4 @@ func _on_mouse_entered() -> void:
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	animated_sprite_2d.hide()
+	animated_sprite_2d.queue_free()

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="SlotItem" load_steps=6 format=3 uid="uid://dxomgo1me4tuq"]
 
-[ext_resource type="AudioStream" uid="uid://dg1qxg4girect" path="res://assets/audio/sfx/drops/item_key_drop_draft_01.wav" id="1_s34ob"]
-[ext_resource type="AudioStream" uid="uid://bfd2qb670lmcu" path="res://assets/audio/sfx/pickups/item_key_pickup_draft_01.wav" id="2_2jdjx"]
+[ext_resource type="AudioStream" uid="uid://hcxnlw3q3ivi" path="res://assets/sfx/Key/item_key_drop_draft_01.wav" id="1_3pv21"]
+[ext_resource type="AudioStream" uid="uid://bwgxyvnai4si8" path="res://assets/sfx/Key/item_key_pickup_draft_01.wav" id="2_dcd3m"]
 [ext_resource type="Script" path="res://scripts/resources/items/slot_item.gd" id="3_20xux"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="4_gprf6"]
 
@@ -12,8 +12,8 @@ region = Rect2(162, 36, 18, 18)
 [resource]
 script = ExtResource("3_20xux")
 weight = 2
-drop_audio = ExtResource("1_s34ob")
-pickup_audio = ExtResource("2_2jdjx")
+drop_audio = ExtResource("1_3pv21")
+pickup_audio = ExtResource("2_dcd3m")
 texture = SubResource("AtlasTexture_hyo8l")
 name = "Key"
 description = "Unlocks locked inventory slot. Item is deleted after."

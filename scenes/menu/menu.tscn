@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_82enx"]
 [ext_resource type="Script" path="res://scenes/menu/menu.gd" id="2_rhonl"]
-[ext_resource type="AudioStream" uid="uid://b6krf2860d4k1" path="res://assets/audio/music/TITLESCREEN.wav" id="3_frgv7"]
+[ext_resource type="AudioStream" uid="uid://b6krf2860d4k1" path="res://assets/music/TITLESCREEN.wav" id="3_frgv7"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
