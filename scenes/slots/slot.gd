@@ -42,7 +42,7 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	return self
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
-	return data is Slot
+	return data is Slot and data != self
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	var source_slot := data as Slot
