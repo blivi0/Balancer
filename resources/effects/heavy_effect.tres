@@ -11,4 +11,4 @@ region = Rect2(106, 26, 28, 28)
 script = ExtResource("1_w7d5x")
 texture = SubResource("AtlasTexture_6prsj")
 name = "Heavy"
-description = "Multiplies the weight of any item placed in this slot by 2."
+description = "The item's weight is multiplied by 2."

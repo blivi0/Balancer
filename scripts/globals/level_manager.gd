@@ -4,7 +4,7 @@ const MENU_SCENE := preload("res://scenes/menu/menu.tscn") as PackedScene
 const GAME_SCENE := preload("res://scenes/game/game.tscn") as PackedScene
 
 const TOTAL_LEVELS := 10
-var curr_level := 11
+var curr_level := 1
 var max_level := 1
 
 var best_moves := { }

@@ -11,4 +11,4 @@ region = Rect2(54, 71, 36, 34)
 script = ExtResource("1_j8x8w")
 texture = SubResource("AtlasTexture_sxfp1")
 name = "Light"
-description = "The item in this slot doesn't contribute to the total weight at all."
+description = "The item's weight becomes 0."
