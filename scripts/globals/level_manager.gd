@@ -30,3 +30,6 @@ func complete_level(num_moves: int) -> void:
 
 func get_curr_best_moves() -> int:
 	return best_moves[curr_level]
+
+func get_total_moves() -> int:
+	return best_moves.values().reduce(func(acc, num): return acc + num, 0)

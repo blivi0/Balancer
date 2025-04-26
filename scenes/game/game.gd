@@ -1,5 +1,7 @@
 extends Control
 
+const END_MENU := preload("res://scenes/game/end_menu.tscn")
+
 @onready var inventory_controller: InventoryController = $InventoryController
 @onready var item_description: DescriptionContainer = $HBoxContainer/ItemDescription
 @onready var effect_description: DescriptionContainer = $HBoxContainer/EffectDescription
@@ -20,7 +22,7 @@ func _ready() -> void:
 	load_level()
 
 func load_level() -> void:
-	win_menu.hide_win_menu()
+	win_menu.hide()
 	num_moves = 0
 	move_num_label.text = "Moves: 0"
 	level_num_label.text = "Level: %d" % LevelManager.curr_level
@@ -33,7 +35,7 @@ func load_level() -> void:
 
 func on_inventory_balanced() -> void:
 	LevelManager.complete_level(num_moves)
-	win_menu.show_win_menu(num_moves)
+	win_menu.show_win_menu(num_moves, LevelManager.get_curr_best_moves())
 
 func on_slot_updated() -> void:
 	num_moves += 1
@@ -50,8 +52,13 @@ func on_slot_unhovered() -> void:
 	effect_description.hide()
 
 func on_next_level() -> void:
-	LevelManager.increase_level()
-	load_level()
+	if LevelManager.can_increase_level():
+		LevelManager.increase_level()
+		load_level()
+	else:
+		inventory_controller.queue_free()
+		win_menu.queue_free()
+		add_child(END_MENU.instantiate())
 
 func on_restart_level() -> void:
 	load_level()

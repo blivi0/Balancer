@@ -12,46 +12,46 @@
 [ext_resource type="AudioStream" uid="uid://ci2b7f846fjdw" path="res://assets/sfx/UI/ui_winner_draft_01.wav" id="8_drk6f"]
 [ext_resource type="AudioStream" uid="uid://c5jg4adcsucw1" path="res://assets/music/Main Theme.wav" id="10_g3qu7"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_weslg"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_65hlu"]
 load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jelwl"]
-atlas = SubResource("CompressedTexture2D_weslg")
+atlas = SubResource("CompressedTexture2D_65hlu")
 region = Rect2(256, 96, 32, 32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qekgd"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y2dcn"]
 load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_joy6y"]
-atlas = SubResource("CompressedTexture2D_qekgd")
+atlas = SubResource("CompressedTexture2D_y2dcn")
 region = Rect2(288, 96, 32, 32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6wbyp"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5qc0n"]
 load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tcidb"]
-atlas = SubResource("CompressedTexture2D_6wbyp")
+atlas = SubResource("CompressedTexture2D_5qc0n")
 region = Rect2(320, 96, 32, 32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ooka2"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7rdm0"]
 load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ddei0"]
-atlas = SubResource("CompressedTexture2D_ooka2")
+atlas = SubResource("CompressedTexture2D_7rdm0")
 region = Rect2(160, 64, 32, 32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g0j8u"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_47ew3"]
 load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wwrte"]
-atlas = SubResource("CompressedTexture2D_g0j8u")
+atlas = SubResource("CompressedTexture2D_47ew3")
 region = Rect2(192, 64, 32, 32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ynt24"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_syuyl"]
 load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pb44c"]
-atlas = SubResource("CompressedTexture2D_ynt24")
+atlas = SubResource("CompressedTexture2D_syuyl")
 region = Rect2(224, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ccia4"]
@@ -125,22 +125,18 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
-offset_top = -39.0
-offset_right = 104.0
+offset_top = -28.0
+offset_right = 82.0
 offset_bottom = -8.0
 grow_vertical = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="LevelNumContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
 
 [node name="LevelNumLabel" type="Label" parent="LevelNumContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 1
-theme_type_variation = &"LargeLabel"
+theme_type_variation = &"MediumLabel"
 text = "Level: 00"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -152,8 +148,8 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -104.0
-offset_top = -39.0
+offset_left = -90.0
+offset_top = -28.0
 offset_right = -8.0
 offset_bottom = -8.0
 grow_horizontal = 0
@@ -161,15 +157,11 @@ grow_vertical = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="MoveNumContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
 
 [node name="MoveNumLabel" type="Label" parent="MoveNumContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 1
-theme_type_variation = &"LargeLabel"
+theme_type_variation = &"MediumLabel"
 text = "Moves: 00"
 horizontal_alignment = 1
 vertical_alignment = 1

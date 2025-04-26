@@ -7,36 +7,33 @@
 
 [node name="SlotGrid" instance=ExtResource("1_sfm41")]
 
-[node name="Slot" parent="." index="0" instance=ExtResource("2_eqf7f")]
+[node name="LockedSlot" parent="." index="0" instance=ExtResource("4_4fmyd")]
+layout_mode = 2
+
+[node name="Slot" parent="." index="1" instance=ExtResource("2_eqf7f")]
 layout_mode = 2
 effect = ExtResource("3_i8i5s")
 
-[node name="Slot2" parent="." index="1" instance=ExtResource("2_eqf7f")]
+[node name="LockedSlot3" parent="." index="2" instance=ExtResource("4_4fmyd")]
+layout_mode = 2
+
+[node name="Slot2" parent="." index="3" instance=ExtResource("2_eqf7f")]
 layout_mode = 2
 effect = ExtResource("3_i8i5s")
 
-[node name="Slot3" parent="." index="2" instance=ExtResource("2_eqf7f")]
+[node name="LockedSlot2" parent="." index="4" instance=ExtResource("4_4fmyd")]
+layout_mode = 2
+
+[node name="Slot3" parent="." index="5" instance=ExtResource("2_eqf7f")]
 layout_mode = 2
 effect = ExtResource("3_i8i5s")
 
-[node name="LockedSlot" parent="." index="3" instance=ExtResource("4_4fmyd")]
+[node name="LockedSlot4" parent="." index="6" instance=ExtResource("4_4fmyd")]
 layout_mode = 2
 
-[node name="Slot4" parent="." index="4" instance=ExtResource("2_eqf7f")]
+[node name="Slot4" parent="." index="7" instance=ExtResource("2_eqf7f")]
 layout_mode = 2
 effect = ExtResource("3_i8i5s")
 
-[node name="LockedSlot2" parent="." index="5" instance=ExtResource("4_4fmyd")]
+[node name="LockedSlot5" parent="." index="8" instance=ExtResource("4_4fmyd")]
 layout_mode = 2
-
-[node name="Slot5" parent="." index="6" instance=ExtResource("2_eqf7f")]
-layout_mode = 2
-effect = ExtResource("3_i8i5s")
-
-[node name="Slot6" parent="." index="7" instance=ExtResource("2_eqf7f")]
-layout_mode = 2
-effect = ExtResource("3_i8i5s")
-
-[node name="Slot7" parent="." index="8" instance=ExtResource("2_eqf7f")]
-layout_mode = 2
-effect = ExtResource("3_i8i5s")

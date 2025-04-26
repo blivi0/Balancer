@@ -1,0 +1,106 @@
+[gd_scene load_steps=16 format=3 uid="uid://b4aficwle6gn3"]
+
+[ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_30s5a"]
+[ext_resource type="Script" path="res://scenes/game/end_menu.gd" id="2_el2r3"]
+[ext_resource type="PackedScene" uid="uid://beocrjjnsxjiw" path="res://scenes/game/game_button.tscn" id="2_ie03c"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_weslg"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx5ps"]
+atlas = SubResource("CompressedTexture2D_weslg")
+region = Rect2(256, 96, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qekgd"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpq3i"]
+atlas = SubResource("CompressedTexture2D_qekgd")
+region = Rect2(288, 96, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6wbyp"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx64a"]
+atlas = SubResource("CompressedTexture2D_6wbyp")
+region = Rect2(320, 96, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ooka2"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ch4y1"]
+atlas = SubResource("CompressedTexture2D_ooka2")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g0j8u"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n08uw"]
+atlas = SubResource("CompressedTexture2D_g0j8u")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ynt24"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66uer"]
+atlas = SubResource("CompressedTexture2D_ynt24")
+region = Rect2(224, 64, 32, 32)
+
+[node name="EndMenu" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.5
+offset_top = -75.5
+offset_right = 103.5
+offset_bottom = 75.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_30s5a")
+theme_type_variation = &"WoodPanelContainer"
+script = ExtResource("2_el2r3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 32
+
+[node name="EndLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_type_variation = &"LargeLabel"
+text = "Thank You For Playing"
+
+[node name="TotalMovesLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_type_variation = &"LargeLabel"
+text = "Best Total Moves: 000"
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="QuitButton" parent="MarginContainer/VBoxContainer/ButtonsContainer" instance=ExtResource("2_ie03c")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_dx5ps")
+hover_icon = SubResource("AtlasTexture_kpq3i")
+pressed_icon = SubResource("AtlasTexture_rx64a")
+
+[node name="RestartButton" parent="MarginContainer/VBoxContainer/ButtonsContainer" instance=ExtResource("2_ie03c")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_ch4y1")
+hover_icon = SubResource("AtlasTexture_n08uw")
+pressed_icon = SubResource("AtlasTexture_66uer")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/RestartButton" to="." method="_on_restart_button_pressed"]

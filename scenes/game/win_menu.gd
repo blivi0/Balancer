@@ -13,20 +13,13 @@ var viewport_height: float
 func _ready() -> void:
 	viewport_height = get_viewport().get_visible_rect().size.y
 
-func show_win_menu(num_moves: int) -> void:
-	if not LevelManager.can_increase_level():
-		next_level_button.hide()
-		reset_size()
-	
+func show_win_menu(num_moves: int, best_moves: int) -> void:
 	moves_label.text = "Moves: %d" % num_moves
-	best_label.text = "Best: %d" % LevelManager.get_curr_best_moves()
+	best_label.text = "Best: %d" % best_moves
 	
 	show()
+	position.y = viewport_height
 	var position_diff = Vector2.UP * ((viewport_height + size.y) / 2)
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_parallel(true)
 	tween.tween_property(self, "position", position_diff, 0.5).as_relative()
 	tween.tween_callback(win_sound.play).set_delay(0.05)
-
-func hide_win_menu() -> void:
-	hide()
-	position.y = viewport_height
