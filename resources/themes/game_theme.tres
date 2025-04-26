@@ -64,6 +64,7 @@ texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
 texture_margin_bottom = 8.0
+modulate_color = Color(1, 1, 1, 0.752941)
 
 [resource]
 Button/fonts/font = ExtResource("2_vw2nx")
