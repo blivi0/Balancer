@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://bbepqc04iog4e"]
+[gd_scene load_steps=27 format=3 uid="uid://bbepqc04iog4e"]
 
 [ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_82enx"]
 [ext_resource type="Script" path="res://scenes/menu/menu.gd" id="2_rhonl"]
 [ext_resource type="AudioStream" uid="uid://b6krf2860d4k1" path="res://assets/music/TITLESCREEN.wav" id="3_frgv7"]
 [ext_resource type="PackedScene" uid="uid://nvo7tvh43x0h" path="res://scenes/background.tscn" id="3_ro7a3"]
+[ext_resource type="Texture2D" uid="uid://cbyjg2uus1ooo" path="res://assets/ART/TITLE.png" id="4_1p5lc"]
 [ext_resource type="Texture2D" uid="uid://8jk8hpa2eywm" path="res://assets/ART/Background_ALT-1.png" id="4_eos37"]
 [ext_resource type="PackedScene" uid="uid://beocrjjnsxjiw" path="res://scenes/game/game_button.tscn" id="4_xudc1"]
 [ext_resource type="Texture2D" uid="uid://bru8q2172irmi" path="res://assets/ART/Background_ALT-2.png" id="5_6ulqy"]
@@ -90,43 +91,36 @@ grow_vertical = 2
 [node name="Background" parent="MainPanel" instance=ExtResource("3_ro7a3")]
 layout_mode = 0
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="MainPanel"]
+[node name="TitleImage" type="TextureRect" parent="MainPanel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -126.0
-offset_top = 18.0
-offset_right = 126.0
-offset_bottom = 72.0
+offset_left = -107.0
+offset_top = 28.0
+offset_right = 107.0
+offset_bottom = 194.0
 grow_horizontal = 2
-theme_type_variation = &"WoodPanelContainer"
-
-[node name="MarginContainer" type="MarginContainer" parent="MainPanel/PanelContainer"]
-layout_mode = 2
-
-[node name="TitleLabel" type="Label" parent="MainPanel/PanelContainer/MarginContainer"]
-layout_mode = 2
-theme_type_variation = &"LargeLabel"
-theme_override_font_sizes/font_size = 36
-text = "Steady Store"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture = ExtResource("4_1p5lc")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainPanel"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -69.0
-offset_top = -20.5
+offset_top = -58.0
 offset_right = 69.0
-offset_bottom = 20.5
+offset_bottom = -17.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 theme_override_constants/separation = 12
 
 [node name="CreditsButton" parent="MainPanel/HBoxContainer" instance=ExtResource("4_xudc1")]
@@ -159,6 +153,10 @@ grow_vertical = 2
 [node name="Background" parent="LevelsPanel" instance=ExtResource("3_ro7a3")]
 layout_mode = 0
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 texture = ExtResource("4_eos37")
 
 [node name="MarginContainer" type="MarginContainer" parent="LevelsPanel"]
@@ -199,6 +197,10 @@ grow_vertical = 2
 [node name="Background" parent="CreditsPanel" instance=ExtResource("3_ro7a3")]
 layout_mode = 0
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 texture = ExtResource("5_6ulqy")
 
 [node name="MarginContainer" type="MarginContainer" parent="CreditsPanel"]
