@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://3m2amnmp0x3c"]
+[gd_scene load_steps=27 format=3 uid="uid://3m2amnmp0x3c"]
 
 [ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_a84yq"]
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_rse5h"]
 [ext_resource type="PackedScene" uid="uid://cxx57oxpc1hs1" path="res://scenes/game/inventory_controller.tscn" id="2_dheqr"]
+[ext_resource type="PackedScene" uid="uid://nvo7tvh43x0h" path="res://scenes/background.tscn" id="3_dytwg"]
 [ext_resource type="PackedScene" uid="uid://dmwqj1xxuahjc" path="res://scenes/game/description_container.tscn" id="3_tpjy8"]
 [ext_resource type="Script" path="res://scenes/game/pause_menu.gd" id="5_jf0le"]
 [ext_resource type="Script" path="res://scenes/game/win_menu.gd" id="5_trp2c"]
@@ -74,6 +75,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_a84yq")
 script = ExtResource("1_rse5h")
+
+[node name="Background" parent="." instance=ExtResource("3_dytwg")]
+layout_mode = 0
+anchors_preset = 0
 
 [node name="InventoryController" parent="." instance=ExtResource("2_dheqr")]
 custom_minimum_size = Vector2(0, 198)

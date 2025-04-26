@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="FeatherItem" load_steps=6 format=3 uid="uid://cx32j81fblskt"]
 
-[ext_resource type="AudioStream" uid="uid://dpnxy11pp844e" path="res://assets/sfx/Feather/item_feather_drop_draft_01.wav" id="1_jdy0f"]
+[ext_resource type="AudioStream" uid="uid://cqu3lgrvvm5sq" path="res://assets/sfx/Feather/item_feather_drop_draft_02.wav" id="1_acuwa"]
 [ext_resource type="Script" path="res://scripts/resources/items/feather_item.gd" id="1_vel3v"]
-[ext_resource type="AudioStream" uid="uid://bxdl28vgtjfow" path="res://assets/sfx/Feather/item_feather_pickup_draft_01.wav" id="2_0uhlg"]
+[ext_resource type="AudioStream" uid="uid://ciriyadkokq44" path="res://assets/sfx/Feather/item_feather_pickup_draft_02.wav" id="2_7x27p"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_in6ev"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7v6ef"]
@@ -12,8 +12,8 @@ region = Rect2(144, 36, 18, 18)
 [resource]
 script = ExtResource("1_vel3v")
 weight = 1
-drop_audio = ExtResource("1_jdy0f")
-pickup_audio = ExtResource("2_0uhlg")
+drop_audio = ExtResource("1_acuwa")
+pickup_audio = ExtResource("2_7x27p")
 texture = SubResource("AtlasTexture_7v6ef")
 name = "Feather"
 description = "Reduces weight of nearby items by 5."
