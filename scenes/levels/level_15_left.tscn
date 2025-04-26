@@ -54,6 +54,7 @@ item = ExtResource("12_o4gtw")
 
 [node name="Slot7" parent="." index="7" instance=ExtResource("2_0w4d6")]
 layout_mode = 2
+item = ExtResource("16_jquab")
 
 [node name="Slot8" parent="." index="8" instance=ExtResource("2_0w4d6")]
 layout_mode = 2
@@ -68,7 +69,6 @@ item = ExtResource("15_4m36j")
 [node name="Slot10" parent="." index="10" instance=ExtResource("2_0w4d6")]
 layout_mode = 2
 effect = ExtResource("4_3ehj7")
-item = ExtResource("16_jquab")
 
 [node name="LockedSlot2" parent="." index="11" instance=ExtResource("6_dasuq")]
 layout_mode = 2

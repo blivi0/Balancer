@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cumia42qhcvaq"]
+[gd_scene load_steps=4 format=3 uid="uid://cumia42qhcvaq"]
 
 [ext_resource type="PackedScene" uid="uid://c7toce147ilqu" path="res://scenes/slots/slot_grid.tscn" id="1_vdr3x"]
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_7ql7h"]
 [ext_resource type="Resource" uid="uid://n4nvs0ip1cfs" path="res://resources/items/shield_item.tres" id="3_usvsy"]
-[ext_resource type="Resource" uid="uid://cxetoso7ot27r" path="res://resources/effects/heavy_effect.tres" id="4_0iqjk"]
 
 [node name="SlotGrid" instance=ExtResource("1_vdr3x")]
 
@@ -22,7 +21,7 @@ item = ExtResource("3_usvsy")
 
 [node name="Slot5" parent="." index="4" instance=ExtResource("2_7ql7h")]
 layout_mode = 2
-effect = ExtResource("4_0iqjk")
+item = ExtResource("3_usvsy")
 
 [node name="Slot6" parent="." index="5" instance=ExtResource("2_7ql7h")]
 layout_mode = 2

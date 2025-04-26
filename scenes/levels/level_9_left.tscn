@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dvdcr6yw64lg1" path="res://scenes/slots/slot.tscn" id="2_pusxp"]
 [ext_resource type="Resource" uid="uid://c3wrbe1b1ntd3" path="res://resources/items/leaf_item.tres" id="3_nef2v"]
 [ext_resource type="Resource" uid="uid://bs4xpmy5wad0i" path="res://resources/effects/invert_effect.tres" id="3_uy1ol"]
-[ext_resource type="Resource" uid="uid://oyjdh5y3rssa" path="res://resources/items/staff_item.tres" id="6_jmf4s"]
-[ext_resource type="Resource" uid="uid://btqc46e62ypoh" path="res://resources/items/bow_item.tres" id="8_1ahng"]
-[ext_resource type="Resource" uid="uid://c4xrohkyxd6as" path="res://resources/items/potion_item.tres" id="9_r3cvt"]
+[ext_resource type="Resource" uid="uid://n4nvs0ip1cfs" path="res://resources/items/shield_item.tres" id="4_fkucb"]
+[ext_resource type="Resource" uid="uid://di24d3yagjavj" path="res://resources/items/pickaxe_item.tres" id="5_30lli"]
+[ext_resource type="Resource" uid="uid://bc6f3y4uvna4d" path="res://resources/items/crossbow_item.tres" id="8_rxnv5"]
 [ext_resource type="Resource" uid="uid://bpreo46u130nb" path="res://resources/items/sword_item.tres" id="10_lgk7h"]
 [ext_resource type="Resource" uid="uid://bg2o4joduo023" path="res://resources/items/paper_item.tres" id="11_0rmxm"]
 
@@ -21,11 +21,11 @@ layout_mode = 2
 
 [node name="Slot3" parent="." index="2" instance=ExtResource("2_pusxp")]
 layout_mode = 2
-item = ExtResource("9_r3cvt")
+item = ExtResource("5_30lli")
 
 [node name="Slot4" parent="." index="3" instance=ExtResource("2_pusxp")]
 layout_mode = 2
-item = ExtResource("6_jmf4s")
+item = ExtResource("10_lgk7h")
 
 [node name="Slot5" parent="." index="4" instance=ExtResource("2_pusxp")]
 layout_mode = 2
@@ -33,11 +33,11 @@ effect = ExtResource("3_uy1ol")
 
 [node name="Slot6" parent="." index="5" instance=ExtResource("2_pusxp")]
 layout_mode = 2
-item = ExtResource("8_1ahng")
+item = ExtResource("8_rxnv5")
 
 [node name="Slot7" parent="." index="6" instance=ExtResource("2_pusxp")]
 layout_mode = 2
-item = ExtResource("10_lgk7h")
+item = ExtResource("4_fkucb")
 
 [node name="Slot8" parent="." index="7" instance=ExtResource("2_pusxp")]
 layout_mode = 2
