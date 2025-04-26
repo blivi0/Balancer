@@ -1,8 +1,73 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbepqc04iog4e"]
+[gd_scene load_steps=26 format=3 uid="uid://bbepqc04iog4e"]
 
 [ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_82enx"]
 [ext_resource type="Script" path="res://scenes/menu/menu.gd" id="2_rhonl"]
 [ext_resource type="AudioStream" uid="uid://b6krf2860d4k1" path="res://assets/music/TITLESCREEN.wav" id="3_frgv7"]
+[ext_resource type="PackedScene" uid="uid://nvo7tvh43x0h" path="res://scenes/background.tscn" id="3_ro7a3"]
+[ext_resource type="Texture2D" uid="uid://8jk8hpa2eywm" path="res://assets/ART/Background_ALT-1.png" id="4_eos37"]
+[ext_resource type="PackedScene" uid="uid://beocrjjnsxjiw" path="res://scenes/game/game_button.tscn" id="4_xudc1"]
+[ext_resource type="Texture2D" uid="uid://bru8q2172irmi" path="res://assets/ART/Background_ALT-2.png" id="5_6ulqy"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="5_ds6qx"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8hjp8"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hmta"]
+atlas = SubResource("CompressedTexture2D_8hjp8")
+region = Rect2(256, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i35a8"]
+atlas = ExtResource("5_ds6qx")
+region = Rect2(288, 192, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3iq0f"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rkmq"]
+atlas = SubResource("CompressedTexture2D_3iq0f")
+region = Rect2(320, 192, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mqnnr"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbt43"]
+atlas = SubResource("CompressedTexture2D_mqnnr")
+region = Rect2(256, 224, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ug6nx"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v80bd"]
+atlas = SubResource("CompressedTexture2D_ug6nx")
+region = Rect2(320, 224, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6i6jo"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bxjy"]
+atlas = SubResource("CompressedTexture2D_6i6jo")
+region = Rect2(288, 224, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t8fcc"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wv16q"]
+atlas = SubResource("CompressedTexture2D_t8fcc")
+region = Rect2(256, 256, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j0wxk"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1d2d6"]
+atlas = SubResource("CompressedTexture2D_j0wxk")
+region = Rect2(288, 256, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3uqum"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41spq"]
+atlas = SubResource("CompressedTexture2D_3uqum")
+region = Rect2(320, 256, 32, 32)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -21,6 +86,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" parent="MainPanel" instance=ExtResource("3_ro7a3")]
+layout_mode = 0
+anchors_preset = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="MainPanel"]
 layout_mode = 1
@@ -47,30 +116,36 @@ vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainPanel"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -36.0
-offset_top = -45.0
+offset_top = -165.0
 offset_right = 36.0
-offset_bottom = 45.0
+offset_bottom = -18.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 theme_override_constants/separation = 12
 
-[node name="PlayButton" type="Button" parent="MainPanel/VBoxContainer"]
+[node name="PlayButton" parent="MainPanel/VBoxContainer" instance=ExtResource("4_xudc1")]
 layout_mode = 2
-text = "Play"
+icon = SubResource("AtlasTexture_3hmta")
+hover_icon = SubResource("AtlasTexture_i35a8")
+pressed_icon = SubResource("AtlasTexture_3rkmq")
 
-[node name="LevelsButton" type="Button" parent="MainPanel/VBoxContainer"]
+[node name="LevelsButton" parent="MainPanel/VBoxContainer" instance=ExtResource("4_xudc1")]
 layout_mode = 2
-text = "Levels"
+icon = SubResource("AtlasTexture_xbt43")
+hover_icon = SubResource("AtlasTexture_v80bd")
+pressed_icon = SubResource("AtlasTexture_3bxjy")
 
-[node name="CreditsButton" type="Button" parent="MainPanel/VBoxContainer"]
+[node name="CreditsButton" parent="MainPanel/VBoxContainer" instance=ExtResource("4_xudc1")]
 layout_mode = 2
-text = "Credits"
+icon = SubResource("AtlasTexture_wv16q")
+hover_icon = SubResource("AtlasTexture_1d2d6")
+pressed_icon = SubResource("AtlasTexture_41spq")
 
 [node name="LevelsPanel" type="Control" parent="."]
 visible = false
@@ -80,6 +155,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" parent="LevelsPanel" instance=ExtResource("3_ro7a3")]
+layout_mode = 0
+anchors_preset = 0
+texture = ExtResource("4_eos37")
 
 [node name="MarginContainer" type="MarginContainer" parent="LevelsPanel"]
 layout_mode = 1
@@ -107,6 +187,72 @@ theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 16
 columns = 3
 
+[node name="CreditsPanel" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" parent="CreditsPanel" instance=ExtResource("3_ro7a3")]
+layout_mode = 0
+anchors_preset = 0
+texture = ExtResource("5_6ulqy")
+
+[node name="MarginContainer" type="MarginContainer" parent="CreditsPanel"]
+layout_mode = 1
+offset_right = 60.0
+offset_bottom = 38.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="CreditsBackButton" type="Button" parent="CreditsPanel/MarginContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="PanelContainer" type="PanelContainer" parent="CreditsPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WoodPanelContainer"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsPanel/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"LargeLabel"
+text = "Programmer - Blivi0"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"LargeLabel"
+text = "Artist / Game Designer - Devillas"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"LargeLabel"
+text = "Sound Designer - Zac Chung"
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"LargeLabel"
+text = "Composer - Eric"
+vertical_alignment = 1
+
 [node name="MenuBackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_frgv7")
 autoplay = true
@@ -114,4 +260,6 @@ bus = &"Music"
 
 [connection signal="pressed" from="MainPanel/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MainPanel/VBoxContainer/LevelsButton" to="." method="_on_levels_button_pressed"]
+[connection signal="pressed" from="MainPanel/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="LevelsPanel/MarginContainer/LevelsBackButton" to="." method="_on_levels_back_button_pressed"]
+[connection signal="pressed" from="CreditsPanel/MarginContainer/CreditsBackButton" to="." method="_on_credits_back_button_pressed"]

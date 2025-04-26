@@ -5,6 +5,7 @@ const LEVEL_BUTTON := preload("res://scenes/menu/level_button.tscn")
 @onready var main_panel: Control = $MainPanel
 @onready var levels_panel: Control = $LevelsPanel
 @onready var levels_container: GridContainer = $LevelsPanel/MarginContainer/LevelsContainer
+@onready var credits_panel: Control = $CreditsPanel
 
 func _ready() -> void:
 	for i in range(LevelManager.TOTAL_LEVELS):
@@ -24,4 +25,12 @@ func _on_levels_button_pressed() -> void:
 
 func _on_levels_back_button_pressed() -> void:
 	levels_panel.hide()
+	main_panel.show()
+
+func _on_credits_button_pressed() -> void:
+	main_panel.hide()
+	credits_panel.show()
+
+func _on_credits_back_button_pressed() -> void:
+	credits_panel.hide()
 	main_panel.show()
