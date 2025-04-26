@@ -267,15 +267,15 @@ script = ExtResource("5_jf0le")
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="ResumeButton" type="Button" parent="PauseMenu/VBoxContainer"]
+[node name="ResumeButton" parent="PauseMenu/VBoxContainer" instance=ExtResource("6_t2rbg")]
 layout_mode = 2
 text = "Resume"
 
-[node name="RestartButton" type="Button" parent="PauseMenu/VBoxContainer"]
+[node name="RestartButton" parent="PauseMenu/VBoxContainer" instance=ExtResource("6_t2rbg")]
 layout_mode = 2
 text = "Restart"
 
-[node name="QuitButton" type="Button" parent="PauseMenu/VBoxContainer"]
+[node name="QuitButton" parent="PauseMenu/VBoxContainer" instance=ExtResource("6_t2rbg")]
 layout_mode = 2
 text = "Quit"
 

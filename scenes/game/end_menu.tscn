@@ -76,7 +76,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_type_variation = &"LargeLabel"
-text = "Thank You For Playing"
+text = "Thank You For Playing!"
 
 [node name="TotalMovesLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

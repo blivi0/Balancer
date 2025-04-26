@@ -1,4 +1,4 @@
-extends Button
+extends GameButton
 class_name LevelButton
 
 var level: int
@@ -11,4 +11,5 @@ func _ready() -> void:
 	disabled = LevelManager.max_level < level
 
 func _on_pressed() -> void:
+	super()
 	level_pressed.emit(level)
