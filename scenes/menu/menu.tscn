@@ -9,6 +9,27 @@
 [ext_resource type="Texture2D" uid="uid://bru8q2172irmi" path="res://assets/ART/Background_ALT-2.png" id="5_6ulqy"]
 [ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="5_ds6qx"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t8fcc"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wv16q"]
+atlas = SubResource("CompressedTexture2D_t8fcc")
+region = Rect2(256, 256, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j0wxk"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1d2d6"]
+atlas = SubResource("CompressedTexture2D_j0wxk")
+region = Rect2(288, 256, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3uqum"]
+load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41spq"]
+atlas = SubResource("CompressedTexture2D_3uqum")
+region = Rect2(320, 256, 32, 32)
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8hjp8"]
 load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
 
@@ -47,27 +68,6 @@ load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e
 [sub_resource type="AtlasTexture" id="AtlasTexture_3bxjy"]
 atlas = SubResource("CompressedTexture2D_6i6jo")
 region = Rect2(288, 224, 32, 32)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t8fcc"]
-load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wv16q"]
-atlas = SubResource("CompressedTexture2D_t8fcc")
-region = Rect2(256, 256, 32, 32)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j0wxk"]
-load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1d2d6"]
-atlas = SubResource("CompressedTexture2D_j0wxk")
-region = Rect2(288, 256, 32, 32)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3uqum"]
-load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_41spq"]
-atlas = SubResource("CompressedTexture2D_3uqum")
-region = Rect2(320, 256, 32, 32)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -114,38 +114,38 @@ text = "Steady Store"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel"]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -36.0
-offset_top = -165.0
-offset_right = 36.0
-offset_bottom = -18.0
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -20.5
+offset_right = 69.0
+offset_bottom = 20.5
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_constants/separation = 12
 
-[node name="PlayButton" parent="MainPanel/VBoxContainer" instance=ExtResource("4_xudc1")]
+[node name="CreditsButton" parent="MainPanel/HBoxContainer" instance=ExtResource("4_xudc1")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_wv16q")
+hover_icon = SubResource("AtlasTexture_1d2d6")
+pressed_icon = SubResource("AtlasTexture_41spq")
+
+[node name="PlayButton" parent="MainPanel/HBoxContainer" instance=ExtResource("4_xudc1")]
 layout_mode = 2
 icon = SubResource("AtlasTexture_3hmta")
 hover_icon = SubResource("AtlasTexture_i35a8")
 pressed_icon = SubResource("AtlasTexture_3rkmq")
 
-[node name="LevelsButton" parent="MainPanel/VBoxContainer" instance=ExtResource("4_xudc1")]
+[node name="LevelsButton" parent="MainPanel/HBoxContainer" instance=ExtResource("4_xudc1")]
 layout_mode = 2
 icon = SubResource("AtlasTexture_xbt43")
 hover_icon = SubResource("AtlasTexture_v80bd")
 pressed_icon = SubResource("AtlasTexture_3bxjy")
-
-[node name="CreditsButton" parent="MainPanel/VBoxContainer" instance=ExtResource("4_xudc1")]
-layout_mode = 2
-icon = SubResource("AtlasTexture_wv16q")
-hover_icon = SubResource("AtlasTexture_1d2d6")
-pressed_icon = SubResource("AtlasTexture_41spq")
 
 [node name="LevelsPanel" type="Control" parent="."]
 visible = false
@@ -250,7 +250,7 @@ vertical_alignment = 1
 [node name="Label4" type="Label" parent="CreditsPanel/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"LargeLabel"
-text = "Composer - Eric"
+text = "Composer - MULTI"
 vertical_alignment = 1
 
 [node name="MenuBackgroundMusic" type="AudioStreamPlayer" parent="."]
@@ -258,8 +258,8 @@ stream = ExtResource("3_frgv7")
 autoplay = true
 bus = &"Music"
 
-[connection signal="pressed" from="MainPanel/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="MainPanel/VBoxContainer/LevelsButton" to="." method="_on_levels_button_pressed"]
-[connection signal="pressed" from="MainPanel/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MainPanel/HBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MainPanel/HBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainPanel/HBoxContainer/LevelsButton" to="." method="_on_levels_button_pressed"]
 [connection signal="pressed" from="LevelsPanel/MarginContainer/LevelsBackButton" to="." method="_on_levels_back_button_pressed"]
 [connection signal="pressed" from="CreditsPanel/MarginContainer/CreditsBackButton" to="." method="_on_credits_back_button_pressed"]
