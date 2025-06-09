@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c8ecli8wrgctx"
-path="res://.godot/imported/item_potion_drop_draft_02 .wav-89e347d7f3350a70728a5a477445206a.sample"
+path="res://.godot/imported/item_potion_drop_draft_02 .wav-dd91cd1cfb2eaf1d67e95f10a1d818dc.sample"
 
 [deps]
 
-source_file="res://assets/sfx/Potion/item_potion_drop_draft_02 .wav"
-dest_files=["res://.godot/imported/item_potion_drop_draft_02 .wav-89e347d7f3350a70728a5a477445206a.sample"]
+source_file="res://ASSETS/sfx/Potion/item_potion_drop_draft_02 .wav"
+dest_files=["res://.godot/imported/item_potion_drop_draft_02 .wav-dd91cd1cfb2eaf1d67e95f10a1d818dc.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b6krf2860d4k1"
-path="res://.godot/imported/TITLESCREEN.wav-2ce224fcc45a3d88d77944bda0aa4daf.sample"
+path="res://.godot/imported/TITLESCREEN.wav-32ec476aff37e6d403d3ee87c7c141ec.sample"
 
 [deps]
 
-source_file="res://assets/music/TITLESCREEN.wav"
-dest_files=["res://.godot/imported/TITLESCREEN.wav-2ce224fcc45a3d88d77944bda0aa4daf.sample"]
+source_file="res://ASSETS/music/TITLESCREEN.wav"
+dest_files=["res://.godot/imported/TITLESCREEN.wav-32ec476aff37e6d403d3ee87c7c141ec.sample"]
 
 [params]
 

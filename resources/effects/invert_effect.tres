@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="InvertEffect" load_steps=4 format=3 uid="uid://bs4xpmy5wad0i"]
 
 [ext_resource type="Script" path="res://scripts/resources/effects/invert_effect.gd" id="1_bu6wx"]
-[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_imk7b"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://ASSETS/ART/MAIN_ART.png" id="2_imk7b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ds8s"]
 atlas = ExtResource("2_imk7b")

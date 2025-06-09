@@ -1,14 +1,12 @@
 [gd_resource type="Resource" script_class="SlotItem" load_steps=6 format=3 uid="uid://bc6f3y4uvna4d"]
 
-[ext_resource type="AudioStream" uid="uid://baksmghafavjc" path="res://assets/sfx/Crossbow/item_crossbow_drop_draft_03.wav" id="1_8sibj"]
+[ext_resource type="AudioStream" uid="uid://baksmghafavjc" path="res://ASSETS/sfx/Crossbow/item_crossbow_drop_draft_03.wav" id="1_8sibj"]
 [ext_resource type="Script" path="res://scripts/resources/items/slot_item.gd" id="1_epk8l"]
-[ext_resource type="AudioStream" uid="uid://cbtejbryo26sw" path="res://assets/sfx/Crossbow/item_crossbow_pickup_draft_03.wav" id="2_s204v"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i4v0b"]
-load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+[ext_resource type="AudioStream" uid="uid://cbtejbryo26sw" path="res://ASSETS/sfx/Crossbow/item_crossbow_pickup_draft_03.wav" id="2_s204v"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://ASSETS/ART/MAIN_ART.png" id="4_i8o45"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0tm30"]
-atlas = SubResource("CompressedTexture2D_i4v0b")
+atlas = ExtResource("4_i8o45")
 region = Rect2(324, 18, 18, 18)
 
 [resource]

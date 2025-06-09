@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dplrham8l28p6"
-path="res://.godot/imported/item_ironblock_pickup_draft_02.wav-995d142a32bf8be54b42f7b446471ab3.sample"
+path="res://.godot/imported/item_ironblock_pickup_draft_02.wav-18f22898309b8855d445200ad8d8aa16.sample"
 
 [deps]
 
-source_file="res://assets/sfx/Iron Block/item_ironblock_pickup_draft_02.wav"
-dest_files=["res://.godot/imported/item_ironblock_pickup_draft_02.wav-995d142a32bf8be54b42f7b446471ab3.sample"]
+source_file="res://ASSETS/sfx/Iron Block/item_ironblock_pickup_draft_02.wav"
+dest_files=["res://.godot/imported/item_ironblock_pickup_draft_02.wav-18f22898309b8855d445200ad8d8aa16.sample"]
 
 [params]
 

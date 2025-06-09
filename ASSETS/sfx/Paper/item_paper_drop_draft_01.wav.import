@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bore68rsdfpra"
-path="res://.godot/imported/item_paper_drop_draft_01.wav-b90c3fcbebe2b531962a380e3fdc871e.sample"
+path="res://.godot/imported/item_paper_drop_draft_01.wav-93d557837b65dd2583d83889d49cb5e5.sample"
 
 [deps]
 
-source_file="res://assets/sfx/Paper/item_paper_drop_draft_01.wav"
-dest_files=["res://.godot/imported/item_paper_drop_draft_01.wav-b90c3fcbebe2b531962a380e3fdc871e.sample"]
+source_file="res://ASSETS/sfx/Paper/item_paper_drop_draft_01.wav"
+dest_files=["res://.godot/imported/item_paper_drop_draft_01.wav-93d557837b65dd2583d83889d49cb5e5.sample"]
 
 [params]
 

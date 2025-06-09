@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cbtejbryo26sw"
-path="res://.godot/imported/item_crossbow_pickup_draft_03.wav-bb6796abb19eda930c60582d26fcd3da.sample"
+path="res://.godot/imported/item_crossbow_pickup_draft_03.wav-9b8ea21c87bb63ccc8252a2eb2c3bb3e.sample"
 
 [deps]
 
-source_file="res://assets/sfx/Crossbow/item_crossbow_pickup_draft_03.wav"
-dest_files=["res://.godot/imported/item_crossbow_pickup_draft_03.wav-bb6796abb19eda930c60582d26fcd3da.sample"]
+source_file="res://ASSETS/sfx/Crossbow/item_crossbow_pickup_draft_03.wav"
+dest_files=["res://.godot/imported/item_crossbow_pickup_draft_03.wav-9b8ea21c87bb63ccc8252a2eb2c3bb3e.sample"]
 
 [params]
 

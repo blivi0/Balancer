@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SlotItem" load_steps=6 format=3 uid="uid://c4xrohkyxd6as"]
 
 [ext_resource type="Script" path="res://scripts/resources/items/slot_item.gd" id="1_3u7sg"]
-[ext_resource type="AudioStream" uid="uid://c8ecli8wrgctx" path="res://assets/sfx/Potion/item_potion_drop_draft_02 .wav" id="1_vainx"]
-[ext_resource type="AudioStream" uid="uid://dv362g0racor5" path="res://assets/sfx/Potion/item_potion_pickup_draft_02 .wav" id="2_hsna6"]
-[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_v6dly"]
+[ext_resource type="AudioStream" uid="uid://c8ecli8wrgctx" path="res://ASSETS/sfx/Potion/item_potion_drop_draft_02 .wav" id="1_vainx"]
+[ext_resource type="AudioStream" uid="uid://dv362g0racor5" path="res://ASSETS/sfx/Potion/item_potion_pickup_draft_02 .wav" id="2_hsna6"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://ASSETS/ART/MAIN_ART.png" id="2_v6dly"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3yugm"]
 atlas = ExtResource("2_v6dly")

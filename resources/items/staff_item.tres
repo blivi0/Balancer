@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SlotItem" load_steps=6 format=3 uid="uid://oyjdh5y3rssa"]
 
-[ext_resource type="AudioStream" uid="uid://cuuek21roy43p" path="res://assets/sfx/Staff/item_staff_drop_draft_01 .wav" id="1_aqq08"]
+[ext_resource type="AudioStream" uid="uid://cuuek21roy43p" path="res://ASSETS/sfx/Staff/item_staff_drop_draft_01 .wav" id="1_aqq08"]
 [ext_resource type="Script" path="res://scripts/resources/items/slot_item.gd" id="1_cbnp3"]
-[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_4uhy7"]
-[ext_resource type="AudioStream" uid="uid://bc7hfgynqg3kj" path="res://assets/sfx/Staff/item_staff_pickup_draft_01 .wav" id="2_octq7"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://ASSETS/ART/MAIN_ART.png" id="2_4uhy7"]
+[ext_resource type="AudioStream" uid="uid://bc7hfgynqg3kj" path="res://ASSETS/sfx/Staff/item_staff_pickup_draft_01 .wav" id="2_octq7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pu4kc"]
 atlas = ExtResource("2_4uhy7")

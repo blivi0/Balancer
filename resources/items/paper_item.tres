@@ -1,14 +1,12 @@
 [gd_resource type="Resource" script_class="SlotItem" load_steps=6 format=3 uid="uid://bg2o4joduo023"]
 
-[ext_resource type="AudioStream" uid="uid://bore68rsdfpra" path="res://assets/sfx/Paper/item_paper_drop_draft_01.wav" id="1_ccugh"]
+[ext_resource type="AudioStream" uid="uid://bore68rsdfpra" path="res://ASSETS/sfx/Paper/item_paper_drop_draft_01.wav" id="1_ccugh"]
 [ext_resource type="Script" path="res://scripts/resources/items/slot_item.gd" id="1_oevm7"]
-[ext_resource type="AudioStream" uid="uid://cq8ff0r6xrn1w" path="res://assets/sfx/Paper/item_paper_pickup_draft_01.wav" id="2_7o023"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_coqrk"]
-load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+[ext_resource type="AudioStream" uid="uid://cq8ff0r6xrn1w" path="res://ASSETS/sfx/Paper/item_paper_pickup_draft_01.wav" id="2_7o023"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://ASSETS/ART/MAIN_ART.png" id="4_pe0se"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n01oq"]
-atlas = SubResource("CompressedTexture2D_coqrk")
+atlas = ExtResource("4_pe0se")
 region = Rect2(144, 18, 18, 18)
 
 [resource]

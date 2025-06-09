@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SlotItem" load_steps=6 format=3 uid="uid://cswpw8a6anuds"]
 
-[ext_resource type="AudioStream" uid="uid://dppkudxoiu2jd" path="res://assets/sfx/Arrow/item_arrow_drop_draft_02 .wav" id="1_brx7k"]
+[ext_resource type="AudioStream" uid="uid://dppkudxoiu2jd" path="res://ASSETS/sfx/Arrow/item_arrow_drop_draft_02 .wav" id="1_brx7k"]
 [ext_resource type="Script" path="res://scripts/resources/items/slot_item.gd" id="1_xx0b6"]
-[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://assets/ART/MAIN_ART.png" id="2_3gurk"]
-[ext_resource type="AudioStream" uid="uid://c4apuvspeeo4j" path="res://assets/sfx/Arrow/item_arrow_pickup_draft_02 .wav" id="2_74gda"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://ASSETS/ART/MAIN_ART.png" id="2_3gurk"]
+[ext_resource type="AudioStream" uid="uid://c4apuvspeeo4j" path="res://ASSETS/sfx/Arrow/item_arrow_pickup_draft_02 .wav" id="2_74gda"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f67p0"]
 atlas = ExtResource("2_3gurk")

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ghjguaprihq"
-path="res://.godot/imported/item_pickaxe_drop_draft_02 .wav-801950fe383c17e5e76a84485566cf2d.sample"
+path="res://.godot/imported/item_pickaxe_drop_draft_02 .wav-9d559da6418b1b8c821a61733c9574db.sample"
 
 [deps]
 
-source_file="res://assets/sfx/Pickaxe/item_pickaxe_drop_draft_02 .wav"
-dest_files=["res://.godot/imported/item_pickaxe_drop_draft_02 .wav-801950fe383c17e5e76a84485566cf2d.sample"]
+source_file="res://ASSETS/sfx/Pickaxe/item_pickaxe_drop_draft_02 .wav"
+dest_files=["res://.godot/imported/item_pickaxe_drop_draft_02 .wav-9d559da6418b1b8c821a61733c9574db.sample"]
 
 [params]
 

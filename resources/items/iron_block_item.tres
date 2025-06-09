@@ -1,14 +1,12 @@
 [gd_resource type="Resource" script_class="IronBlockItem" load_steps=6 format=3 uid="uid://egahxugh1mcp"]
 
-[ext_resource type="AudioStream" uid="uid://c6klt1bix68y6" path="res://assets/sfx/Iron Block/item_ironblock_drop_draft_02.wav" id="1_6doyq"]
+[ext_resource type="AudioStream" uid="uid://c6klt1bix68y6" path="res://ASSETS/sfx/Iron Block/item_ironblock_drop_draft_02.wav" id="1_6doyq"]
 [ext_resource type="Script" path="res://scripts/resources/items/iron_block_item.gd" id="1_n4ix1"]
-[ext_resource type="AudioStream" uid="uid://dplrham8l28p6" path="res://assets/sfx/Iron Block/item_ironblock_pickup_draft_02.wav" id="2_6l4rj"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w30vb"]
-load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+[ext_resource type="AudioStream" uid="uid://dplrham8l28p6" path="res://ASSETS/sfx/Iron Block/item_ironblock_pickup_draft_02.wav" id="2_6l4rj"]
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://ASSETS/ART/MAIN_ART.png" id="4_us7tx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5u8pd"]
-atlas = SubResource("CompressedTexture2D_w30vb")
+atlas = ExtResource("4_us7tx")
 region = Rect2(180, 36, 18, 18)
 
 [resource]

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ciriyadkokq44"
-path="res://.godot/imported/item_feather_pickup_draft_02.wav-d1e08db88707f836860de94404b47568.sample"
+path="res://.godot/imported/item_feather_pickup_draft_02.wav-ebecae737c695c81f688128275116c46.sample"
 
 [deps]
 
-source_file="res://assets/sfx/Feather/item_feather_pickup_draft_02.wav"
-dest_files=["res://.godot/imported/item_feather_pickup_draft_02.wav-d1e08db88707f836860de94404b47568.sample"]
+source_file="res://ASSETS/sfx/Feather/item_feather_pickup_draft_02.wav"
+dest_files=["res://.godot/imported/item_feather_pickup_draft_02.wav-ebecae737c695c81f688128275116c46.sample"]
 
 [params]
 

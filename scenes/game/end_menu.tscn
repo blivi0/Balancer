@@ -1,49 +1,32 @@
-[gd_scene load_steps=16 format=3 uid="uid://b4aficwle6gn3"]
+[gd_scene load_steps=11 format=3 uid="uid://b4aficwle6gn3"]
 
 [ext_resource type="Theme" uid="uid://bsdk08c61i3mi" path="res://resources/themes/game_theme.tres" id="1_30s5a"]
 [ext_resource type="Script" path="res://scenes/game/end_menu.gd" id="2_el2r3"]
 [ext_resource type="PackedScene" uid="uid://beocrjjnsxjiw" path="res://scenes/game/game_button.tscn" id="2_ie03c"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_weslg"]
-load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
+[ext_resource type="Texture2D" uid="uid://lc6srp527hqt" path="res://ASSETS/ART/MAIN_ART.png" id="4_qd6yh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dx5ps"]
-atlas = SubResource("CompressedTexture2D_weslg")
+atlas = ExtResource("4_qd6yh")
 region = Rect2(256, 96, 32, 32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qekgd"]
-load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpq3i"]
-atlas = SubResource("CompressedTexture2D_qekgd")
+atlas = ExtResource("4_qd6yh")
 region = Rect2(288, 96, 32, 32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6wbyp"]
-load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_rx64a"]
-atlas = SubResource("CompressedTexture2D_6wbyp")
+atlas = ExtResource("4_qd6yh")
 region = Rect2(320, 96, 32, 32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ooka2"]
-load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ch4y1"]
-atlas = SubResource("CompressedTexture2D_ooka2")
+atlas = ExtResource("4_qd6yh")
 region = Rect2(160, 64, 32, 32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g0j8u"]
-load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_n08uw"]
-atlas = SubResource("CompressedTexture2D_g0j8u")
+atlas = ExtResource("4_qd6yh")
 region = Rect2(192, 64, 32, 32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ynt24"]
-load_path = "res://.godot/imported/MAIN_ART.png-5b1e93203b44ea9fd17cf4e0f44be29e.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_66uer"]
-atlas = SubResource("CompressedTexture2D_ynt24")
+atlas = ExtResource("4_qd6yh")
 region = Rect2(224, 64, 32, 32)
 
 [node name="EndMenu" type="PanelContainer"]
